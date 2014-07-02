@@ -1,2 +1,250 @@
 // Normally mainpage styles
- 
+.topper
+	position: relative	 
+.header-wrap
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	height: 110px
+	z-index: 2
+.header
+	position: relative 
+	height: 110px
+	+clr
+	padding: 0 50px 
+	background: #fa453c
+	&.is-fixed
+		+box-shadow(0 2px 10px rgba(112,25,21,.1))
+.logo
+	float: left
+	height: 110px
+	+vcenter 
+	a
+		display: inline-block
+		vertical-align: middle
+		+s(logo)
+.menu
+	overflow: hidden
+	text-align: center
+	padding: 45px 0 
+	ul
+		display: inline-block
+		margin-left: 146px
+		li
+			display: inline-block
+			vertical-align: middle
+			a
+				position: relative
+				display: block
+				font-size: 12px
+				font-weight: 400
+				text-transform: uppercase
+				margin: 0 13px 
+				text-decoration: none
+				color: #fff
+				&:after
+					content: ""
+					position: absolute
+					top: 100%
+					left: 0
+					width: 100%
+					background: #fff
+					opacity: 0
+					+transition(all 0.3s)
+					+transform(translateY(-10px))
+				&:hover
+					&:after
+						height: 2px
+						opacity: 1
+						+transform(translateY(2px)) 		
+.header__tools
+	float: right
+	height: 110px
+	+vcenter
+.header__phone
+	display: inline-block
+	vertical-align: middle
+	margin-right: 35px
+	font-size: 12px
+	font-weight: 700
+	color: #fff 
+.like
+	display: inline-block
+	vertical-align: middle
+	a
+		display: inline-block
+		+s(like)
+
+// slider
+.slider
+	position: relative
+	&__list
+		position: relative
+		overflow: hidden
+		height: 100%
+		width: 100%
+		& > li
+			position: absolute
+			top: 0
+			right: 0
+			left: auto 
+			width: 100%
+			height: 100%
+			overflow: hidden
+			background: #fa453c
+			text-align: center
+			+vcenter 
+			&.slider__left-item
+				left: 0
+				right: auto
+			&.is-active
+				z-index: 1
+			&.red
+				background: #fa453c
+			&.green
+				background: green
+			&.blue
+				background: blue 	
+	&__next
+		position: absolute
+		top: 50%
+		right: 48px
+		+s(slider-next)
+		z-index: 2
+	&__prev
+		position: absolute
+		top: 50%
+		left: 48px
+		+s(slider-prev)
+		z-index: 2
+	&__pager
+		position: absolute
+		bottom: 70px
+		left: 0
+		right: 0
+		text-align: center
+		z-index: 2
+		ul
+			display: inline-block
+			li
+				display: inline-block
+				vertical-align: middle
+				margin: 0 11px
+				a
+					display: block
+					width: 8px
+					height: 8px  
+					border-radius: 50%
+					background: #fff
+					+gpu
+					+transition(all 200ms)
+				&.is-active
+					a		  
+						height: 12px
+						width: 12px
+						background: #ffeb12
+	&__content
+		display: inline-block
+		vertical-align: middle
+		max-width: 800px
+		padding: 0 50px
+.logo-big
+	position: relative
+	display: inline-block
+	margin-bottom: 80px
+	padding-left: 73px
+	font-size: 32px
+	font-weight: 700
+	color: #fff
+	text-decoration: none
+	text-transform: uppercase
+	&:before
+		content: ""
+		position: absolute
+		top: -4px
+		left: 0
+		+s(logo-big)
+.slider__text
+	font-size: 24px
+	text-transform: uppercase
+	font-weight: 300
+	line-height: 1.8
+	color: #fff
+	span
+		font-weight: 400
+		color: #ffeb12
+		
+.m-works
+	position: relative
+	display: block
+	height: 100%
+	width: 100%
+	overflow: hidden
+	font-size: 0
+	&__img
+		position: absolute
+		top: -8px
+		left: -8px
+		right: -8px
+		bottom: -8px
+		.m-works__logo
+			position: absolute
+			top: 0px
+			left: 0px
+			right: 0px
+			bottom: 0px
+			+vertical
+			+tr(opacity 300ms)
+			i
+				position: relative
+				display: inline-block
+				vertical-align: middle
+		img
+			min-width: 100%
+			min-height: 100%
+			+gpu
+			+blur(8px)
+			+tr(all 300ms)
+	&:hover
+		.m-works__img
+			.m-works__logo
+				opacity: 0
+			img
+				+blur(0px)		 	 							   						
+.expedition-logo
+	+s(expedition-logo)
+.mattioli-logo
+	+s(mattioli-logo)
+.tnt-logo
+	+s(tnt-logo)		
+.m-portfolio
+	height: 100% 
+	+box
+	+vertical
+	padding: 0 15% 
+	background: #fff
+	text-align: left
+	&__inner
+		display: inline-block
+		vertical-align: middle
+		font-size: 14px
+		color: #6f6f6f
+		p
+			margin-bottom: 25px  
+	&__title
+		position: relative
+		display: inline-block
+		padding-right: 20px
+		margin-bottom: 25px
+		font-weight: 300
+		font-size: 24px
+		color: #161616
+		&:before
+			content: ""
+			position: absolute
+			top: 12px
+			right: 0
+			+s(arr-right)
+			 	
+		  					

@@ -1,9 +1,13 @@
 // default layout
-.l
+.box-wrap
 	+clr
-	.l-col1
-		float: left
-		width: 20%
-	.l-col2
-		float: right
-		width: 70%
+.box-wrap__col
+	float: left
+	width: 20%
+	&.wide
+		width: 40% 
+.box
+	float: left
+	width: 100%
+	&.box_small
+		width: 50%   	
