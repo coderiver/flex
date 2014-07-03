@@ -88,11 +88,38 @@ head.ready(function() {
 	}
 	layout();
 
+// scroll top
+
+	function scrollUp() {
+		var btn = $('.js-scroll-up');
+
+		if($(window).scrollTop() + $(window).height() == $(document).height()) {
+   			btn.addClass('is-animated');
+   		}
+   		else{
+   			btn.removeClass('is-animated');
+   		}
+
+		btn.on('click', function(){
+			$('html, body').animate({
+    		  scrollTop: $('.out').offset().top
+    		}, 500);
+    		return false;
+		});		 
+	} 
+	scrollUp();	
+
 //resize function
 
 	$(window).resize(function(){
 		slider();
 		layout();
 	});
+
+//scroll function
+
+	$(window).scroll(function(){
+		scrollUp();
+	})
 	
 });

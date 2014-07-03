@@ -228,19 +228,48 @@
 	background: #fff
 	text-align: left
 	img
-		display: block
+		display: inline-block
+		max-width: 100%
 		margin-bottom: 30px
 	&__inner
+		+clr
 		display: inline-block
 		vertical-align: middle
 		font-size: 14px
 		color: #6f6f6f
 		p
 			margin-bottom: 25px
+			line-height: 1.6
+		ul
+			+clr
+			li
+				position: relative
+				float: left
+				margin-bottom: 20px
+				width: 40%
+				+box
+				padding-left: 27px
+				font-size: 12px
+				font-weight: 400 
+				text-transform: uppercase
+				color: #262626
+				&:before
+					content: ""
+					position: absolute
+					top: 0
+					left: 0
+					+s(ok)
+	&__left
+		margin-bottom: 40px
+	&__right
+		ul
+			margin-bottom: 30px
+		img
+			margin-right: 40px 					  
 	&:hover
 		.link
 			color: #f3463d
-			&:before
+			span
 				+s(arr-right-red)
 	&.m-portfolio_mod
 		.link
@@ -248,9 +277,6 @@
 			font-weight: 400
 			font-size: 16px
 			text-transform: uppercase
-			&:before
-				top: auto
-				bottom: 4px
 			i
 				position: absolute
 				top: 0
@@ -258,7 +284,12 @@
 .mob-icon
 	+s(mob-icon)
 .promotion-icon
-	+s(promotion-icon)	
+	+s(promotion-icon)
+.design-icon
+	+s(design-icon)
+.bitrix-icon
+	+s(bitrix-icon)
+
 // m-events
 .m-events
 	position: relative
@@ -321,6 +352,37 @@
 		font-weight: 400 
 		color: #414141
 		+tr(color 300ms)
+.m-services 
+	background: #ebf0f1
+	&__alert
+		text-align: center
+		padding: 75px 50px 
+		color: #161616
+		font-weight: 300
+		font-size: 36px 
+
+.m-clients
+	padding: 92px 50px
+	background: url(../img/clients-bg.jpg) no-repeat
+	+cover
+	background-attachment: fixed
+	text-align: center
+	&__title
+		margin-bottom: 85px
+		color: #fff
+		font-size: 24px
+		text-transform: uppercase
+		span
+			font-weight: 400
+	&__list
+		font-size: 0
+		line-height: 1
+		li
+			display: inline-block
+			vertical-align: middle
+			width: 20%
+			margin-bottom: 35px
+			text-align: center				 
 		 		   			
 						
 			 	
