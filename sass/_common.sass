@@ -129,7 +129,7 @@ body
 		+transform(scale(.9))
 		+opacity(.9)
 	100%
-		+transform(scale(1.35))
+		+transform(scale(1.3))
 		+opacity(0)							   				  
 
 // common blocks      
@@ -156,17 +156,22 @@ body
 		height: 100%
 		border-radius: 23px
 		background: #fa453c
+		+transform(scale(0.9))
 		z-index: -1
 	&:hover
 		+transform(translate3d(0, 0, 0) scale(0.96))
 		&:after
-			+animation(pulse 1s linear)	  
+			+animation(pulse 1s linear)
+			+box-shadow(0 0px 5px 2px #fa453c) 	  
 	&.btn_yellow
 		padding: 0 40px 
 		background: #ffeb12
 		color: #071427
 		font-weight: 400
-		+box-shadow(0 19px 30px -18px #ffeb12)  
+		+box-shadow(0 19px 30px -18px #ffeb12)
+		&:after
+			background: #ffeb12
+			+box-shadow(0 0px 5px 2px #ffeb12)   
 .link
 	position: relative
 	display: inline-block
