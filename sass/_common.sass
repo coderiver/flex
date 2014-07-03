@@ -50,10 +50,9 @@ body
 		position: absolute
 		right: 50px
 		top: 50%
-		margin-top: -24px
+		margin-top: 16px
 		padding-right: 50px
 		+tr(all 400ms)
-		+transform(translateY(40px))
 		opacity: 0
 		&:before
 			content: ""
@@ -62,7 +61,7 @@ body
 			right: 30px
 			+s(arr-top)
 		&.is-animated
-			+transform(translateY(0px))
+			margin-top: -24px 
 			opacity: 1
 	&__socials
 		text-align: center
@@ -71,22 +70,67 @@ body
 		li
 			display: inline-block
 			vertical-align: middle
-			margin: 0 10px 
-.vk
-	display: block
-	+s(vk)
-.fb
-	display: block
-	+s(fb)
-.tw
-	display: block
-	+s(tw)
-.dribble
-	display: block
-	+s(dribble)
-.instagram
-	display: block
-	+s(instagram)				  
+			margin: 0 10px
+			a
+				position: relative
+				display: block
+				height: 31px
+				width: 31px 
+				i
+					position: relative
+					display: inline-block
+					z-index: 2
+					-webkit-transition: -webkit-transform ease-out 0.1s
+					-moz-transition: -moz-transform ease-out 0.1s
+					transition: transform ease-out 0.1s
+				&:after
+					content: ""
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					border-radius: 50%
+					z-index: -1 
+					+box-shadow(0 0 0 2px rgba(255,255,255,0.1))
+					+transform(scale(0.9))
+				&:hover
+					&:after
+						+animation(pulse 1s linear)
+					i
+						+transform(scale(0.93))
+				&.vk
+					i
+						+s(vk)
+					&:after
+						background: #77a3e4 	
+				&.fb
+					i
+						+s(fb)
+					&:after
+						background: #517eda	
+				&.tw
+					i
+						+s(tw)
+					&:after
+						background: #abe1ec	
+				&.dribble
+					i
+						+s(dribble)
+					&:after
+						background: #ff6bb1		
+				&.instagram
+					i
+						+s(instagram)
+					&:after
+						background: #a38272				
++keyframes(pulse)
+	0%
+		+transform(scale(.9))
+		+opacity(.9)
+	100%
+		+transform(scale(1.35))
+		+opacity(0)							   				  
 
 // common blocks      
 
@@ -102,6 +146,21 @@ body
 	text-transform: uppercase
 	font-size: 11px
 	font-weight: 300
+	+transition(transform ease-out 0.1s)
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: 23px
+		background: #fa453c
+		z-index: -1
+	&:hover
+		+transform(translate3d(0, 0, 0) scale(0.96))
+		&:after
+			+animation(pulse 1s linear)	  
 	&.btn_yellow
 		padding: 0 40px 
 		background: #ffeb12
