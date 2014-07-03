@@ -219,32 +219,109 @@
 .tnt-logo
 	+s(tnt-logo)		
 .m-portfolio
+	display: block
 	height: 100% 
 	+box
 	+vertical
-	padding: 0 15% 
+	padding: 0 15%
+	font-size: 0 
 	background: #fff
 	text-align: left
+	img
+		display: block
+		margin-bottom: 30px
 	&__inner
 		display: inline-block
 		vertical-align: middle
 		font-size: 14px
 		color: #6f6f6f
 		p
-			margin-bottom: 25px  
-	&__title
+			margin-bottom: 25px
+	&:hover
+		.link
+			color: #f3463d
+			&:before
+				+s(arr-right-red)
+	&.m-portfolio_mod
+		.link
+			padding-top: 50px 
+			font-weight: 400
+			font-size: 16px
+			text-transform: uppercase
+			&:before
+				top: auto
+				bottom: 4px
+			i
+				position: absolute
+				top: 0
+				left: 0						
+.mob-icon
+	+s(mob-icon)
+.promotion-icon
+	+s(promotion-icon)	
+// m-events
+.m-events
+	position: relative
+	top: -1px
+	&__list
+		+clr 
+		background: #ffeb12 
+	&__item
 		position: relative
-		display: inline-block
-		padding-right: 20px
-		margin-bottom: 25px
+		float: left
+		width: 20%
+		height: 200px
+		+box
+		vertical-align: middle 
+		&:first-child
+			text-align: center
+			.m-events__inner
+				+vertical
+			.link
+				vertical-align: middle
+				margin-bottom: 0
+			&:hover
+				.link
+					color: #fff
+					&:before
+						+s(arr-right-white)	
+		&:hover
+			.m-events__inner
+				background: transparent
+			.m-events__date
+				color: rgba(#fff, .8)
+			.m-events__text
+				color: #fff				
+	&__bg
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		+cover
+		z-index: 1			
+	&__inner
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0 
+		padding: 45px 10% 10%
+		+tr(background 300ms)
+		background: #ffeb12
+		z-index: 2
+	&__date
+		margin-bottom: 20px
+		font-size: 12px
 		font-weight: 300
-		font-size: 24px
-		color: #161616
-		&:before
-			content: ""
-			position: absolute
-			top: 12px
-			right: 0
-			+s(arr-right)
+		color: rgba(#161616, .8)
+		+tr(color 300ms)
+	&__text
+		line-height: 1.6
+		font-weight: 400 
+		color: #414141
+		+tr(color 300ms)
+		 		   			
+						
 			 	
 		  					
