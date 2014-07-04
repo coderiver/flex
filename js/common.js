@@ -102,10 +102,16 @@ head.ready(function() {
 
 // sidebar
 	
-	$('.menu-btn').on('click', function(){
+	$('.menu-btn').on('click', function(event){
 		$('.out_mobile').addClass('is-open');
 		$('.header-wrap').addClass('is-open');
+		return false;
 	});
+	// $('.out_mobile').on('click', function(event){
+		// $('.header-wrap').removeClass('is-open');
+		// $(this).removeClass('is-open');
+		// event.preventDefault();
+	// });
 
 //resize function
 
