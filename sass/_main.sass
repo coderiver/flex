@@ -1,21 +1,74 @@
 // Normally mainpage styles
 .topper
-	position: relative	 
+	position: relative
+	z-index: 99
+.out_mobile
+	position: relative
+	-webkit-transform-style: preserve-3d
+	transform-style: preserve-3d
+	+transition(transform 0.5s)
+	&:after
+		position: absolute
+		content: ""
+		top: 0
+		right: 0
+		width: 0
+		height: 0
+		background: rgba(0,0,0,0.2)
+		opacity: 0
+		+transition(opacity 0.5s, width 0.1s, height 0.1s)
+		z-index: 999
+	&.is-open
+		+transform(translate3d(300px, 0, 0))
+		&:after
+			width: 100%
+			height: 100%
+			opacity: 1  			 
 .header-wrap
 	position: absolute
 	top: 0
 	left: 0
 	right: 0
 	height: 110px
-	z-index: 2
+	z-index: 1000
+	+r(w768)
+		position: fixed
+		height: auto
+		width: 300px
+		bottom: 0
+		background: green
+		+box-shadow(0 2px 10px rgba(112,25,21,.1))
+		+transition(all 0.5s)
+		visibility: hidden
+		+transform(translate3d(-100%, 0, 0) rotateY(90deg))
+		-webkit-transform-origin: 100% 50%
+		transform-origin: 100% 50%
+		-webkit-transform-style: preserve-3d
+		transform-style: preserve-3d
+		&.is-open
+			+r(w768)
+				visibility: visible
+				+transition(transform 0.5s)
+				+transform(translate3d(-100%, 0, 0) rotateY(0deg))
 .header
-	position: relative 
+	position: fixed
+	top: 0
+	left: 0
+	right: 0 
 	height: 110px
 	+clr
 	padding: 0 50px 
 	background: #fa453c
+	z-index: 999
 	&.is-fixed
 		+box-shadow(0 2px 10px rgba(112,25,21,.1))
+	+r(w768)
+		height: auto
+		position: absolute
+		padding: 0
+		background: green
+		&.is-fixed
+			+box-shadow(none)  	
 .logo
 	float: left
 	height: 110px
@@ -24,6 +77,28 @@
 		display: inline-block
 		vertical-align: middle
 		+s(logo)
+	+r(w768)
+		float: none
+		height: 80px
+		padding: 0 43px
+.menu-btn
+	display: none
+	position: fixed
+	top: 0
+	right: 0
+	width: 66px
+	height: 66px
+	background: #fa453c
+	z-index: 100
+	&:before
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -10px 0 0 -12px 
+		+s(menu-btn)
+	+r(w768)
+		display: block	 
 .menu
 	overflow: hidden
 	text-align: center
@@ -31,6 +106,8 @@
 	ul
 		display: inline-block
 		margin-left: 146px
+		+r(w1024)
+			margin-left: 0
 		li
 			display: inline-block
 			vertical-align: middle
@@ -57,28 +134,70 @@
 					&:after
 						height: 2px
 						opacity: 1
-						+transform(translateY(2px)) 		
+						+transform(translateY(2px))
+	+r(w768)
+		overflow: visible
+		padding: 10px 0 45px 
+		ul
+			display: block
+			padding: 0 30px 
+			li
+				display: block
+				text-align: left
+				a
+					display: inline-block
+					height: 30px
+					line-height: 30px
+					&:hover
+						&:after
+							+transform(translateY(-4px)) 					 		
 .header__tools
 	float: right
 	height: 110px
 	+vcenter
+	+r(w768)
+		display: none
 .header__phone
 	display: inline-block
 	vertical-align: middle
 	margin-right: 35px
 	font-size: 12px
 	font-weight: 700
-	color: #fff 
+	color: #fff
+	+r(w1024)
+		display: none 
 .like
 	display: inline-block
 	vertical-align: middle
+	font-size: 0
 	a
+		position: relative
 		display: inline-block
 		+s(like)
+		+transition(transform ease-out 0.1s)
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			border-radius: 23px
+			+box
+			border: 3px solid #fff
+			background: transparent
+			+transform(scale(1))
+			z-index: -1
+		&:hover
+			+transform(translate3d(0, 0, 0) scale(0.96))
+			&:after
+				+animation(pulse 1s linear)
+				+box-shadow(0 0px 5px 2px #fa453c)	
 
 // slider
 .slider
 	position: relative
+	z-index: 1
 	&__list
 		position: relative
 		overflow: hidden
@@ -91,6 +210,7 @@
 			left: auto 
 			width: 100%
 			height: 100%
+			font-size: 0
 			overflow: hidden
 			background: #fa453c
 			text-align: center
@@ -112,12 +232,20 @@
 		right: 48px
 		+s(slider-next)
 		z-index: 2
+		+r(w768) 
+			right: 15px
+		+r(w480)
+			display: none	
 	&__prev
 		position: absolute
 		top: 50%
 		left: 48px
 		+s(slider-prev)
 		z-index: 2
+		+r(w768) 
+			left: 15px
+		+r(w480)
+			display: none	
 	&__pager
 		position: absolute
 		bottom: 70px
@@ -165,6 +293,12 @@
 		top: -4px
 		left: 0
 		+s(logo-big)
+	+r(w768)
+		margin-bottom: 30px
+	+r(w480)
+		font-size: 21px
+		&:before
+			top: -13px	 	
 .slider__text
 	font-size: 24px
 	text-transform: uppercase
@@ -174,63 +308,97 @@
 	span
 		font-weight: 400
 		color: #ffeb12
-		
+	+r(w768)
+		font-size: 20px
+	+r(w640)
+		font-size: 18px
+	+r(w560)
+		font-size: 16px
+	+r(w480)
+		font-size: 14px				
 .m-works
-	position: relative
-	display: block
-	height: 100%
-	width: 100%
+	position: absolute
+	top: 0px
+	left: 0px
+	right: 0px
+	bottom: 0px
 	overflow: hidden
 	font-size: 0
 	&__img
 		position: absolute
-		top: -8px
-		left: -8px
-		right: -8px
-		bottom: -8px
-		.m-works__logo
-			position: absolute
-			top: 0px
-			left: 0px
-			right: 0px
-			bottom: 0px
-			+vertical
-			+tr(opacity 300ms)
-			i
-				position: relative
-				display: inline-block
-				vertical-align: middle
+		top: 0px
+		left: 0px
+		right: 0px
+		bottom: 0px
+		z-index: 1
 		img
 			min-width: 100%
 			min-height: 100%
-			+gpu
-			+blur(8px)
-			+tr(all 300ms)
+	&__img-blur
+		position: absolute
+		top: 0px
+		left: 0px
+		right: 0px
+		bottom: 0px
+		z-index: 2
+		+tr(opacity 400ms linear)
+		+gpu
+		img
+			min-width: 100%
+			min-height: 100%		
+	&__logo
+		position: absolute
+		top: 0px
+		left: 0px
+		right: 0px
+		bottom: 0px
+		+vertical
+		+tr(opacity 400ms)
+		z-index: 3
+		i
+			position: relative
+			display: inline-block
+			vertical-align: middle		
 	&:hover
-		.m-works__img
-			.m-works__logo
-				opacity: 0
-			img
-				+blur(0px)		 	 							   						
+		.m-works__logo
+			opacity: 0
+		.m-works__img-blur
+			opacity: 0		 	 							   						
 .expedition-logo
 	+s(expedition-logo)
 .mattioli-logo
 	+s(mattioli-logo)
 .tnt-logo
-	+s(tnt-logo)		
+	+s(tnt-logo)
+.naplavu-logo
+	+s(naplavu-logo)			
 .m-portfolio
-	display: block
-	height: 100% 
+	position: absolute
+	top: 0px
+	left: 0px
+	right: 0px
+	bottom: 0px 
 	+box
 	+vertical
 	padding: 0 15%
 	font-size: 0 
 	background: #fff
 	text-align: left
-	img
-		display: inline-block
-		max-width: 100%
+	&__img
+		height: 259px
+		overflow: hidden
 		margin-bottom: 30px
+		text-align: center
+		img
+			display: inline-block
+			max-width: 100%
+	+r(w1280)
+		padding: 0 30px
+		.m-portfolio__img
+			height: 200px
+	+r(w1180)
+		.m-portfolio__img
+			height: 259px 		 	
 	&__inner
 		+clr
 		display: inline-block
@@ -259,9 +427,17 @@
 					top: 0
 					left: 0
 					+s(ok)
+		+r(w1280)
+			font-size: 13px					
 	&__left
 		margin-bottom: 40px
+		+r(w1180)
+			float: left
+			width: 50%
 	&__right
+		+r(w1180)
+			float: left
+			width: 50%
 		ul
 			margin-bottom: 30px
 		img
@@ -273,14 +449,17 @@
 				+s(arr-right-red)
 	&.m-portfolio_mod
 		.link
-			padding-top: 50px 
+			padding-top: 35px 
 			font-weight: 400
 			font-size: 16px
 			text-transform: uppercase
 			i
 				position: absolute
 				top: 0
-				left: 0						
+				left: 0
+.bitrix
+	+r(w1180)
+		+clr										
 .mob-icon
 	+s(mob-icon)
 .promotion-icon

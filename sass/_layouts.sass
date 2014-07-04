@@ -5,13 +5,44 @@
 	float: left
 	width: 20%
 	&.wide
-		width: 40% 
+		width: 40%
+	+r(w1024)
+		width: 25%
+		&.wide
+			width: 50%
+			&.wide_resp
+				width: 25%
+				.box_big
+					padding-bottom: 200%	 
 .box
+	position: relative
 	float: left
 	width: 100%
+	padding-bottom: 100%  
 	+box
 	&.box_small
 		width: 50%
+		padding-bottom: 50% 
+	&.box_high
+		padding-bottom: 200%
+	&.box_w
+		padding-bottom: 50%
 	.m-services &
 		border-bottom: 1px solid #f0f0f0
 		border-left: 1px solid #f0f0f0  	   	
+.m-service__col1
+	+r(w1180)
+		width: 50%
+		.box_high
+			padding-bottom: 100%
+.m-service__col2
+	margin-top: -1px
+	&.wide
+		+r(w1180)
+			width: 50%
+.m-service__col3
+	&.wide
+		+r(w1180)
+			width: 100%
+			.box_big
+				padding-bottom: 25%

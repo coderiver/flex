@@ -11,10 +11,9 @@
 <body>
 
 <!-- BEGIN  out-->
-<div class="out out_index">
-	<!-- BEGIN topper -->
-	<section class="topper">
-		<!-- BEGIN header -->
+<div class="out out_mobile">
+	<a href="#" class="menu-btn"></a>
+	<!-- BEGIN header -->
 		<header class="header-wrap">
 			<div class="header">
 				<h1 class="logo"><a href="#"></a></h1>
@@ -37,6 +36,8 @@
 			</div>
 		</header>
 		<!-- END header -->
+	<!-- BEGIN topper -->
+	<section class="topper">
 		<!-- BEGIN slider -->
 		<div class="slider">
 			<a href="#" class="slider__prev"></a>
@@ -49,8 +50,22 @@
 						</div>
 					</div>
 				</li>
-				<li class="slider__right-item" data-slide="2"></li>
-				<li class="slider__right-item" data-slide="3"></li>
+				<li class="slider__right-item" data-slide="2">
+					<div class="slider__content">
+						<a href="#" class="logo-big">flex media</a>
+						<div class="slider__text">
+							услуги бизнес-класса в сфере <span>индивидуального дизайна, разработки, поддержки и продвижения</span> интернет-проектов любой сложности
+						</div>
+					</div>
+				</li>
+				<li class="slider__right-item" data-slide="3">
+					<div class="slider__content">
+						<a href="#" class="logo-big">flex media</a>
+						<div class="slider__text">
+							услуги бизнес-класса в сфере <span>индивидуального дизайна, разработки, поддержки и продвижения</span> интернет-проектов любой сложности
+						</div>
+					</div>
+				</li>
 			</ul>
 			<a href="#" class="slider__next"></a>
 			<div class="slider__pager">
@@ -72,9 +87,12 @@
 					<a href="#" class="m-works">
 						<div class="m-works__img">
 							<img src="img/pict1.jpg" alt="">
-							<div class="m-works__logo">
-								<i class="expedition-logo"></i>
-							</div>
+						</div>
+						<div class="m-works__img-blur">
+							<img src="img/pict1-blur.jpg" alt="">
+						</div>
+						<div class="m-works__logo">
+							<i class="expedition-logo"></i>
 						</div>
 					</a>
 				</div>
@@ -94,9 +112,12 @@
 					<a href="#" class="m-works">
 						<div class="m-works__img">
 							<img src="img/pict2.jpg" alt="">
-							<div class="m-works__logo">
-								<!-- <i class="expedition-logo"></i> -->
-							</div>
+						</div>
+						<div class="m-works__img-blur">
+							<img src="img/pict2-blur.jpg" alt="">
+						</div>
+						<div class="m-works__logo">
+							<i class="naplavu-logo"></i>
 						</div>
 					</a>
 				</div>
@@ -104,21 +125,27 @@
 					<a href="#" class="m-works">
 						<div class="m-works__img">
 							<img src="img/pict3.jpg" alt="">
-							<div class="m-works__logo">
-								<i class="mattioli-logo"></i>
-							</div>
+						</div>
+						<div class="m-works__img-blur">
+							<img src="img/pict3-blur.jpg" alt="">
+						</div>
+						<div class="m-works__logo">
+							<i class="mattioli-logo"></i>
 						</div>
 					</a>
 				</div>
 			</div>
-			<div class="box-wrap__col wide">
+			<div class="box-wrap__col wide wide_resp">
 				<div class="box box_big">
 					<a href="#" class="m-works">
 						<div class="m-works__img">
 							<img src="img/pict4.jpg" alt="">
-							<div class="m-works__logo">
-								<i class="tnt-logo"></i>
-							</div>
+						</div>
+						<div class="m-works__img-blur">
+							<img src="img/pict4-blur.jpg" alt="">
+						</div>
+						<div class="m-works__logo">
+							<i class="tnt-logo"></i>
 						</div>
 					</a>
 				</div>
@@ -169,22 +196,24 @@
 	<!-- BEGIN m-services -->
 	<section class="m-services">
 		<div class="box-wrap">
-			<div class="box-wrap__col">
+			<div class="box-wrap__col m-service__col1">
 				<div class="box box_high">
 					<a href="#" class="m-portfolio m-portfolio_mod">
 						<div class="m-portfolio__inner">
 							<div class="link link_mob">Мобильные сайты <span></span><i class="mob-icon"></i></div>
-							<img src="img/iphone.png" alt="">
+							<div class="m-portfolio__img">
+								<img src="img/iphone.png" alt="">
+							</div>
 							<p>Мы очень любим дизайн и стремимся к минималистичности и самовыражению визуальной составляющей</p>
 						</div>
 					</a>
 				</div>
 			</div>
-			<div class="box-wrap__col wide">
+			<div class="box-wrap__col wide m-service__col2">
 				<div class="box box_w">
 					<a href="#" class="m-portfolio">
 						<div class="m-portfolio__inner">
-							<div class="link">Новые работы<span></span></div>
+							<div class="link">Услуги и технологии<span></span></div>
 							<p>Мы очень любим дизайн и стремимся к минималистичности и самовыражению визуальной составляющей</p>
 							<div class="btn">Портфолио</div>	
 						</div>
@@ -207,7 +236,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="box-wrap__col wide">
+			<div class="box-wrap__col wide m-service__col3">
 				<div class="box box_big">
 					<a href="#" class="m-portfolio m-portfolio_mod">
 						<div class="m-portfolio__inner bitrix">
