@@ -5,42 +5,45 @@
 .wrapper
 	position: relative
 	overflow: hidden
-	-webkit-perspective: 1500px
-	perspective: 1500px
-	-webkit-perspective-origin: 0% 50%
-	perspective-origin: 0% 0%	
+	+r(w768)
+		-webkit-perspective: 1500px
+		perspective: 1500px
+		-webkit-perspective-origin: 0% 50%
+		perspective-origin: 0% 0%	
 .out_mobile
 	position: relative
-	-webkit-transform-style: preserve-3d
-	transform-style: preserve-3d
-	+transition(transform 0.5s)
+	+r(w768)
+		-webkit-transform-style: preserve-3d
+		transform-style: preserve-3d
+		+transition(transform 0.5s)
+		&.is-open
+			+transform(translate3d(200px, 0, 0))
+.out__inner
+	position: relative
 	&:after
 		position: absolute
 		content: ""
 		top: 0
 		right: 0
-		width: 0
-		height: 0
+		width: 100%
+		height: 100%
 		background: rgba(0,0,0,0.2)
 		opacity: 0
-		+transition(opacity 0.5s, width 0.1s, height 0.1s)
-		z-index: 999
+		+transition(opacity 0.5s linear)
+		z-index: -1
 	&.is-open
-		+transform(translate3d(200px, 0, 0))
 		&:after
-			width: 100%
-			height: 100%
-			opacity: 1  			 
+			opacity: 1
+			z-index: 999				  			 
 .header-wrap
-	position: absolute
+	position: fixed
 	top: 0
 	left: 0
 	right: 0
 	height: 110px
 	z-index: 1000
 	+r(w768)
-		position: fixed
-		height: 500px
+		height: 100%
 		width: 200px
 		bottom: 0
 		background: green
@@ -52,15 +55,13 @@
 		transform-origin: 100% 50%
 		-webkit-transform-style: preserve-3d
 		transform-style: preserve-3d
-		//-webkit-perspective: 500px
-		//perspective: 500px
 		&.is-open
 			+r(w768)
 				visibility: visible
 				+transition(transform 0.5s)
 				+transform(translate3d(-200px, 0, 0) rotateY(0deg))
 .header
-	position: fixed
+	position: absolute
 	top: 0
 	left: 0
 	right: 0 
@@ -228,13 +229,7 @@
 				left: 0
 				right: auto
 			&.is-active
-				z-index: 1
-			&.red
-				background: #fa453c
-			&.green
-				background: green
-			&.blue
-				background: blue 	
+				z-index: 1	
 	&__next
 		position: absolute
 		top: 50%
@@ -284,7 +279,7 @@
 	&__content
 		display: inline-block
 		vertical-align: middle
-		max-width: 800px
+		max-width: 800px 
 		padding: 0 50px
 .logo-big
 	position: relative
