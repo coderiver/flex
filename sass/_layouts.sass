@@ -2,10 +2,15 @@
 .box-wrap
 	+clr
 .box-wrap__col
-	float: left
+	position: relative
 	width: 20%
+	float: left
 	&.wide
 		width: 40%
+	&.first
+		left: 20%
+	&.second
+		left: -40%		
 	+r(w1024)
 		width: 25%
 		&.wide
@@ -13,7 +18,23 @@
 			&.wide_resp
 				width: 25%
 				.box_big
-					padding-bottom: 200%	 
+					padding-bottom: 200%
+		&.first
+			left: 25%
+		&.second
+			left: -50%				
+	+r(w768)
+		width: 50%
+		&.wide
+			width: 100%
+			&.wide_resp
+				width: 50%
+				.box_big
+					padding-bottom: 100% 	
+		&.first
+			left: 0
+		&.second
+			left: 0 							 
 .box
 	position: relative
 	float: left
@@ -25,6 +46,8 @@
 		padding-bottom: 50% 
 	&.box_high
 		padding-bottom: 200%
+		+r(w768)
+			padding-bottom: 100%
 	&.box_w
 		padding-bottom: 50%
 	.m-services &
