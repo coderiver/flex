@@ -104,6 +104,7 @@ head.ready(function() {
    		}
    		if ($('.wrapper').css('overflow') == 'hidden') {
    			$('.header-wrap').css('top', scroll_top);
+   			$('.header').removeClass('is-fixed');
    		}
    		else{
    			$('.header-wrap').css('top', 0).removeClass('is-open');

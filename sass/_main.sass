@@ -36,7 +36,7 @@
 			opacity: 1
 			z-index: 999				  			 
 .header-wrap
-	position: fixed
+	position: absolute
 	top: 0
 	left: 0
 	right: 0
@@ -71,6 +71,7 @@
 	background: #fa453c
 	z-index: 999
 	&.is-fixed
+		position: fixed
 		+box-shadow(0 2px 10px rgba(112,25,21,.1))
 	+r(w900)
 		padding: 0 20px 	
@@ -428,7 +429,11 @@
 			height: 259px
 	+r(w900)
 		.m-portfolio__img
-			height: 200px		 		 	
+			height: 200px
+	+r(w768)
+		text-align: center
+		.m-portfolio__img
+			display: none				 		 	
 	&__inner
 		+clr
 		display: inline-block
@@ -467,7 +472,10 @@
 			.link
 				margin-bottom: 5px
 			p
-				margin-bottom: 15px							
+				margin-bottom: 15px
+		+r(w768)
+			.link
+				margin-bottom: 35px									
 	&__left
 		margin-bottom: 40px
 		+r(w1180)
@@ -508,6 +516,10 @@
 				position: absolute
 				top: 0
 				left: 0
+			+r(w768)
+				i
+					left: 50%
+					margin-left: -15px	
 .bitrix
 	+r(w1180)
 		+clr										
@@ -535,7 +547,10 @@
 		+box
 		vertical-align: middle
 		+r(w1024)
-			width: 25% 
+			width: 25%
+		+r(w768)
+			width: 50%
+			height: 150px	 
 		&:first-child
 			text-align: center
 			.m-events__inner
@@ -589,14 +604,17 @@
 		font-weight: 300
 		font-size: 36px
 		+r(w900)
-			font-size: 30px	 
-
+			font-size: 30px
+		+r(w768)
+			font-size: 24px	
 .m-clients
 	padding: 92px 50px
 	background: url(../img/clients-bg.jpg) no-repeat
 	+cover
 	background-attachment: fixed
 	text-align: center
+	+r(w768)
+		background-attachment: scroll
 	&__title
 		margin-bottom: 85px
 		color: #fff
@@ -613,6 +631,12 @@
 			width: 20%
 			margin-bottom: 35px
 			text-align: center
+		+r(w768)
+			li
+				width: 25%	
+	&__btn
+		position: relative
+		overflow: hidden		
 	+r(w900)
 		padding: 52px 20px 						 
 		 		   			

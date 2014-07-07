@@ -58,14 +58,25 @@
 		width: 50%
 		.box_high
 			padding-bottom: 100%
+	+r(w768)
+		width: 100%
+		.box_high
+			padding-bottom: 50%  		
 .m-service__col2
 	margin-top: -1px
 	&.wide
 		+r(w1180)
 			width: 50%
+	+r(w768)
+		margin-top: 0
+		&.wide
+			width: 100% 		
 .m-service__col3
 	&.wide
 		+r(w1180)
 			width: 100%
 			.box_big
 				padding-bottom: 25%
+		+r(w768)
+			.box_big
+				padding-bottom: 50%		

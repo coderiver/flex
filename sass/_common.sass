@@ -43,6 +43,8 @@ body
 	+clr
 	height: 165px
 	padding: 0 50px
+	+r(w768)
+		padding: 0 20px 
 	&__copyrights
 		position: absolute
 		top: 50%
@@ -66,6 +68,9 @@ body
 		&.is-animated
 			margin-top: -24px 
 			opacity: 1
+		+r(w768)
+			right: 20px
+
 	&__socials
 		text-align: center
 		height: 100%
@@ -138,6 +143,7 @@ body
 // common blocks      
 
 .btn
+	position: relative
 	display: inline-block
 	height: 47px
 	line-height: 47px
@@ -149,6 +155,7 @@ body
 	text-transform: uppercase
 	font-size: 11px
 	font-weight: 300
+	+gpu
 	+transition(transform ease-out 0.1s)
 	&:after
 		content: ""
