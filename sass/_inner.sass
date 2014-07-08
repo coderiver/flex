@@ -1,0 +1,43 @@
+// styles for inner pages
+.portfolio
+    padding-top: 150px
+    text-align: center
+    &__nav
+        display: inline-block
+        li
+            display: inline-block
+            a
+                position: relative
+                display: block
+                height: 80px
+                padding: 0 50px 0 30px
+                line-height: 80px
+                font-weight: 300
+                font-size: 14px
+                text-decoration: none
+                color: #fff
+                +tr(background 200ms)
+                &:before
+                    content: ""
+                    position: absolute
+                    top: 36px
+                    right: 30px
+                    +s(arr-down)
+                &:hover
+                    background: #df3027
+                &.is-active
+                    background: #df3027    
+    &__dropdown
+        text-align: center
+        background: #df3027
+        li
+            display: inline-block
+            margin: 0 20px
+            a
+                display: block
+                height: 80px
+                line-height: 80px 
+                font-weight: 300
+                color: #fff
+                text-decoration: none  
+                            
