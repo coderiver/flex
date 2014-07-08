@@ -17,7 +17,10 @@ head.ready(function() {
 			
 			// autoheight
 			//slider.css('height', h);
-			item_content.css('width', (w*0.8 - 100));
+			
+			if (w >= 480) {
+				item_content.css('width', (w*0.8 - 100));
+			}
 
 			// slider__item visibility
 			item.css('width', 0);

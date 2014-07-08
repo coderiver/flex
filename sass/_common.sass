@@ -41,16 +41,23 @@ body
 .footer
 	position: relative
 	+clr
-	height: 165px
-	padding: 0 50px
+	height: 105px
+	padding: 30px 50px
 	+r(w768)
-		padding: 0 20px 
+		padding: 30px 20px
+	+r(w600)
+		height: 140px	 
 	&__copyrights
 		position: absolute
 		top: 50%
 		margin-top: -8px
 		font-size: 12px
-		color: #414141 
+		color: #414141
+		+r(w600)
+			top: auto
+			bottom: 20px
+			left: 50%
+			margin: 0 0 0 -70px
 	.btn_up
 		position: absolute
 		right: 50px
@@ -70,7 +77,15 @@ body
 			opacity: 1
 		+r(w768)
 			right: 20px
-
+		+r(w600)
+			margin-top: 0px
+			top: auto
+			bottom: 65px
+			right: 50%
+			opacity: 1
+			margin-right: -60px
+			&.is-animated
+				margin-top: 0	
 	&__socials
 		text-align: center
 		height: 100%
@@ -79,6 +94,8 @@ body
 			display: inline-block
 			vertical-align: middle
 			margin: 0 10px
+			+r(w600)
+				vertical-align: top
 			a
 				position: relative
 				display: block
