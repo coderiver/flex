@@ -21,6 +21,9 @@ head.ready(function() {
 			if (w >= 480) {
 				item_content.css('width', (w*0.8 - 100));
 			}
+			else{
+				item_content.css('width', (w - 40));
+			}
 
 			// slider__item visibility
 			item.css('width', 0);

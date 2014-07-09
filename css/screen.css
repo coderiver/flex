@@ -94,7 +94,7 @@ body { font-family: "Open Sans", sans-serif; font-weight: 300; font-size: 14px; 
 .share li a.share__fb { background: #2f63cd; }
 .share li a.share__tw { background: #4ddbdd; }
 
-.box-wrap { *zoom: 1; }
+.box-wrap { *zoom: 1; background: black; }
 .box-wrap:after { content: " "; display: table; clear: both; }
 
 .box-wrap__col { position: relative; width: 20%; float: left; }
