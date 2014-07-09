@@ -166,6 +166,19 @@ head.ready(function() {
 		$(this).removeClass('is-open').parent('.out').removeClass('is-open');
 	});
 
+	$('.out__inner').swipe({
+		swipeLeft: function(event, direction, distance, duration, fingerCount) {
+		    $('.menu-btn').removeClass('is-active');
+			$('.header-wrap').removeClass('is-open');
+			$(this).removeClass('is-open').parent('.out').removeClass('is-open');
+		},
+		swipeRight: function(event, direction, distance, duration, fingerCount) {
+		    
+		},
+		//Default is 75px, set to 0 for demo so any distance triggers swipe
+		threshold: 0
+	});
+
 // m-events
 
 	function m_events(){
