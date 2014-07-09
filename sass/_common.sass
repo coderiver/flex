@@ -235,6 +235,7 @@ body
 	background: rgba(#fa453c, .5)
 	z-index: 9999
 	visibility: hidden
+	+gpu
 	&.is-open
 		visibility: visible
 		.popup
@@ -246,13 +247,18 @@ body
 	left: 50%
 	margin-top: -78px
 	margin-left: -206px 
-	width: 356px
+	width: 320px
 	height: 100px
 	background: #fff
 	padding: 28px
 	+transform(translateY(-20px))
 	+transition(all 0.4s)
-	opacity: 0	
+	opacity: 0
+	+r(w480)
+		width: 260px
+		height: 80px
+		padding: 10px
+		margin-left: -130px  	
 .share
 	+clr
 	li
@@ -269,5 +275,11 @@ body
 			&.share__fb
 				background: #2f63cd
 			&.share__tw
-				background: #4ddbdd 	  	  
+				background: #4ddbdd
+	+r(w480)
+		li
+			margin-left: 10px
+			a
+				width: 80px
+				height: 80px			 	  	  
 

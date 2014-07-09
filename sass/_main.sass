@@ -21,6 +21,9 @@
 		+transition(transform 0.5s)
 		&.is-open
 			+transform(translate3d(200px, 0, 0))
+	+r(w320)
+		&.is-open
+			+transform(translate3d(320px, 0, 0))	
 .out__inner
 	position: relative
 	&:after
@@ -63,6 +66,11 @@
 				visibility: visible
 				+transition(transform 0.5s)
 				+transform(translate3d(-200px, 0, 0) rotateY(0deg))
+	+r(w320)
+		width: 320px
+		+transform(translate3d(-320px, 0, 0) rotateY(90deg))
+		&.is-open
+			+transform(translate3d(-320px, 0, 0) rotateY(0deg))			
 .header
 	position: absolute
 	top: 0
@@ -76,6 +84,14 @@
 	&.is-fixed
 		position: fixed
 		+box-shadow(0 2px 10px rgba(112,25,21,.1))
+	&__close
+		visibility: hidden
+		position: absolute
+		top: 24px
+		right: 20px
+		+s(close)
+		cursor: pointer
+		z-index: 2	
 	+r(w900)
 		padding: 0 20px 	
 	+r(w768)
@@ -83,7 +99,10 @@
 		position: absolute
 		padding: 0
 		&.is-fixed
-			+box-shadow(none)  	
+			+box-shadow(none)
+	+r(w320)		
+		.header__close
+			visibility: visible			  	
 .logo
 	float: left
 	height: 110px
@@ -93,9 +112,7 @@
 		vertical-align: middle
 		+s(logo)
 	+r(w768)
-		float: none
-		height: 80px
-		padding: 0 43px
+		display: none
 .menu-btn
 	display: none
 	position: fixed
@@ -104,6 +121,7 @@
 	width: 66px
 	height: 66px
 	background: #fa453c
+	+tr(opacity 200ms)
 	z-index: 100
 	&:before
 		content: ""
@@ -124,16 +142,14 @@
 		+transition(opacity 0.5s linear)
 		z-index: -1		
 	&.is-active
-		&:after
-			opacity: 1
-			z-index: 999	
+		opacity: 0
+		z-index: 0	
 	+r(w768)
 		display: block	 
 .menu
 	overflow: hidden
 	text-align: center
 	padding: 45px 0
-	+gpu 
 	ul
 		display: inline-block
 		margin-left: 146px
@@ -168,13 +184,13 @@
 						+transform(translateY(2px))
 	+r(w768)
 		overflow: visible
-		padding: 10px 0 45px 
+		padding: 80px 0 45px 
 		ul
 			display: block
 			padding: 0 30px 
 			li
 				display: block
-				text-align: left
+				//text-align: left
 				a
 					display: inline-block
 					height: 30px
@@ -187,7 +203,13 @@
 	height: 110px
 	+vcenter
 	+r(w768)
-		display: none
+		float: none
+		position: absolute
+		top: 275px
+		left: 0
+		right: 0
+		height: auto 
+		text-align: center
 .header__phone
 	display: inline-block
 	vertical-align: middle
@@ -196,7 +218,12 @@
 	font-weight: 700
 	color: #fff
 	+r(w1024)
-		display: none 
+		display: none
+	+r(w768)
+		display: inline-block
+		margin-right: 0
+		width: 100%
+		margin-bottom: 10px  	 
 .like
 	display: inline-block
 	vertical-align: middle
@@ -575,11 +602,7 @@
 				margin-bottom: 0	
 			&:hover
 				.m-events__inner
-					background: #ffeb12
-				// .link
-					// color: #fff
-					// &:before
-						// +s(arr-right-white)	
+					background: #ffeb12	
 		&:hover
 			.m-events__inner
 				background: #27ae60
@@ -598,16 +621,16 @@
 				height: 90px					
 	&__inner
 		position: absolute
-		top: 0
-		right: 0
-		bottom: 0
-		left: 0 
-		padding: 45px 10% 10%
+		top: 45px
+		right: 10%
+		bottom: 10%
+		left: 10% 
+		overflow: hidden
 		+tr(background 300ms)
 		background: #ffeb12
 		z-index: 2
 		+r(w900)
-			padding: 10% 
+			top: 10% 
 	&__date
 		margin-bottom: 20px
 		font-size: 12px

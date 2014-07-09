@@ -166,6 +166,12 @@ head.ready(function() {
 		$(this).removeClass('is-open').parent('.out').removeClass('is-open');
 	});
 
+	$('.js-close-sidebar').on('click', function(){
+		$('.menu-btn').removeClass('is-active');
+		$('.header-wrap').removeClass('is-open');
+		$('.out__inner').removeClass('is-open').parent('.out').removeClass('is-open');
+	});
+
 	$('.out__inner').swipe({
 		swipeLeft: function(event, direction, distance, duration, fingerCount) {
 		    $('.menu-btn').removeClass('is-active');
@@ -184,6 +190,9 @@ head.ready(function() {
 	function m_events(){
 		if ($('.header__phone').css('display') == 'none') {
 			$('.m-events__item:last-child').hide();
+		}
+		else{
+			$('.m-events__item:last-child').show();
 		}	
 	}
 	m_events();
