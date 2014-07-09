@@ -83,7 +83,7 @@ body { font-family: "Open Sans", sans-serif; font-weight: 300; font-size: 14px; 
 .popup-wrap.is-open { visibility: visible; }
 .popup-wrap.is-open .popup { -moz-transform: translateY(0); -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
 
-.popup { position: absolute; top: 50%; left: 50%; margin-top: -78px; margin-left: -206px; width: 356px; height: 100px; background: white; padding: 28px; -moz-transform: translateY(-5%); -ms-transform: translateY(-5%); -webkit-transform: translateY(-5%); transform: translateY(-5%); -moz-transition: all 0.4s; -o-transition: all 0.4s; -webkit-transition: all 0.4s; transition: all 0.4s; opacity: 0; }
+.popup { position: absolute; top: 50%; left: 50%; margin-top: -78px; margin-left: -206px; width: 356px; height: 100px; background: white; padding: 28px; -moz-transform: translateY(-20px); -ms-transform: translateY(-20px); -webkit-transform: translateY(-20px); transform: translateY(-20px); -moz-transition: all 0.4s; -o-transition: all 0.4s; -webkit-transition: all 0.4s; transition: all 0.4s; opacity: 0; }
 
 .share { *zoom: 1; }
 .share:after { content: " "; display: table; clear: both; }
