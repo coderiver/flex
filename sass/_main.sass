@@ -229,12 +229,7 @@
 .slider
 	position: relative
 	height: 790px
-	cursor: -webkit-grab
-	cursor: grab
 	z-index: 1
-	&:active
-		cursor: -webkit-grabbing
-		cursor: grabbing
 	+r(w1024)
 		height: 669px
 	+r(w768)
@@ -257,18 +252,18 @@
 			overflow: hidden
 			background: #fa453c
 			text-align: center
-			+vcenter 
+			//+vcenter 
 			&.slider__left-item
 				left: 0
 				right: auto
 			&.is-active
 				z-index: 1	
-			&.red
-				background: orange
-			&.green
-				background: green
-			&.blue
-				background: blue 
+			// &.red
+			// 	background: orange
+			// &.green
+			// 	background: green
+			// &.blue
+			// 	background: blue		 
 	&__next
 		position: absolute
 		top: 50%
@@ -315,12 +310,13 @@
 		+r(w480)
 			bottom: 35px 				
 	&__content
-		display: inline-block
-		vertical-align: middle
-		max-width: 800px 
-		padding: 0 50px
+		max-width: 800px
+		margin: 0 auto  
+		padding: 170px 50px 0
+		+r(w768)
+			padding: 120px 50px 0
 		+r(w480)
-			padding: 0 20px	
+			padding: 100px 20px 0	
 .logo-big
 	position: relative
 	display: inline-block
