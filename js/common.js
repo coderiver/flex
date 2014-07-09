@@ -169,7 +169,23 @@ head.ready(function() {
 
 		}
 	} 
-	portfolioNav();		
+	portfolioNav();
+
+// popup
+	
+	$('.js-like-btn').on('click', function(){
+		$('.js-popup').addClass('is-open');
+		$('.wrapper').addClass('has-blur');
+		return false;
+	});
+
+	$('.popup-wrap').on('click', function(event){
+		$('.wrapper').removeClass('has-blur');
+		$('.js-popup').removeClass('is-open');
+	});
+	$('.popup').on('click', function(event){
+		event.stopPropagation();
+	});			
 
 //resize function
 

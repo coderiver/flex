@@ -79,6 +79,21 @@ body { font-family: "Open Sans", sans-serif; font-weight: 300; font-size: 14px; 
 .link { position: relative; display: inline-block; margin-bottom: 25px; font-weight: 300; font-size: 24px; text-decoration: none; color: #161616; }
 .link span { display: inline-block; margin-left: 10px; background: url('../img/icons-s7400d40974.png') 0 -64px no-repeat; width: 7px; height: 13px; }
 
+.popup-wrap { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(250, 69, 60, 0.5); z-index: 9999; visibility: hidden; }
+.popup-wrap.is-open { visibility: visible; }
+.popup-wrap.is-open .popup { -moz-transform: translateY(0); -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+
+.popup { position: absolute; top: 50%; left: 50%; margin-top: -78px; margin-left: -206px; width: 356px; height: 100px; background: white; padding: 28px; -moz-transform: translateY(-5%); -ms-transform: translateY(-5%); -webkit-transform: translateY(-5%); transform: translateY(-5%); -moz-transition: all 0.4s; -o-transition: all 0.4s; -webkit-transition: all 0.4s; transition: all 0.4s; opacity: 0; }
+
+.share { *zoom: 1; }
+.share:after { content: " "; display: table; clear: both; }
+.share li { float: left; margin-left: 28px; }
+.share li:first-child { margin-left: 0; }
+.share li a { display: block; width: 100px; height: 100px; }
+.share li a.share__vk { background: #009ad3; }
+.share li a.share__fb { background: #2f63cd; }
+.share li a.share__tw { background: #4ddbdd; }
+
 .box-wrap { *zoom: 1; }
 .box-wrap:after { content: " "; display: table; clear: both; }
 
@@ -133,6 +148,7 @@ body { font-family: "Open Sans", sans-serif; font-weight: 300; font-size: 14px; 
 .topper { position: relative; background: #fa453c; z-index: 99; }
 
 .wrapper { position: relative; }
+.wrapper.has-blur { -webkit-filter: blur(3px); filter: blur(3px); filter: progid:DXImageTransform.Microsoft.Blur(pixelRadius=$var); }
 @media only screen and (max-width: 768px) { .wrapper { overflow: hidden; -webkit-perspective: 1500px; perspective: 1500px; -webkit-perspective-origin: 0% 50%; perspective-origin: 0% 0%; } }
 
 .out_mobile { position: relative; }

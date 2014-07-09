@@ -5,6 +5,8 @@
 	z-index: 99
 .wrapper
 	position: relative
+	&.has-blur
+		+blur(3px)
 	+r(w768)
 		overflow: hidden
 		-webkit-perspective: 1500px

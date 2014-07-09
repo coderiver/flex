@@ -223,3 +223,49 @@ body
 		margin-left: 10px 
 		+s(arr-right)
 
+// popup
+.popup-wrap
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: rgba(#fa453c, .5)
+	z-index: 9999
+	visibility: hidden
+	&.is-open
+		visibility: visible
+		.popup
+			+transform(translateY(0))
+			opacity: 1
+.popup
+	position: absolute
+	top: 50%
+	left: 50%
+	margin-top: -78px
+	margin-left: -206px 
+	width: 356px
+	height: 100px
+	background: #fff
+	padding: 28px
+	+transform(translateY(-5%))
+	+transition(all 0.4s)
+	opacity: 0	
+.share
+	+clr
+	li
+		float: left
+		margin-left: 28px
+		&:first-child
+			margin-left: 0
+		a
+			display: block
+			width: 100px
+			height: 100px
+			&.share__vk
+				background: #009ad3
+			&.share__fb
+				background: #2f63cd
+			&.share__tw
+				background: #4ddbdd 	  	  
+
