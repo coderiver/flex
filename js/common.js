@@ -28,48 +28,135 @@ head.ready(function() {
 			// slider__item visibility
 			item.css('width', 0);
 			$('.slider__list li:first-child').css('width', '100%');
+
+			// slider nav first/last hidden
+
+			if ($('.slider__list li.is-active').next('li').length) {
+				next.removeClass('is-hidden');	
+			}
+			else{
+				next.addClass('is-hidden');
+			}
+			if ($('.slider__list li.is-active').prev('li').length) {
+				prev.removeClass('is-hidden');	
+			}
+			else{
+				prev.addClass('is-hidden');
+			}
 			
 			// slider nav
-			next.on('click', function(){
-				if ($('.slider__list li.is-active').next('li').length) {
-					$('.slider__list li.is-active').removeClass('is-active').next('li').addClass('is-active').
-					animate({
+			// next.on('click', function(){
+				// 
+				// if ($('.slider__list li.is-active').next('li').length) {
+					// 
+					// var act = $('.slider__list li.is-active');
+						// act_next = act.next('li');
+	// 
+	// 
+					// act.removeClass('is-active').next('li').addClass('is-active').
+					// animate({
+						// width: '100%'
+					// }, 500);
+					// 
+	// 
+					// prev.removeClass('is-hidden');
+					// 
+					// if (!act_next.next().length) {
+						// next.addClass('is-hidden');
+					// };
+// 
+					// 
+				// }
+// 
+				// 
+// 
+				// return false;
+			// });
+			// prev.on('click', function(){
+				// 
+				// if ($('.slider__list li.is-active').prev('li').length) {
+					// 
+					// var act = $('.slider__list li.is-active');
+						// act_prev = act.prev('li');
+// 
+					// act.removeClass('is-active').
+					// animate({
+						// width: '0%'
+					// }, 500, function(){
+						// $(this).prev('li').addClass('is-active');
+					// });
+// 
+					// next.removeClass('is-hidden');
+// 
+					// if (!act_prev.prev().length) {
+						// prev.addClass('is-hidden');
+					// };
+// 
+				// }
+// 
+				// return false;
+			// });
+			
+			//slider pager
+			var pager = $('.slider__pager'),
+				pager_link = pager.find('a');
+
+			pager_link.on('click', function(){
+				var slide = $(this).data('slide');
+				pager_link.removeClass('is-active');
+				$(this).nextAll().attr('data-direction', 'next');
+				$(this).prevAll().attr('data-direction', 'prev');
+				$(this).addClass('is-active');
+				pager_data = $(this).attr('data-direction');
+				if (pager_data == 'prev') {
+					$(this).removeAttr('data-direction');
+					$('.slider__list li.is-active').animate({
+						width: '0%'
+					}, 500);
+					$('.slider__list li[data-slide = '+slide+']').addClass('is-active').css('width', '100%');
+				};
+				if (pager_data == 'next') {
+					$(this).removeAttr('data-direction');
+					$('.slider__list li').removeClass('is-active');
+					$('.slider__list li[data-slide = '+slide+']').addClass('is-active').animate({
 						width: '100%'
 					}, 500);
-					$('.slider__pager li[class = is-active]').removeClass('is-active').next().addClass('is-active');
 				};
+				next.removeClass('is-hidden');
+				prev.removeClass('is-hidden');
+				if (pager_link.first().hasClass('is-active')) {
+					prev.addClass('is-hidden');
+				};
+				if (pager_link.last().hasClass('is-active')) {
+					next.addClass('is-hidden');
+				};
+				return false;
+			})
 
+			next.on('click', function(){
+				prev.removeClass('is-hidden');
+				var active = $('.slider__pager a.is-active');
+				active.next().trigger('click');
 				return false;
 			});
+
 			prev.on('click', function(){
-				if ($('.slider__list li.is-active').prev('li').length) {
-					$('.slider__list li.is-active').removeClass('is-active').
-					animate({
-						width: '0%'
-					}, 500, function(){
-						$(this).prev('li').addClass('is-active');
-					});
-
-					$('.slider__pager li[class = is-active]').removeClass('is-active').prev().addClass('is-active');
-
-				};
+				next.removeClass('is-hidden');
+				var active = $('.slider__pager a.is-active');
+				active.prev().trigger('click');
 				return false;
 			});
 
-			//slider pager
-			
-			$('.slider__pager li a').on('click', function(){
-				var slide = $(this).attr('data-slide');
-				$('.slider__pager li').removeClass('is-active');
-				$(this).parent().addClass('is-active');
-				$('.slider__list li').removeClass('is-active');
-				$('.slider__list li[data-slide = '+slide+']').addClass('is-active').animate({
-					width: '100%'
-				}, 500);
-				return false;
+			slider.swipe({
+				swipeLeft: function(event, direction, distance, duration, fingerCount) {
+				    next.trigger('click');
+				},
+				swipeRight: function(event, direction, distance, duration, fingerCount) {
+				    prev.trigger('click');
+				},
+				//Default is 75px, set to 0 for demo so any distance triggers swipe
+				threshold: 0
 			});
-
-			
 
 		};
 	}

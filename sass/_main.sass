@@ -132,7 +132,8 @@
 .menu
 	overflow: hidden
 	text-align: center
-	padding: 45px 0 
+	padding: 45px 0
+	+gpu 
 	ul
 		display: inline-block
 		margin-left: 146px
@@ -228,7 +229,12 @@
 .slider
 	position: relative
 	height: 790px
+	cursor: -webkit-grab
+	cursor: grab
 	z-index: 1
+	&:active
+		cursor: -webkit-grabbing
+		cursor: grabbing
 	+r(w1024)
 		height: 669px
 	+r(w768)
@@ -257,12 +263,20 @@
 				right: auto
 			&.is-active
 				z-index: 1	
+			&.red
+				background: orange
+			&.green
+				background: green
+			&.blue
+				background: blue 
 	&__next
 		position: absolute
 		top: 50%
 		right: 48px
 		+s(slider-next)
 		z-index: 2
+		&.is-hidden
+			visibility: hidden
 		+r(w768) 
 			right: 15px
 		+r(w480)
@@ -273,6 +287,8 @@
 		left: 48px
 		+s(slider-prev)
 		z-index: 2
+		&.is-hidden
+			visibility: hidden
 		+r(w768) 
 			left: 15px
 		+r(w480)
@@ -284,25 +300,18 @@
 		right: 0
 		text-align: center
 		z-index: 2
-		ul
+		a
 			display: inline-block
-			li
-				display: inline-block
-				vertical-align: middle
-				margin: 0 11px
-				a
-					display: block
-					width: 8px
-					height: 8px  
-					border-radius: 50%
-					background: #fff
-					+gpu
-					+transition(all 200ms)
-				&.is-active
-					a		  
-						height: 12px
-						width: 12px
-						background: #ffeb12
+			vertical-align: middle
+			margin: 0 11px
+			width: 8px
+			height: 8px  
+			border-radius: 50%
+			background: #fff
+			+transition(transform 200ms)
+			&.is-active 
+				+transform(translate3d(0,0,0) scale(1.4))
+				background: #ffeb12
 		+r(w480)
 			bottom: 35px 				
 	&__content
