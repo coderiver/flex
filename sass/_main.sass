@@ -252,18 +252,11 @@
 			overflow: hidden
 			background: #fa453c
 			text-align: center
-			//+vcenter 
 			&.slider__left-item
 				left: 0
 				right: auto
 			&.is-active
-				z-index: 1	
-			// &.red
-			// 	background: orange
-			// &.green
-			// 	background: green
-			// &.blue
-			// 	background: blue		 
+				z-index: 1		 
 	&__next
 		position: absolute
 		top: 50%
@@ -371,9 +364,7 @@
 		right: 0px
 		bottom: 0px
 		z-index: 1
-		img
-			min-width: 100%
-			min-height: 100%
+		+cover
 	&__img-blur
 		position: absolute
 		top: 0px
@@ -381,11 +372,9 @@
 		right: 0px
 		bottom: 0px
 		z-index: 2
-		+tr(opacity 400ms linear)
+		+tr(opacity 200ms linear)
 		+gpu
-		img
-			min-width: 100%
-			min-height: 100%		
+		+cover		
 	&__logo
 		position: absolute
 		top: 0px

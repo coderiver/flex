@@ -62,7 +62,7 @@
 			padding-bottom: 100%
 	&.box_w
 		padding-bottom: 50%
-		+r(w480)
+		+r(w400)
 			padding-bottom: 100%
 	.m-services &
 		border-bottom: 1px solid #f0f0f0
@@ -75,7 +75,13 @@
 	+r(w768)
 		width: 100%
 		.box_high
-			padding-bottom: 50%  		
+			padding-bottom: 40%
+	+r(w600)
+		.box_high
+			padding-bottom: 50%
+	+r(w400)
+		.box_high
+			padding-bottom: 75% 		 		  		
 .m-service__col2
 	margin-top: -1px
 	&.wide
@@ -88,7 +94,13 @@
 	+r(w480)
 		.box
 			&.box_small
-				padding-bottom: 50% 		 		
+				padding-bottom: 50%
+	+r(w400)
+		.box
+			&.box_small
+				padding-bottom: 70%
+			&.box_w
+				padding-bottom: 70%					 		 		
 .m-service__col3
 	&.wide
 		+r(w1180)
