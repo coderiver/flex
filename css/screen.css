@@ -69,10 +69,10 @@ body { font-family: "Open Sans", sans-serif; font-weight: 300; font-size: 14px; 
   100% { -moz-transform: scale(1.3); -ms-transform: scale(1.3); -webkit-transform: scale(1.3); transform: scale(1.3); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; } }
 @keyframes pulse { 0% { -moz-transform: scale(0.9); -ms-transform: scale(0.9); -webkit-transform: scale(0.9); transform: scale(0.9); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90); opacity: 0.9; }
   100% { -moz-transform: scale(1.3); -ms-transform: scale(1.3); -webkit-transform: scale(1.3); transform: scale(1.3); filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; } }
-.btn { position: relative; display: inline-block; height: 47px; line-height: 47px; padding: 0 30px; background: #fa453c; border-radius: 23px; text-decoration: none; color: white; text-transform: uppercase; font-size: 11px; letter-spacing: 1px; font-weight: 300; overflow: hidden; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -moz-transition: background 0.2s; -o-transition: background 0.2s; -webkit-transition: background 0.2s; transition: background 0.2s; }
-.btn:after { content: ""; position: absolute; top: -30px; left: -71px; background: url('../img/icons-s13975e3b91.png') 0 -1092px no-repeat; width: 91px; height: 132px; -moz-transition: -moz-transform 200ms; -o-transition: -o-transform 200ms; -webkit-transition: -webkit-transform 200ms; transition: transform 200ms; }
-.btn:hover { background: #e82f25; }
-.btn:hover:after { -moz-transform: translateX(175px); -ms-transform: translateX(175px); -webkit-transform: translateX(175px); transform: translateX(175px); }
+.btn { position: relative; display: inline-block; height: 47px; line-height: 47px; padding: 0 30px; background: #fa453c; border-radius: 23px; text-decoration: none; color: white; text-transform: uppercase; font-size: 11px; letter-spacing: 1px; font-weight: 300; overflow: hidden; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -moz-transition: background 200ms; -o-transition: background 200ms; -webkit-transition: background 200ms; transition: background 200ms; }
+.btn:after { content: ""; position: absolute; top: -30px; left: -71px; background: url('../img/icons-s13975e3b91.png') 0 -1092px no-repeat; width: 91px; height: 132px; -moz-transition: none; -o-transition: none; -webkit-transition: none; transition: none; }
+.btn:hover { background: #e82f25; -moz-transition: none; -o-transition: none; -webkit-transition: none; transition: none; }
+.btn:hover:after { -moz-transition: -moz-transform 200ms; -o-transition: -o-transform 200ms; -webkit-transition: -webkit-transform 200ms; transition: transform 200ms; -moz-transform: translateX(175px); -ms-transform: translateX(175px); -webkit-transform: translateX(175px); transform: translateX(175px); }
 .btn.btn_yellow { padding: 0 40px; background: #ffeb12; color: #071427; font-weight: 400; -moz-box-shadow: 0 19px 30px -18px #ffeb12; -webkit-box-shadow: 0 19px 30px -18px #ffeb12; box-shadow: 0 19px 30px -18px #ffeb12; }
 .btn.btn_yellow:hover { background: #e3d219; }
 .btn.btn_yellow:hover:after { -moz-transform: translateX(230px); -ms-transform: translateX(230px); -webkit-transform: translateX(230px); transform: translateX(230px); }
@@ -85,7 +85,7 @@ body { font-family: "Open Sans", sans-serif; font-weight: 300; font-size: 14px; 
 .popup-wrap.is-open .popup { -moz-transform: translateY(0); -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
 
 .popup { position: absolute; top: 50%; left: 50%; margin-top: -78px; margin-left: -206px; width: 356px; height: 100px; background: white; padding: 28px; -moz-transform: translateY(-20px); -ms-transform: translateY(-20px); -webkit-transform: translateY(-20px); transform: translateY(-20px); -moz-transition: all 0.4s; -o-transition: all 0.4s; -webkit-transition: all 0.4s; transition: all 0.4s; opacity: 0; }
-@media only screen and (max-width: 480px) { .popup { width: 260px; height: 80px; padding: 10px; margin-left: -130px; } }
+@media only screen and (max-width: 480px) { .popup { width: 260px; height: 80px; padding: 10px; margin-left: -140px; } }
 
 .share { *zoom: 1; }
 .share:after { content: " "; display: table; clear: both; }

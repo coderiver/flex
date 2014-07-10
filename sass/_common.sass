@@ -187,17 +187,19 @@ body
 	font-weight: 300
 	overflow: hidden
 	+gpu
-	+transition(background 0.2s)
+	+transition(background 200ms)
 	&:after
 		content: ""
 		position: absolute
 		top: -30px
 		left: -71px
 		+s(string)
-		+transition(transform 200ms)
+		+transition(none)
 	&:hover
-		background: #e82f25 
+		background: #e82f25
+		+transition(none) 
 		&:after
+			+transition(transform 200ms)
 			+transform(translateX(175px))
 	&.btn_yellow
 		padding: 0 40px 
@@ -255,7 +257,7 @@ body
 		width: 260px
 		height: 80px
 		padding: 10px
-		margin-left: -130px  	
+		margin-left: -140px  	
 .share
 	+clr
 	li
