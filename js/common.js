@@ -8,7 +8,7 @@ $(document).ready(function() {
 		$('a').click(function(ev) {
 			ev.preventDefault();
 			var inner_link = $(this).attr('rel');
-			if (inner_link == 'inner') {
+			if (inner_link == 'internal') {
 			}
 			else{
 				loader.show();
