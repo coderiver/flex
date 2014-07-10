@@ -424,7 +424,13 @@
 		.m-works__logo
 			opacity: 0
 		.m-works__img-blur
-			opacity: 0		 	 							   						
+			opacity: 0
+	+r(w768)
+		&:hover
+			.m-works__img-blur
+				opacity: 1
+			.m-works__logo
+				opacity: 1					 	 							   						
 .expedition-logo
 	+s(expedition-logo)
 .mattioli-logo

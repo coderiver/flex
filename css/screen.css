@@ -268,6 +268,8 @@ body { font-family: "Open Sans", sans-serif; font-weight: 300; font-size: 14px; 
 .m-works__logo img { position: relative; display: inline-block; vertical-align: middle; max-width: 100%; }
 .m-works:hover .m-works__logo { opacity: 0; }
 .m-works:hover .m-works__img-blur { opacity: 0; }
+@media only screen and (max-width: 768px) { .m-works:hover .m-works__img-blur { opacity: 1; }
+  .m-works:hover .m-works__logo { opacity: 1; } }
 
 .expedition-logo { background: url('../img/icons-s13975e3b91.png') 0 -312px no-repeat; width: 82px; height: 103px; }
 
