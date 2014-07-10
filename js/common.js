@@ -213,7 +213,7 @@ $(document).ready(function() {
 // m-events
 
 	function m_events(){
-		if ($('.header__phone').css('display') == 'none') {
+		if ($('.out').css('cursor') == 'default') {
 			$('.m-events__item:last-child').hide();
 		}
 		else{

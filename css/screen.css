@@ -22,6 +22,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 body { font-family: "Open Sans", sans-serif; font-weight: 300; font-size: 14px; line-height: 1.4; background: #444444; }
 
 .out { background: white; }
+@media only screen and (max-width: 1024px) { .out { cursor: default; } }
 
 .h2 { padding-bottom: 30px; font-size: 36px; font-weight: 300; color: white; text-align: center; }
 .h2 span { font-weight: 400; }
@@ -363,7 +364,10 @@ body { font-family: "Open Sans", sans-serif; font-weight: 300; font-size: 14px; 
 .m-events__item:hover .m-events__date { color: rgba(255, 255, 255, 0.8); }
 .m-events__item:hover .m-events__text { color: white; }
 @media only screen and (max-width: 1024px) { .m-events__item { width: 25%; } }
-@media only screen and (max-width: 768px) { .m-events__item { width: 50%; height: 150px; } }
+@media only screen and (max-width: 768px) { .m-events__item { width: 50%; height: 150px; }
+  .m-events__item:hover { background: #ffeb12; }
+  .m-events__item:hover .m-events__date { color: rgba(22, 22, 22, 0.8); }
+  .m-events__item:hover .m-events__text { color: #414141; } }
 @media only screen and (max-width: 480px) { .m-events__item { width: 100%; }
   .m-events__item:first-child { height: 90px; } }
 .m-events__inner { position: absolute; top: 45px; right: 10%; bottom: 10%; left: 10%; overflow: hidden; z-index: 2; }
