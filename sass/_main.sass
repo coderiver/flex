@@ -181,7 +181,12 @@
 					&:after
 						height: 2px
 						opacity: 1
-						+transform(translateY(2px))
+						+transform(translateY(4px))
+				&.is-active
+					&:after
+						height: 2px
+						opacity: 1
+						+transform(translateY(4px))		
 	+r(w768)
 		overflow: visible
 		padding: 80px 0 45px 
@@ -316,17 +321,30 @@
 		text-align: center
 		z-index: 2
 		a
+			position: relative
 			display: inline-block
 			vertical-align: middle
-			margin: 0 11px
-			width: 8px
-			height: 8px  
-			border-radius: 50%
-			background: #fff
+			margin: 0 5px
+			width: 20px
+			height: 20px
 			+transition(transform 200ms)
-			&.is-active 
-				+transform(translate3d(0,0,0) scale(1.4))
-				background: #ffeb12
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				left: 50%
+				margin: -4px 0 0 -4px
+				width: 8px
+				height: 8px
+				border-radius: 50% 
+				background: #FFF  
+			&.is-active
+				&:before 
+					+transform(translate3d(0,0,0) scale(1.4))
+					background: #ffeb12
+			&:hover
+				&:before
+					background: #ffeb12	
 		+r(w480)
 			bottom: 35px 				
 	&__content
