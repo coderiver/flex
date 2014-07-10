@@ -1,4 +1,23 @@
-head.ready(function() {
+$(document).ready(function() {
+
+// pages transition
+
+(function() {
+		var loader = new SVGLoader( document.getElementById( 'loader' ), { speedIn : 100 } );
+
+		$('a').click(function(ev) {
+			ev.preventDefault();
+			loader.show();
+
+			var route = $(this).attr('href');
+			// after some time hide loader
+			setTimeout( function() {
+				//loader.hide();
+				window.location.href = route;
+			}, 1000 );
+		});
+
+	})();
 
 // slider
 
