@@ -409,6 +409,7 @@
 	bottom: 0px
 	overflow: hidden
 	font-size: 0
+	+gpu
 	&__img
 		position: absolute
 		top: 0px
@@ -417,6 +418,8 @@
 		bottom: 0px
 		z-index: 1
 		+cover
+		+transform(scale(1.03))
+		+transition(all 0.3s ease)
 	&__img-blur
 		position: absolute
 		top: 0px
@@ -424,7 +427,7 @@
 		right: 0px
 		bottom: 0px
 		z-index: 2
-		+tr(opacity 200ms linear)
+		+tr(opacity 300ms linear)
 		+gpu
 		+cover		
 	&__logo
@@ -434,7 +437,7 @@
 		right: 0px
 		bottom: 0px
 		+vertical
-		+tr(opacity 300ms)
+		+tr(all 300ms)
 		z-index: 3
 		img
 			position: relative
@@ -442,7 +445,10 @@
 			vertical-align: middle
 			max-width: 100%		
 	&:hover
+		.m-works__img
+			+transform(scale(1))
 		.m-works__logo
+			+transform(scale(0.7) translate3d(0, -60px, 0))
 			opacity: 0
 		.m-works__img-blur
 			opacity: 0
