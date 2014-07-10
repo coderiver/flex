@@ -213,7 +213,8 @@ body { font-family: "Open Sans", sans-serif; font-weight: 300; font-size: 14px; 
   .menu ul { display: block; padding: 0 30px; }
   .menu ul li { display: block; }
   .menu ul li a { display: inline-block; height: 30px; line-height: 30px; }
-  .menu ul li a:hover:after { -moz-transform: translateY(-4px); -ms-transform: translateY(-4px); -webkit-transform: translateY(-4px); transform: translateY(-4px); } }
+  .menu ul li a:hover:after { -moz-transform: translateY(-4px); -ms-transform: translateY(-4px); -webkit-transform: translateY(-4px); transform: translateY(-4px); }
+  .menu ul li a.is-active:after { -moz-transform: translateY(-4px); -ms-transform: translateY(-4px); -webkit-transform: translateY(-4px); transform: translateY(-4px); } }
 
 .header__tools { float: right; height: 110px; }
 .header__tools:before { content: ""; display: inline-block; width: 0; height: 100%; vertical-align: middle; }

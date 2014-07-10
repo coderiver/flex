@@ -7,14 +7,20 @@ $(document).ready(function() {
 
 		$('a').click(function(ev) {
 			ev.preventDefault();
-			loader.show();
+			var inner_link = $(this).attr('rel');
+			if (inner_link == 'inner') {
+			}
+			else{
+				loader.show();
 
-			var route = $(this).attr('href');
-			// after some time hide loader
-			setTimeout( function() {
-				//loader.hide();
-				window.location.href = route;
-			}, 1000 );
+				var route = $(this).attr('href');
+				
+				setTimeout( function() {
+					
+					window.location.href = route;
+				}, 1000 );
+			}
+			
 		});
 
 	})();
