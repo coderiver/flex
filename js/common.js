@@ -226,22 +226,22 @@ $(document).ready(function() {
 
 // portfolio navigation
 
-	function portfolioNav() {
-		if ($('.js-portfolio').length) {
-			$('.portfolio__dropdown').hide();
+	function filters() {
+		if ($('.js-filters').length) {
+			$('.filters__dropdown').hide();
 
-			var btn = $('.js-portfolio-nav a');
+			var btn = $('.js-filters-nav a');
 
 
 			btn.on('click', function(){
 				var index = $(this).attr('href');
 				if ($(this).hasClass('is-active')) {
-					$('.portfolio__dropdown').slideUp();
+					$('.filters__dropdown').slideUp();
 					$(this).removeClass('is-active');
 					
 				}
 				else{
-					$('.portfolio__dropdown').slideUp();
+					$('.filters__dropdown').slideUp();
 					btn.removeClass('is-active');
 					$(this).addClass('is-active');
 					$('.'+index+'').slideDown();
@@ -252,7 +252,7 @@ $(document).ready(function() {
 
 		}
 	} 
-	portfolioNav();
+	filters();
 
 // popup
 	

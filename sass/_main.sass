@@ -2,7 +2,13 @@
 .topper
 	position: relative
 	background: #fa453c
+	text-align: center
+	padding-top: 150px
 	z-index: 99
+	+r(w768)
+		padding-top: 80px
+	.pagewrap_blog &
+		background: #2c3e50 
 .wrapper
 	position: relative
 	&.has-blur
@@ -66,11 +72,13 @@
 				visibility: visible
 				+transition(transform 0.5s)
 				+transform(translate3d(-200px, 0, 0) rotateY(0deg))
+		.pagewrap_blog &
+			background: #2c3e50 		
 	+r(w320)
 		width: 320px
 		+transform(translate3d(-320px, 0, 0) rotateY(90deg))
 		&.is-open
-			+transform(translate3d(-320px, 0, 0) rotateY(0deg))			
+			+transform(translate3d(-320px, 0, 0) rotateY(0deg))					
 .header
 	position: absolute
 	top: 0
@@ -91,7 +99,9 @@
 		right: 20px
 		+s(close)
 		cursor: pointer
-		z-index: 2	
+		z-index: 2
+	.pagewrap_blog &
+		background: #2c3e50 
 	+r(w900)
 		padding: 0 20px 	
 	+r(w768)
@@ -143,7 +153,9 @@
 		z-index: -1		
 	&.is-active
 		opacity: 0
-		z-index: 0	
+		z-index: 0
+	.pagewrap_blog &
+		background: #2c3e50 		
 	+r(w768)
 		display: block	 
 .menu
@@ -265,7 +277,13 @@
 			+transform(translate3d(0, 0, 0) scale(0.96))
 			&:after
 				+animation(pulse 1s linear)
-				+box-shadow(0 0px 5px 2px #fa453c)	
+				+box-shadow(0 0px 5px 2px #fa453c)
+	&.like_gray
+		a
+			+s(like-gray)
+			&:hover
+				&:after
+					+box-shadow(0 0px 5px 2px #2c3e50)				
 
 // slider
 .slider
@@ -277,7 +295,18 @@
 	+r(w768)
 		height: 580px
 	+r(w480)
-		height: 360px	 	
+		height: 360px
+	&__topper
+		position: absolute
+		top: 230px
+		left: 0
+		right: 0
+		text-align: center
+		z-index: 999
+		+r(w768)
+			top: 125px
+		+r(w480)
+			top: 100px		 	
 	&__list
 		position: relative
 		overflow: hidden
@@ -360,11 +389,11 @@
 	&__content
 		max-width: 800px
 		margin: 0 auto  
-		padding: 225px 50px 0
+		padding: 350px 50px 0
 		+r(w768)
-			padding: 120px 50px 0
+			padding: 215px 50px 0
 		+r(w480)
-			padding: 100px 20px 0	
+			padding: 175px 20px 0	
 .logo-big
 	position: relative
 	display: inline-block
@@ -390,7 +419,7 @@
 	+r(w480)
 		font-size: 21px
 		&:before
-			top: -13px	 	
+			top: -13px			 	
 .slider__text
 	font-size: 24px
 	text-transform: uppercase
