@@ -120,6 +120,61 @@
             font-weight: 400                            
     &__inner
         display: inline-block
-        vertical-align: middle      
+        vertical-align: middle
+        
+.quote
+    position: relative
+    font-size: 16px
+    color: #161616
+    font-weight: 300
+    text-align: left 
+    line-height: 1.8
+    &:before
+        content: ""
+        position: absolute
+        top: -5px
+        left: -50px
+        +s(quote)
+    &__text
+        margin-bottom: 20px
+    &__author
+        font-size: 0
+        img
+            display: inline-block
+            vertical-align: middle
+            margin-right: 25px
+        span
+            display: inline-block
+            vertical-align: middle
+            font-size: 14px
+            color: #939393
+            font-weight: 300
+    +r(w1280)
+        font-size: 14px
+        line-height: 1.6
+        padding: 20px
+        &:before
+            top: 20px
+            left: -19px
+    +r(w900)
+        font-size: 13px
+        .quote__text
+            margin-bottom: 10px
+        .quote__author
+            span
+                font-size: 13px
+    +r(w768)
+        margin: 0 10%
+        font-size: 16px
+        line-height: 1.8
+    +r(w568)
+        font-size: 14px
+        line-height: 1.6
+    +r(w480)
+        margin: 0 
+        padding: 10px 0 10px 20px
+        &:before
+            top: 10px    
+
                               
                             
