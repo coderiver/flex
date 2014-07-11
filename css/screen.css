@@ -103,6 +103,9 @@ body { font-family: "Open Sans", sans-serif; font-weight: 300; font-size: 14px; 
 .pageload-overlay.show { visibility: visible; }
 .pageload-overlay svg { position: absolute; top: 0; left: 0; pointer-events: none; }
 .pageload-overlay svg path { fill: white; }
+@media only screen and (max-width: 768px) { .pageload-overlay { display: none; } }
+
+@media only screen and (max-width: 768px) { .fakeoverlay { display: none; } }
 
 .box-wrap { *zoom: 1; background: black; }
 .box-wrap:after { content: " "; display: table; clear: both; }

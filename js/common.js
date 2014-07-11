@@ -3,25 +3,27 @@ $(document).ready(function() {
 // pages transition
 
 (function() {
-		var loader = new SVGLoader( document.getElementById( 'loader' ), { speedIn : 100 } );
 
-		$('a').click(function(ev) {
-			ev.preventDefault();
-			var inner_link = $(this).attr('rel');
-			if (inner_link == 'internal') {
-			}
-			else{
-				loader.show();
+			var loader = new SVGLoader( document.getElementById( 'loader' ), { speedIn : 100 } );
 
-				var route = $(this).attr('href');
-				
-				setTimeout( function() {
+			$('a').click(function(ev) {
+				ev.preventDefault();
+				var inner_link = $(this).attr('rel');
+				if (inner_link == 'internal') {
+				}
+				else{
+					loader.show();
+	
+					var route = $(this).attr('href');
 					
-					window.location.href = route;
-				}, 1000 );
-			}
-			
-		});
+					setTimeout( function() {
+						
+						window.location.href = route;
+					}, 1000 );
+				}
+				
+			});
+		
 
 	})();
 
