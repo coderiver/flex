@@ -245,7 +245,7 @@ $(document).ready(function() {
 					btn.removeClass('is-active');
 					$(this).addClass('is-active');
 					$('.'+index+'').slideDown();
-					link.removeClass('is-active');
+					link.removeClass('is-active').removeClass('no-active');
 				}
 
 				return false;
@@ -260,7 +260,6 @@ $(document).ready(function() {
 					$('.filters__dropdown a').addClass('no-active').removeClass('is-active');
 					$(this).removeClass('no-active').addClass('is-active');
 				}
-				
 
 				return false;
 			});
