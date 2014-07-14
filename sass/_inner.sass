@@ -199,31 +199,118 @@
 .blog
     width: 50%
     float: left
-    a
-        display: block
-        width: 100%
+    +r(w800)
+        width: 100% 
+    &__container
+        position: relative
         height: 0
         padding-bottom: 60%
+    a
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
         background: #3db670
+        text-decoration: none
+        font-size: 0
+        vertical-align: middle
+        color: #fff
+        +tr(background 200ms)
+        &:before
+            content: ""
+            display: inline-block
+            width: 0
+            height: 100%
+            vertical-align: middle
+        &:hover
+            background: lighten(#3db670, 10%)
+        &:visited
+            color: rgba(#fff, 0.5)
+            .link
+                color: rgba(#fff, 0.5)
+            .blog__author
+                color: rgba(#fff, 0.5)              
     &.blog_blue
         a
-            background: #2980b9                      
+            background: #2980b9
+            &:hover
+                background: lighten(#2980b9, 10%)                      
     &.blog_yellow
         a
-            background: #e9bc21 
+            background: #e9bc21
+            &:hover
+                background: lighten(#e9bc21, 10%) 
     &.blog_violet
         a
             background: #9b59b6
+            &:hover
+                background: lighten(#9b59b6, 10%)
     &.blog_red
         a
             background: #e74c3c
+            &:hover
+                background: lighten(#e74c3c, 10%)
     &.blog_orange
         a
             background: #e67e22
+            &:hover
+                background: lighten(#e67e22, 10%)
     &.blog_turquoise
         a
             background: #1abc9c
+            &:hover
+                background: lighten(#1abc9c, 10%)
     &__inner
+        display: inline-block
+        vertical-align: middle
         +box
-        padding: 13%                                         
+        padding: 0 13%
+        +r(w1180)
+            padding: 0 5%
+        +r(w800)
+            padding: 0 10%
+        +r(w480)
+            padding: 0 5%           
+    &__date
+        color: rgba(#fff, .5)
+        font-size: 12px
+        margin-bottom: 40px
+        +r(w1180)
+            margin-bottom: 20px
+        +r(w800)
+            margin-bottom: 40px
+        +r(w480)
+            margin-bottom: 20px        
+    .link
+        color: #fff
+        margin-bottom: 45px
+        span
+            +s(arr-right-white)
+        &:hover
+            span
+                +s(arr-right-white)
+        +r(w1180)
+            margin-bottom: 25px
+            font-size: 20px
+        +r(w800)
+            margin-bottom: 45px
+            font-size: 24px
+        +r(w568)
+            font-size: 20px
+        +r(w480)
+            font-size: 18px
+            margin-bottom: 25px
+        +r(w360)
+            font-size: 16px                          
+    &__author
+        vertical-align: middle
+        font-size: 0
+        img, span
+            display: inline-block
+            vertical-align: middle
+        img
+            margin-right: 25px
+        span
+            font-size: 14px                                                                  
                             
