@@ -48,6 +48,7 @@
         text-align: center
         background: #df3027
         li
+            position: relative
             display: inline-block
             margin: 0 20px
             a
@@ -56,7 +57,21 @@
                 line-height: 80px 
                 font-weight: 300
                 color: #fff
-                text-decoration: none
+                text-decoration: none   
+                .filters__reset
+                    display: none
+                    position: absolute
+                    top: 50%
+                    left: -18px
+                    padding-right: 6px
+                    margin-top: -6px 
+                    cursor: pointer
+                    +s(reset)
+                &.is-active
+                    .filters__reset
+                        display: block
+                &.no-active
+                    color: rgba(#fff, 0.5)           
         .pagewrap_blog &
             background: #1d2c3b         
 .services
