@@ -286,6 +286,14 @@ $(document).ready(function() {
 		event.stopPropagation();
 	});			
 
+// slick gallery
+
+	$('.js-gallery').slick({
+		dots: true,
+		responsive: true
+	});
+
+
 //resize function
 
 	$(window).resize(function(){
