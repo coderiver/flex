@@ -416,7 +416,7 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 .m-events__list:after { content: " "; display: table; clear: both; }
 .m-events__item { position: relative; float: left; width: 20%; height: 200px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-transition: background 300ms; -o-transition: background 300ms; -webkit-transition: background 300ms; transition: background 300ms; vertical-align: middle; }
 .m-events__item:first-child { text-align: center; }
-.m-events__item:first-child .m-events__inner { text-align: center; font-size: 0; }
+.m-events__item:first-child .m-events__inner { text-align: center; font-size: 0; top: 10%; }
 .m-events__item:first-child .m-events__inner:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .m-events__item:first-child .link { vertical-align: middle; margin-bottom: 0; }
 .m-events__item:first-child:hover { background: #ffeb12; }
