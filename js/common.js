@@ -289,10 +289,29 @@ $(document).ready(function() {
 // slick gallery
 
 	$('.js-gallery').slick({
-		dots: true,
-		responsive: true
+		dots: true
 	});
 
+// article nav position
+
+	function article_nav() {
+		if ($('.article-nav').length) {
+
+			var nav = $('.article-nav'),
+				point = $('.footer').offset().top,
+				scroll_top = ($(window).scrollTop() + $(window).height());
+				console.log(point);
+
+				if (scroll_top >= point ) {
+					nav.addClass('no-fixed');
+				}
+				else{
+					nav.removeClass('no-fixed');
+				}
+		}
+	} 
+	article_nav();
+	
 
 //resize function
 
@@ -307,6 +326,7 @@ $(document).ready(function() {
 	$(window).scroll(function(){
 		scrollUp();
 		header();
+		article_nav();
 	})
 	
 });
