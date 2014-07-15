@@ -533,7 +533,10 @@
 	+r(w560)
 		font-size: 16px
 	+r(w480)
-		font-size: 14px				
+		font-size: 14px
+.m-works-wrap
+	position: relative
+	z-index: 2						
 .m-works
 	position: absolute
 	top: 0px
@@ -758,6 +761,7 @@
 // m-events
 .m-events
 	position: relative
+	z-index: 2
 	top: -1px
 	&__list
 		+clr 
@@ -821,8 +825,10 @@
 		font-weight: 400 
 		color: #414141
 		+tr(color 300ms)
-.m-services 
+.m-services
+	position: relative 
 	background: #ebf0f1
+	z-index: 2
 	&__alert
 		text-align: center
 		padding: 75px 50px 
@@ -836,21 +842,24 @@
 		+r(w480)
 			font-size: 20px		
 .m-clients
+	position: relative
 	padding: 92px 50px
-	background: url(../img/clients-bg.jpg) no-repeat
-	+cover
-	background-attachment: fixed
 	text-align: center
+	z-index: 1
 	&__title
+		position: relative
 		margin-bottom: 85px
 		color: #fff
 		font-size: 24px
 		text-transform: uppercase
+		z-index: 2
 		span
 			font-weight: 400
 	&__list
+		position: relative
 		font-size: 0
 		line-height: 1
+		z-index: 2
 		li
 			display: inline-block
 			vertical-align: middle
@@ -864,16 +873,28 @@
 			li
 				width: 45%
 	&__btn
-		position: relative		
+		position: relative
+		z-index: 2
+	+r(w1024)
+		background: url(../img/clients-bg.jpg) no-repeat
+		+cover
 	+r(w900)
 		padding: 52px 20px
-	+r(w768)
-		background-attachment: scroll
 	+r(w480)
 		padding: 52px 0
 		.m-clients__title
 			font-size: 18px
-			margin-bottom: 58px 		 						 
+			margin-bottom: 58px 
+.video-holder
+	position: fixed
+	top: 180px
+	left: 0
+	z-index: 1
+	width: 100%
+	min-width: 1366px
+	min-height: 768px
+	+r(w1024)
+		display: none 					 						 
 		 		   			
 						
 			 	
