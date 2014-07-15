@@ -141,6 +141,7 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 @media only screen and (max-width: 768px) { .box.box_high { padding-bottom: 100%; } }
 .box.box_w { padding-bottom: 50%; }
 @media only screen and (max-width: 400px) { .box.box_w { padding-bottom: 100%; } }
+@media only screen and (max-width: 320px) { .box.box_w { padding-bottom: 80%; } }
 .m-services .box { border-bottom: 1px solid #f0f0f0; border-left: 1px solid #f0f0f0; }
 
 @media only screen and (max-width: 1180px) { .m-service__col1 { width: 50%; }
@@ -294,6 +295,7 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 .slider__topper { position: absolute; top: 230px; left: 0; right: 0; text-align: center; z-index: 999; }
 @media only screen and (max-width: 768px) { .slider__topper { top: 125px; } }
 @media only screen and (max-width: 480px) { .slider__topper { top: 100px; } }
+@media only screen and (max-width: 320px) { .slider__topper { top: 70px; } }
 .slider__list { position: relative; overflow: hidden; height: 100%; width: 100%; }
 .slider__list > li { position: absolute; top: 0; right: 0; left: auto; width: 100%; height: 100%; font-size: 0; overflow: hidden; background: #fa453c; text-align: center; }
 .slider__list > li.slider__left-item { left: 0; right: auto; }
@@ -315,6 +317,7 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 .slider__content { max-width: 800px; margin: 0 auto; padding: 350px 50px 0; }
 @media only screen and (max-width: 768px) { .slider__content { padding: 215px 50px 0; } }
 @media only screen and (max-width: 480px) { .slider__content { padding: 175px 20px 0; } }
+@media only screen and (max-width: 320px) { .slider__content { padding: 140px 20px 0; } }
 
 .logo-big { position: relative; display: none; margin-bottom: 80px; padding-left: 73px; font-size: 32px; font-weight: 700; color: white; text-decoration: none; text-transform: uppercase; }
 .logo-big:before { content: ""; position: absolute; top: -4px; left: 0; background: url('../img/icons-sd3ac7fe56f.png') 0 -903px no-repeat; width: 55px; height: 56px; }
@@ -388,6 +391,7 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 @media only screen and (max-width: 480px) { .m-portfolio__right ul { padding-left: 25%; }
   .m-portfolio__right ul li { width: 100%; margin-bottom: 10px; }
   .m-portfolio__right img { display: block; margin: 5px auto; } }
+@media only screen and (max-width: 320px) { .m-portfolio__right img { margin: 5px auto 20px; } }
 .m-portfolio:hover .link { color: #f3463d; }
 .m-portfolio:hover .link span { background: url('../img/icons-sd3ac7fe56f.png') 0 -18px no-repeat; width: 7px; height: 13px; }
 @media only screen and (max-width: 900px) { .m-portfolio.m-portfolio_mod { padding: 5px 20px; } }
@@ -434,6 +438,7 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 .m-services__alert { text-align: center; padding: 75px 50px; color: #161616; font-weight: 300; font-size: 36px; }
 @media only screen and (max-width: 900px) { .m-services__alert { font-size: 30px; } }
 @media only screen and (max-width: 768px) { .m-services__alert { font-size: 24px; } }
+@media only screen and (max-width: 480px) { .m-services__alert { font-size: 20px; } }
 
 .m-clients { padding: 92px 50px; background: url(../img/clients-bg.jpg) no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; background-attachment: fixed; text-align: center; }
 .m-clients__title { margin-bottom: 85px; color: white; font-size: 24px; text-transform: uppercase; }
@@ -445,7 +450,8 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 .m-clients__btn { position: relative; }
 @media only screen and (max-width: 900px) { .m-clients { padding: 52px 20px; } }
 @media only screen and (max-width: 768px) { .m-clients { background-attachment: scroll; } }
-@media only screen and (max-width: 480px) { .m-clients { padding: 52px 0; } }
+@media only screen and (max-width: 480px) { .m-clients { padding: 52px 0; }
+  .m-clients .m-clients__title { font-size: 18px; margin-bottom: 58px; } }
 
 .portfolio { text-align: center; }
 @media only screen and (max-width: 768px) { .portfolio { padding-top: 80px; } }
