@@ -102,7 +102,7 @@ $(document).ready(function() {
 					next.addClass('is-hidden');
 				};
 				return false;
-			})
+			});
 
 			next.on('click', function(){
 				prev.removeClass('is-hidden');
@@ -318,7 +318,6 @@ $(document).ready(function() {
 //resize function
 
 	$(window).resize(function(){
-		slider();
 		header();
 		m_events();
 	});
