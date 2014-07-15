@@ -119,10 +119,10 @@ $(document).ready(function() {
 			});
 
 			slider.swipe({
-				swipeLeft: function(event, direction, distance, duration, fingerCount) {
+				swipeLeft: function(e) {
 				    next.trigger('click');
 				},
-				swipeRight: function(event, direction, distance, duration, fingerCount) {
+				swipeRight: function(e) {
 				    prev.trigger('click');
 				},
 				//Default is 75px, set to 0 for demo so any distance triggers swipe
