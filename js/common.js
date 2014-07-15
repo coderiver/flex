@@ -287,10 +287,12 @@ $(document).ready(function() {
 	});			
 
 // slick gallery
-
-	$('.js-gallery').slick({
-		dots: true
-	});
+	if ($('.js-gallery').length) {
+		$('.js-gallery').slick({
+			dots: true
+		});
+	};
+	
 
 // article nav position
 
