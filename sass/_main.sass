@@ -762,7 +762,7 @@
 .m-events
 	position: relative
 	z-index: 2
-	top: -1px
+	//top: -1px
 	&__list
 		+clr 
 		background: #ffeb12 
@@ -830,11 +830,15 @@
 	background: #ebf0f1
 	z-index: 2
 	&__alert
+		position: relative
+		top: -2px
 		text-align: center
 		padding: 75px 50px 
 		color: #161616
 		font-weight: 300
 		font-size: 36px
+		background: #ebf0f1
+		z-index: 2
 		+r(w900)
 			font-size: 30px
 		+r(w768)
