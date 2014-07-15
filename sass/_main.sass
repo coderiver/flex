@@ -8,9 +8,21 @@
 	+r(w768)
 		padding-top: 80px
 	.l-gray &
-		background: #2c3e50
+		background: $gray
 	.l-green &
-		background: #27ae60
+		background: $green
+	.l-red &
+		background: $red
+	.l-blue &
+		background: $blue
+	.l-yellow &
+		background: $yellow
+	.l-violet &
+		background: $violet
+	.l-orange &
+		background: $orange
+	.l-turquoise & 
+		background: $turquoise	
 .wrapper
 	position: relative
 	&.has-blur
@@ -75,9 +87,21 @@
 				+transition(transform 0.5s)
 				+transform(translate3d(-200px, 0, 0) rotateY(0deg))
 		.l-gray &
-			background: #2c3e50
+			background: $gray
 		.l-green &
-			background: #27ae60 
+			background: $green
+		.l-red &
+			background: $red
+		.l-blue &
+			background: $blue
+		.l-yellow &
+			background: $yellow
+		.l-violet &
+			background: $violet
+		.l-orange &
+			background: $orange
+		.l-turquoise & 
+			background: $turquoise 
 	+r(w320)
 		width: 320px
 		+transform(translate3d(-320px, 0, 0) rotateY(90deg))
@@ -105,9 +129,21 @@
 		cursor: pointer
 		z-index: 2
 	.l-gray &
-		background: #2c3e50
+		background: $gray
 	.l-green &
-		background: #27ae60	 
+		background: $green
+	.l-red &
+		background: $red
+	.l-blue &
+		background: $blue
+	.l-yellow &
+		background: $yellow
+	.l-violet &
+		background: $violet
+	.l-orange &
+		background: $orange
+	.l-turquoise & 
+		background: $turquoise	 
 	+r(w900)
 		padding: 0 20px 	
 	+r(w768)
@@ -161,9 +197,21 @@
 		opacity: 0
 		z-index: 0
 	.l-gray &
-		background: #2c3e50
+		background: $gray
 	.l-green &
-		background: #27ae60	 		
+		background: $green
+	.l-red &
+		background: $red
+	.l-blue &
+		background: $blue
+	.l-yellow &
+		background: $yellow
+	.l-violet &
+		background: $violet
+	.l-orange &
+		background: $orange
+	.l-turquoise & 
+		background: $turquoise	 		
 	+r(w768)
 		display: block	 
 .menu
@@ -266,7 +314,7 @@
 	a
 		position: relative
 		display: inline-block
-		+s(like)
+		+s(like-red)
 		+transition(transform ease-out 0.1s)
 		&:after
 			content: ""
@@ -291,13 +339,43 @@
 			+s(like-gray)
 			&:hover
 				&:after
-					+box-shadow(0 0px 5px 2px #2c3e50)
+					+box-shadow(0 0px 5px 2px $gray)
 	.l-green &
 		a
 			+s(like-green)
 			&:hover
 				&:after
-					+box-shadow(0 0px 5px 2px #27ae60)								
+					+box-shadow(0 0px 5px 2px $green)
+	.l-blue &
+		a
+			+s(like-blue)
+			&:hover
+				&:after
+					+box-shadow(0 0px 5px 2px $blue)
+	.l-yellow &
+		a
+			+s(like-yellow)
+			&:hover
+				&:after
+					+box-shadow(0 0px 5px 2px $yellow)
+	.l-violet &
+		a
+			+s(like-violet)
+			&:hover
+				&:after
+					+box-shadow(0 0px 5px 2px $violet)
+	.l-orange &
+		a
+			+s(like-orange)
+			&:hover
+				&:after
+					+box-shadow(0 0px 5px 2px $orange)
+	.l-turquoise &
+		a
+			+s(like-turquoise)
+			&:hover
+				&:after
+					+box-shadow(0 0px 5px 2px $turquoise)																												
 
 // slider
 .slider

@@ -226,7 +226,6 @@
         left: 0
         bottom: 0
         right: 0
-        background: #3db670
         text-decoration: none
         font-size: 0
         vertical-align: middle
@@ -238,44 +237,52 @@
             width: 0
             height: 100%
             vertical-align: middle
-        &:hover
-            background: lighten(#3db670, 10%)
         &:visited
             color: rgba(#fff, 0.5)
             .link
                 color: rgba(#fff, 0.5)
             .blog__author
-                color: rgba(#fff, 0.5)              
+                color: rgba(#fff, 0.5)
+    &.blog_gray
+        a
+            background: $gray
+            &:hover
+                background: lighten($gray, 10%)
+    &.blog_green
+        a
+            background: $green
+            &:hover
+                background: lighten($green, 10%)                                      
     &.blog_blue
         a
-            background: #2980b9
+            background: $blue
             &:hover
-                background: lighten(#2980b9, 10%)                      
+                background: lighten($blue, 10%)                      
     &.blog_yellow
         a
-            background: #e9bc21
+            background: $yellow
             &:hover
-                background: lighten(#e9bc21, 10%) 
+                background: lighten($yellow, 10%) 
     &.blog_violet
         a
-            background: #9b59b6
+            background: $violet
             &:hover
-                background: lighten(#9b59b6, 10%)
+                background: lighten($violet, 10%)
     &.blog_red
         a
-            background: #e74c3c
+            background: $red
             &:hover
-                background: lighten(#e74c3c, 10%)
+                background: lighten($red, 10%)
     &.blog_orange
         a
-            background: #e67e22
+            background: $orange
             &:hover
-                background: lighten(#e67e22, 10%)
+                background: lighten($orange, 10%)
     &.blog_turquoise
         a
-            background: #1abc9c
+            background: $turquoise
             &:hover
-                background: lighten(#1abc9c, 10%)
+                background: lighten($turquoise, 10%)
     &__inner
         display: inline-block
         vertical-align: middle
@@ -374,9 +381,30 @@
         line-height: 1.6
     a:hover
         text-decoration: none
+    .l-gray &
+        a
+            color: $gray
     .l-green &
         a
-            color: #27ae60
+            color: $green
+    .l-red &
+        a
+            color: $red
+    .l-blue &
+        a
+            color: $blue
+    .l-yellow &
+        a
+            color: $yellow
+    .l-violet &
+        a
+            color: $violet
+    .l-orange &
+        a
+            color: $orange
+    .l-turquoise & 
+        a
+            color: $turquoise                        
     &__quote
         padding-bottom: 32px
         margin-bottom: 60px  
@@ -388,8 +416,22 @@
             font-style: italic
             padding-left: 20px
             border-left: 1px solid #27ae60
+            .l-gray &
+                border-left-color: $gray
             .l-green &
-                border-left-color: #27ae60
+                border-left-color: $green
+            .l-red &
+                border-left-color: $red
+            .l-blue &
+                border-left-color: $blue
+            .l-yellow &
+                border-left-color: $yellow
+            .l-violet &
+                border-left-color: $violet
+            .l-orange &
+                border-left-color: $orange
+            .l-turquoise & 
+                border-left-color: $turquoise    
     &__block
         margin-bottom: 60px
         border-bottom: 1px solid #e1e1e1
@@ -404,8 +446,22 @@
                 line-height: 1.6
                 font-weight: 400 
                 font-style: italic
+                .l-gray &
+                    color: $gray
                 .l-green &
-                    color: #27ae60
+                    color: $green
+                .l-red &
+                    color: $red
+                .l-blue &
+                    color: $blue
+                .l-yellow &
+                    color: $yellow
+                .l-violet &
+                    color: $violet
+                .l-orange &
+                    color: $orange
+                .l-turquoise & 
+                    color: $turquoise 
         img
             display: block
             max-width: 100%
@@ -525,9 +581,23 @@
         margin-bottom: 15px
         span
             display: block
-            font-size: 20px 
+            font-size: 20px
+            .l-gray &
+                color: $gray 
             .l-green &
-                color: #27ae60
+                color: $green
+            .l-red &
+                color: $red
+            .l-blue &
+                color: $blue
+            .l-yellow &
+                color: $yellow
+            .l-violet &
+                color: $violet
+            .l-orange &
+                color: $orange
+            .l-turquoise & 
+                color: $turquoise 
         +r(w768)
             width: 45%
         +r(w480)
@@ -551,6 +621,30 @@
                 top: 10px
                 left: 20px
                 +arr(8, 12, #27ae60, r)
+            .l-gray &
+                &:before
+                    +arr(8, 12, $gray, r)    
+            .l-green &
+                &:before
+                    +arr(8, 12, $green, r)
+            .l-red &
+                &:before
+                    +arr(8, 12, $red, r)
+            .l-blue &
+                &:before
+                    +arr(8, 12, $blue, r)
+            .l-yellow &
+                &:before
+                    +arr(8, 12, $yellow, r)
+            .l-violet &
+                &:before
+                    +arr(8, 12, $violet, r)
+            .l-orange &
+                &:before
+                    +arr(8, 12, $orange, r)
+            .l-turquoise &
+                &:before
+                    +arr(8, 12, $turquoise, r)   
         +r(w480)
             li
                 width: 95%
