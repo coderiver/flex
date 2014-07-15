@@ -176,6 +176,7 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 .l-violet .topper { background: #9b59b6; }
 .l-orange .topper { background: #e67e22; }
 .l-turquoise .topper { background: #1abc9c; }
+.topper.topper_index { padding-top: 0; }
 
 .wrapper { position: relative; }
 .wrapper.has-blur { -webkit-filter: blur(3px); filter: blur(3px); filter: progid:DXImageTransform.Microsoft.Blur(pixelRadius=$var); }
