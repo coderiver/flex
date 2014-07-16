@@ -325,8 +325,45 @@ $(document).ready(function() {
 		}
 	} 
 	article_nav();
-	
 
+// tabs
+	
+	function tab() {
+       $(".js-tab").each(function(){
+         var tab_link = $(this).find("a");
+         var tab_item = $(this).find("li");
+         var tab_cont = $(this).parents(".js-tab-group").find(".js-tab-cont");
+         tab_cont.hide();
+         tab_item.first().addClass("is-active");
+         $(this).parents(".js-tab-group").find(".js-tab1").show();
+         tab_link.on("click", function() {
+             var index = $(this).attr("href");
+             tab_item.removeClass("is-active");
+             $(this).parent().addClass("is-active");
+             tab_cont.hide();
+             $(this).parents(".js-tab-group").find("."+index).show();
+             return false;
+          });
+       });
+  	}
+  	tab();	
+
+ // range slider
+ 
+ 	$( "#slider-range" ).slider({
+      range: true,
+      min: 5000,
+      max: 50000,
+      values: [ 5000, 35000 ],
+      step: 1000,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "От $" + ui.values[ 0 ] + " до $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "От $" + $( "#slider-range" ).slider( "values", 0 ) +
+      " до $" + $( "#slider-range" ).slider( "values", 1 ) ); 	
+
+    $( "#slider-range" ).find('.ui-slider-handle:last-child').addClass('is-last');
 //resize function
 
 	$(window).resize(function(){
