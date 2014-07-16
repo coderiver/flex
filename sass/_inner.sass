@@ -709,7 +709,12 @@
             button  
                 +transform(scale(1.5))
                 background: #ffeb12
-
+.feedback
+    margin-bottom: 130px
+    +r(w786)
+        margin-bottom: 100px
+    +r(w568)
+        margin-bottom: 70px     
 .form-nav
     background: $red
     text-align: center
@@ -748,7 +753,8 @@
         margin-bottom: 50px
     &__title
         font-weight: 600
-        font-size: 24px 
+        font-size: 24px
+        color: #072335 
         margin-bottom: 30px
     &__content
         padding: 0 25px
@@ -992,7 +998,97 @@
         display: inline-block
         font-family: 'Open Sans', sans-serif
         font-size: 14px
-        color: #072335            
-                         
-                            
-          
+        color: #072335
+        
+.brif
+    max-width: 690px
+    margin: 0 auto
+    padding-top: 60px                     
+    &__topper
+        text-align: center
+        margin-bottom: 45px
+        padding: 0 10px 
+        p
+            line-height: 2
+            color: #414141
+            font-size: 14px
+    &__title
+        font-size: 24px
+        color: #072335
+        font-weight: 600                          
+        margin-bottom: 30px                    
+    &__content
+        padding: 0 44px
+        +r(w480)
+            padding: 0 10px 
+.download
+    text-align: center
+    font-size: 0
+    margin-bottom: 75px
+    li
+        display: inline-block
+        vertical-align: top
+        margin: 0 40px
+        a
+            font-weight: 400
+            font-size: 14px
+            color: #262626
+        +r(w480)
+            margin: 0 20px              
+.upload
+    &__title
+        margin-bottom: 30px
+        text-align: center
+        text-transform: uppercase
+        font-size: 16px
+        color: #262626
+    &__block
+        position: relative
+        min-height: 98px
+        padding: 18px
+        margin-bottom: 18px 
+        background: #27ae60
+        +box
+        border: 2px dashed #1d8649 
+        input[type="file"]
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            width: 100%
+            opacity: 0
+            z-index: 2
+    &__preview
+        color: #fff 
+    &__add
+        position: absolute
+        top: 50%
+        width: 60px
+        height: 60px
+        margin-top: -30px 
+        margin-right: 28px 
+        border-radius: 2px
+        background: #217745
+        &:before
+            content: ""
+            position: absolute
+            top: 50%
+            left: 50%
+            margin: -17px 0 0 -17px 
+            +s(plus)
+    &__text
+        padding-top: 10px
+        padding-left: 88px
+    &__mail
+        text-align: center
+        color: #262626                         
+        a
+            font-size: 20px
+            color: #fa453c
+            font-weight: 400
+            text-decoration: none
+            span
+                display: inline-block
+                line-height: 1
+                border-bottom: 1px solid #fa453c 
