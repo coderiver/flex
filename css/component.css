@@ -37,7 +37,7 @@
 .progress-button .content::after  {
 	position: absolute;
 	right: 20px;
-	color: #d23f38;
+	color: #fff;
 	font-family: "icomoon";
 	opacity: 0;
 	-webkit-transition: opacity 0.3s 0.3s;
