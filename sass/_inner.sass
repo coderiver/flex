@@ -774,9 +774,7 @@
         +clr
         margin-left: -1%
         .checkbox
-            float: left
-    &__btn
-                             
+            float: left                   
 .input, .textarea
     display: block
     width: 100% 
@@ -1091,4 +1089,135 @@
             span
                 display: inline-block
                 line-height: 1
-                border-bottom: 1px solid #fa453c 
+                border-bottom: 1px solid #fa453c
+                
+// contacts
+.contacts
+    position: relative
+    height: 640px
+    overflow: hidden
+    +gpu
+    +r(w1180)
+        height: 520px
+    +r(w900)
+        height: auto     
+    &__map
+        position: absolute
+        width: 1920px
+        right: 0
+        top: 0  
+        height: 100%
+        z-index: 1 
+    &__inner
+        position: absolute
+        bottom: 0
+        left: 50%
+        margin-left: -480px
+        width: 640px
+        height: 320px
+        background: #fff  
+        +clr
+        +gpu
+        z-index: 2
+        +r(w1180)
+            width: 500px
+            margin-left: 0
+            left: 0
+            height: 260px
+        +r(w900)
+            position: relative
+            width: 100%      
+    &__block
+        float: left
+        width: 50%
+        height: 320px
+        background: #fff
+        +box
+        text-decoration: none
+        color: #6f6f6f
+        border-left: 1px solid #f2f2f2
+        &:first-child
+            border-left: none
+        +r(w1180)
+            height: 260px
+        +r(w480)
+            width: 100%
+            border-left: none
+            text-align: center
+            border-top: 1px solid #f2f2f2          
+    &__content
+        +box
+        padding: 55px 60px
+        .link
+            font-size: 16px
+            text-transform: uppercase
+            font-weight: 400
+        +r(w1180)
+            padding: 20px 30px      
+    &__text
+        line-height: 1.8
+        margin-bottom: 20px
+    &__email
+        font-size: 18px
+        color: #fa453c
+        font-weight: 400                                             
+.adress
+    position: absolute
+    top: 0
+    left: 50%
+    margin-left: -480px
+    width: 640px
+    height: 320px
+    +box
+    border-bottom: 1px solid #f2f2f2   
+    background: #fff
+    font-size: 0  
+    z-index: 2
+    +gpu
+    +r(w1180)
+        width: 500px
+        height: 260px 
+        margin-left: 0
+        left: 0
+    +r(w900)
+        position: relative
+        margin-bottom: 260px
+        width: 100%
+        text-align: center       
+    &:before
+        content: ""
+        display: inline-block
+        width: 0
+        height: 100% 
+        vertical-align: middle
+    &__inner
+        display: inline-block
+        vertical-align: middle
+        font-size: 16px
+        line-height: 1.8
+        +box
+        padding: 20px 100px
+        a
+            display: inline-block
+            margin-right: 10px 
+            color: #fa453c
+            text-decoration: none
+            &.skype
+                color: #1aaee5
+        +r(w900)
+            font-size: 15px
+            padding: 20px         
+    &__item
+        margin-top: 40px
+        &:first-child
+            margin-top: 0
+        +r(w900)
+            margin-top: 20px     
+    &__phone
+        font-weight: 600
+        +r(w900)
+            margin-bottom: 10px
+            span
+                display: block            
+            
+                 
