@@ -203,11 +203,7 @@ window.onpageshow = function(event) {
 		$('.header-wrap').addClass('is-open');
 		return false;
 	});
-	$('.out__inner').on('click', function(){
-		$('.menu-btn').removeClass('is-active');
-		$('.header-wrap').removeClass('is-open');
-		$(this).removeClass('is-open').parent('.out').removeClass('is-open');
-	});
+	
 
 	$('.js-close-sidebar').on('click', function(){
 		$('.menu-btn').removeClass('is-active');
@@ -226,6 +222,11 @@ window.onpageshow = function(event) {
 		},
 		//Default is 75px, set to 0 for demo so any distance triggers swipe
 		threshold: 0
+	});
+	$('.out__inner').on('click', function(){
+		$('.menu-btn').removeClass('is-active');
+		$('.header-wrap').removeClass('is-open');
+		$(this).removeClass('is-open').parent('.out').removeClass('is-open');
 	});
 
 // m-events
@@ -371,8 +372,8 @@ window.onpageshow = function(event) {
  	$( "#slider-range" ).slider({
       range: true,
       min: 5000,
-      max: 50000,
-      values: [ 5000, 35000 ],
+      max: 30000,
+      values: [ 5000, 30000 ],
       step: 1000,
       slide: function( event, ui ) {
         $( "#amount" ).val( "От $" + ui.values[ 0 ] + " до $" + ui.values[ 1 ] );
