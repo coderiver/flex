@@ -1,5 +1,9 @@
 $(document).ready(function() {
-
+window.onpageshow = function(event) {
+    if (event.persisted) {
+        window.location.reload() 
+    }
+};
 // pages transition
 
 (function() {
