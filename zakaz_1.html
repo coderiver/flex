@@ -18,6 +18,7 @@
 	<script src="js/lib/jquery.touchSwipe.min.js"></script>
 	<script src="js/lib/svgLoader.js"></script>
 	<script src="js/lib/progressButton.js"></script>
+	<script src="js/lib/jquery.validate.js"></script>
 	<script src="js/lib/slick.min.js"></script>
 	<script src="js/common.js"></script>
 	<!--[if IE]><script src="js/lib/html5shiv.js"></script><![endif]-->
@@ -81,18 +82,18 @@
 					<p>Чем быстрее вы заполните заявку, тем быстрее мы сделаем для вас клёвый проект</p>
 				</div>
 		  	  	<div class="form__content">
-		  	  		<form>
+		  	  		<form class="js-validate">
 		  	  			<label class="form__item">
-		  	  				<input type="text" class="input" placeholder="Имя">
+		  	  				<input type="text" class="input" placeholder="Имя" required name="name">
 		  	  			</label>
 		  	  			<label class="form__item">
-		  	  				<input type="text" class="input" placeholder="Компания">
+		  	  				<input type="text" class="input" placeholder="Компания" required name="company">
 		  	  			</label>
 		  	  			<label class="form__item">
-		  	  				<input type="text" class="input" placeholder="E-mail">
+		  	  				<input type="text" class="input" placeholder="E-mail" required name="email">
 		  	  			</label>
 		  	  			<label class="form__item">
-		  	  				<input type="text" class="input" placeholder="Телефон">
+		  	  				<input type="text" class="input" placeholder="Телефон" required name="tel">
 		  	  			</label>
 		  	  			<div class="form__name">Тип проекта</div>
 		  	  			<div class="form__checkbox">

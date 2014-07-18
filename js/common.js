@@ -154,7 +154,7 @@ window.onpageshow = function(event) {
 	function scrollUp() {
 		var btn = $('.js-scroll-up');
 
-		if($(window).scrollTop() + $(window).height() >= ($(document).height() - 100)) {
+		if($(window).scrollTop() + $(window).height() >= ($(document).height() - 50)) {
    			btn.addClass('is-animated');
    		}
    		else{
@@ -382,6 +382,47 @@ window.onpageshow = function(event) {
       " до $" + $( "#slider-range" ).slider( "values", 1 ) ); 	
 
     $( "#slider-range" ).find('.ui-slider-handle:last-child').addClass('is-last');
+
+
+// validation
+	
+	function validate() {
+		$('.js-validate').each(function(){
+			if ($(this).length > 0) {
+				jQuery.validator.setDefaults({
+				  debug: true,
+				  success: "valid"
+				});
+
+				$(this).validate({
+					errorClass: 'is-error',
+					rules: {
+						name: {
+							minlength: 2
+						},
+						company: {
+							minlength: 2
+						},
+						comment: {
+							minlength: 2
+						},
+						email: {
+							email: true
+						},
+						tel: {
+							minlength: 2,
+							number: true
+						}
+					}
+				});
+			}
+		});
+	}
+		
+	validate();
+
+
+
 //resize function
 
 	$(window).resize(function(){
