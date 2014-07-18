@@ -3,7 +3,21 @@
 	+clr
 	background: #000
 	.m-services &
-		background: #FFF 
+		background: #FFF
+	&.box-wrap_mod
+		.box-wrap__col
+			&.second
+				left: 40%
+				+r(w1024)
+					left: 50%
+				+r(w768)
+					left: 0	
+			&.first
+				left: -20%
+				+r(w1024)
+					left: -25%
+				+r(w768)
+					left: 0	
 .box-wrap__col
 	position: relative
 	width: 20%

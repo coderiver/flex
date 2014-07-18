@@ -121,6 +121,12 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 .box-wrap { *zoom: 1; background: black; }
 .box-wrap:after { content: " "; display: table; clear: both; }
 .m-services .box-wrap { background: white; }
+.box-wrap.box-wrap_mod .box-wrap__col.second { left: 40%; }
+@media only screen and (max-width: 1024px) { .box-wrap.box-wrap_mod .box-wrap__col.second { left: 50%; } }
+@media only screen and (max-width: 768px) { .box-wrap.box-wrap_mod .box-wrap__col.second { left: 0; } }
+.box-wrap.box-wrap_mod .box-wrap__col.first { left: -20%; }
+@media only screen and (max-width: 1024px) { .box-wrap.box-wrap_mod .box-wrap__col.first { left: -25%; } }
+@media only screen and (max-width: 768px) { .box-wrap.box-wrap_mod .box-wrap__col.first { left: 0; } }
 
 .box-wrap__col { position: relative; width: 20%; float: left; }
 .box-wrap__col.wide { width: 40%; }
