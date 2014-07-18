@@ -101,9 +101,12 @@
 				      	zoom: 15,
 				      	center: new google.maps.LatLng(53.940047, 27.573587),
 				      	disableDefaultUI: true,
-				      	scrollwheel: true,
+				      	scrollwheel: false,
 				     	zoomControl: true,
-				    	mapTypeControlOptions: {
+				     	zoomControlOptions: {
+           				  style: google.maps.ZoomControlStyle.DEFAULT
+           				},
+						mapTypeControlOptions: {
     					    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'tehgrayz']
     					}
 				    }
