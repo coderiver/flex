@@ -150,7 +150,7 @@ $(document).ready(function() {
 	function scrollUp() {
 		var btn = $('.js-scroll-up');
 
-		if($(window).scrollTop() + $(window).height() == $(document).height()) {
+		if($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
    			btn.addClass('is-animated');
    		}
    		else{
