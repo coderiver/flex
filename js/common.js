@@ -203,7 +203,11 @@ window.onpageshow = function(event) {
 		$('.header-wrap').addClass('is-open');
 		return false;
 	});
-	
+	$('.out__inner').on('touchstart click', function(){
+		$('.menu-btn').removeClass('is-active');
+		$('.header-wrap').removeClass('is-open');
+		$(this).removeClass('is-open').parent('.out').removeClass('is-open');
+	});
 
 	$('.js-close-sidebar').on('click', function(){
 		$('.menu-btn').removeClass('is-active');
@@ -222,11 +226,6 @@ window.onpageshow = function(event) {
 		},
 		//Default is 75px, set to 0 for demo so any distance triggers swipe
 		threshold: 0
-	});
-	$('.out__inner').on('click', function(){
-		$('.menu-btn').removeClass('is-active');
-		$('.header-wrap').removeClass('is-open');
-		$(this).removeClass('is-open').parent('.out').removeClass('is-open');
 	});
 
 // m-events
