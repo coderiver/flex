@@ -251,42 +251,42 @@
         a
             background: $gray
             &:hover
-                background: lighten($gray, 10%)
+                background: lighten($gray, 5%)
     &.blog_green
         a
             background: $green
             &:hover
-                background: lighten($green, 10%)                                      
+                background: lighten($green, 5%)                                      
     &.blog_blue
         a
             background: $blue
             &:hover
-                background: lighten($blue, 10%)                      
+                background: lighten($blue, 5%)                      
     &.blog_yellow
         a
             background: $yellow
             &:hover
-                background: lighten($yellow, 10%) 
+                background: lighten($yellow, 5%) 
     &.blog_violet
         a
             background: $violet
             &:hover
-                background: lighten($violet, 10%)
+                background: lighten($violet, 5%)
     &.blog_red
         a
             background: $red
             &:hover
-                background: lighten($red, 10%)
+                background: lighten($red, 5%)
     &.blog_orange
         a
             background: $orange
             &:hover
-                background: lighten($orange, 10%)
+                background: lighten($orange, 5%)
     &.blog_turquoise
         a
             background: $turquoise
             &:hover
-                background: lighten($turquoise, 10%)
+                background: lighten($turquoise, 5%)
     &__inner
         display: inline-block
         vertical-align: middle
@@ -347,13 +347,17 @@
     font-size: 0
     text-align: center
     color: rgba(#fff, 0.5)
-    span
+    p
         display: inline-block
         vertical-align: top
         font-size: 14px
         padding-top: 10px
         a
-            color: rgba(#fff, 0.5)    
+            display: inline-block
+            color: rgba(#fff, 0.5)
+            span
+                display: inline-block
+                border-bottom: 1px solid rgba(#fff, 0.5)     
     &__img
         display: inline-block
         vertical-align: top
@@ -489,7 +493,7 @@
                 width: 100%
                 margin-left: 0     
     &__share
-        padding: 20px 30px
+        padding: 20px 30px 10px
         margin-bottom: 60px
         border: 1px solid #e1e1e1
         +box 
@@ -500,10 +504,11 @@
             vertical-align: middle
             font-size: 14px
             font-weight: 300
-            margin-right: 45px 
+            margin: 0px 45px 10px 0 
         .article__socials
             display: inline-block
             vertical-align: middle
+            margin: 0px 0 10px
 .article-nav
     position: fixed
     right: 0
@@ -575,7 +580,10 @@
                 font-size: 14px
                 color: #2c3e50!important
                 font-weight: 300
-                text-decoration: none                                        
+                +tr(background 200ms)
+                text-decoration: none
+                &:hover
+                    background: #ffeb12                                         
 .list
     +clr
     margin-left: -5% 
