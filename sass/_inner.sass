@@ -944,20 +944,23 @@
     filter: inherit
 
 .ui-slider-horizontal
+    position: relative
     height: 20px
+    margin-left: 18px
 .ui-slider-horizontal .ui-slider-handle
     top: 2px
-    margin-left: 2px
+    margin-left: -16px
     &.is-last
         margin-left: -18px
 .ui-slider-horizontal .ui-slider-range
     top: 0
     height: 100%
+    margin-left: -18px
+    padding-right: 18px
 .ui-slider-horizontal .ui-slider-range-min
     left: 0
 .ui-slider-horizontal .ui-slider-range-max
     right: 0
-
 .ui-slider-vertical
     width: .8em
     height: 100px
