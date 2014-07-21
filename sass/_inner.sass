@@ -550,7 +550,15 @@
         position: absolute
         bottom: 266px
     +r(w1024)
-        display: none
+        position: relative
+        margin-bottom: 25px
+        &.no-fixed
+            position: relative
+            bottom: auto
+        ul
+            text-align: center
+            li
+                display: inline-block
     li
         margin-bottom: 1px
     a
