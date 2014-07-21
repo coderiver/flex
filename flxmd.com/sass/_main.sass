@@ -1,0 +1,808 @@
+//fonts
++font(ProximaNovaRegular, proximanova-reg)
++font(ProximaNovaBold, proximanova-bold)
++font(ProximaNovaLight, proximanova-light)
+
+=font
+	font-family: 'ProximaNovaRegular', Arial, sans-serif
+=font-bold
+	font-family: 'ProximaNovaBold', Arial, sans-serif
+=font-light
+	font-family: 'ProximaNovaLight', Arial, sans-serif	
+
+//vars 
+
+$gray: #2c3e50
+$green: #27ae60
+$red: #fa453c
+$blue: #2980b9
+$yellow: #e9bc21
+$violet: #9b59b6
+$orange: #e67e22
+$turquoise: #1abc9c
+$sea: #7fcbe3
+
+body
+	+font 
+	font-size: 14px 
+	line-height: 1.4
+	background: #444
+
+// extends
+
+=justify
+	text-align: justify
+	line-height: 0
+	font-size: 1px
+	text-justify: newspaper
+	zoom: 1
+	text-align-last: justify
+	&:after
+		content: ""
+		display: inline-block
+		width: 100%
+		height: 0px
+		visibility: hidden
+		overflow: hidden
+=justify-child
+	display: inline-block
+	line-height: normal
+	vertical-align: top
+	font-size: 14px
+
+=vcenter
+	&:before
+		content: ""
+		display: inline-block
+		width: 0
+		height: 100%
+		vertical-align: middle
+.out
+	background: #FFF
+	+r(w1024)
+		cursor: default
+	
+.h2
+	padding-bottom: 30px
+	font-size: 46px
+	+font-bold
+	text-transform: uppercase
+	color: #fff
+	text-align: center
+	span
+		font-weight: 400
+	+r(w768)
+		font-size: 24px
+.h3
+	padding-bottom: 30px
+	font-size: 36px
+	+font-bold
+	text-align: center
+	text-transform: uppercase		
+
+// Normally mainpage styles
+.topper
+	position: relative
+	background: #fa453c
+	text-align: center
+	padding-top: 150px
+	color: #fff
+	font-size: 20px
+	+font-light 
+	z-index: 99
+	&__img
+		font-size: 0
+		img
+			max-width: 90%
+	p
+		max-width: 812px
+		margin: 0 auto
+	&__btn
+		padding: 40px 0 100px 	 		
+	+r(w768)
+		padding-top: 80px
+	.l-gray &
+		background: $gray
+	.l-green &
+		background: $green
+	.l-red &
+		background: $red
+	.l-blue &
+		background: $blue
+	.l-yellow &
+		background: $yellow
+	.l-violet &
+		background: $violet
+	.l-orange &
+		background: $orange
+	.l-turquoise & 
+		background: $turquoise
+	.l-sea & 
+		background: $sea	
+	&.topper_index
+		padding-top: 0
+.works-link
+	display: inline-block
+	+box
+	height: 47px
+	padding: 0 19px 
+	line-height: 47px
+	border-radius: 23px
+	border: 1px solid #ffeb12
+	color: #ffeb12
+	+font
+	text-decoration: none
+	text-transform: uppercase
+	+tr(all 250ms)
+	&:hover
+		color: $red
+		border-color: $red
+		background: #ffeb12
+.btn
+	position: relative
+	display: inline-block
+	height: 47px
+	line-height: 47px
+	padding: 0 30px
+	background: #fa453c
+	border-radius: 23px 
+	text-decoration: none
+	color: #fff
+	+font-bold
+	text-transform: uppercase
+	font-size: 14px
+	overflow: hidden
+	+gpu
+	+transition(background 200ms)
+	&:after
+		content: ""
+		position: absolute
+		top: -30px
+		left: -73px
+		+s(string)
+		+transition(none)
+	&:hover
+		background: #e82f25
+		+transition(none) 
+		&:after
+			+transition(transform 250ms)
+			+transform(translateX(180px))
+	&.btn_yellow
+		padding: 0 40px 
+		background: #ffeb12
+		color: #071427
+		font-weight: 400
+		+box-shadow(0 19px 30px -18px #ffeb12)
+		&:hover
+			background: #e3d219
+			&:after
+				+transform(translateX(252px))		 		
+.wrapper
+	position: relative
+	&.has-blur
+		+blur(3px)
+	+r(w768)
+		overflow: hidden
+		-webkit-perspective: 1500px
+		perspective: 1500px
+		-webkit-perspective-origin: 0% 50%
+		perspective-origin: 0% 0%	
+.out_mobile
+	position: relative
+	+r(w768)
+		-webkit-transform-style: preserve-3d
+		transform-style: preserve-3d
+		+transition(transform 0.5s)
+		&.is-open
+			+transform(translate3d(200px, 0, 0))
+	+r(w320)
+		&.is-open
+			+transform(translate3d(320px, 0, 0))	
+.out__inner
+	position: relative
+	background: #FFF 
+	z-index: 2
+	&:after
+		position: absolute
+		content: ""
+		top: 0
+		right: 0
+		width: 100%
+		height: 100%
+		background: rgba(0,0,0,0.2)
+		opacity: 0
+		+transition(opacity 0.5s linear)
+		z-index: -1
+	&.is-open
+		&:after
+			opacity: 1
+			z-index: 999				  			 
+.header-wrap
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	height: 110px
+	z-index: 1000
+	+r(w768)
+		height: auto 
+		width: 200px
+		bottom: 0
+		background: #fa453c
+		+box-shadow(0 2px 10px rgba(112,25,21,.1))
+		+transition(all 0.5s)
+		visibility: hidden
+		+transform(translate3d(-200px, 0, 0) rotateY(90deg))
+		-webkit-transform-origin: 100% 50%
+		transform-origin: 100% 50%
+		-webkit-transform-style: preserve-3d
+		transform-style: preserve-3d
+		&.is-open
+			+r(w768)
+				visibility: visible
+				+transition(transform 0.5s)
+				+transform(translate3d(-200px, 0, 0) rotateY(0deg))
+		.l-gray &
+			background: $gray
+		.l-green &
+			background: $green
+		.l-red &
+			background: $red
+		.l-blue &
+			background: $blue
+		.l-yellow &
+			background: $yellow
+		.l-violet &
+			background: $violet
+		.l-orange &
+			background: $orange
+		.l-turquoise & 
+			background: $turquoise
+		.l-sea & 
+			background: $sea	 
+	+r(w320)
+		width: 320px
+		+transform(translate3d(-320px, 0, 0) rotateY(90deg))
+		&.is-open
+			+transform(translate3d(-320px, 0, 0) rotateY(0deg))					
+.header
+	position: absolute
+	top: 0
+	left: 0
+	right: 0 
+	height: 110px
+	+clr
+	padding: 0 50px 
+	background: #fa453c
+	z-index: 999
+	&.is-fixed
+		position: fixed
+		+box-shadow(0 2px 10px rgba(112,25,21,.1))
+	&__close
+		visibility: hidden
+		position: absolute
+		top: 24px
+		right: 20px
+		+s(close)
+		cursor: pointer
+		z-index: 2
+	.l-gray &
+		background: $gray
+	.l-green &
+		background: $green
+	.l-red &
+		background: $red
+	.l-blue &
+		background: $blue
+	.l-yellow &
+		background: $yellow
+	.l-violet &
+		background: $violet
+	.l-orange &
+		background: $orange
+	.l-turquoise & 
+		background: $turquoise
+	.l-sea & 
+		background: $sea		 
+	+r(w900)
+		padding: 0 20px 	
+	+r(w768)
+		height: auto
+		position: absolute
+		padding: 0
+		&.is-fixed
+			+box-shadow(none)
+	+r(w768)		
+		.header__close
+			visibility: visible			  	
+.logo
+	float: left
+	height: 110px
+	+vcenter 
+	a
+		display: inline-block
+		vertical-align: middle
+		+s(logo)
+	+r(w768)
+		display: none
+.menu-btn
+	display: none
+	position: fixed
+	top: 0
+	right: 0
+	width: 66px
+	height: 66px
+	background: #fa453c
+	+tr(opacity 200ms)
+	z-index: 100
+	&:before
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -10px 0 0 -12px 
+		+s(menu-btn)
+	&:after
+		position: absolute
+		content: ""
+		top: 0
+		right: 0
+		width: 100%
+		height: 100%
+		background: rgba(0,0,0,0.2)
+		opacity: 0
+		+transition(opacity 0.5s linear)
+		z-index: -1		
+	&.is-active
+		opacity: 0
+		z-index: 0
+	.l-gray &
+		background: $gray
+	.l-green &
+		background: $green
+	.l-red &
+		background: $red
+	.l-blue &
+		background: $blue
+	.l-yellow &
+		background: $yellow
+	.l-violet &
+		background: $violet
+	.l-orange &
+		background: $orange
+	.l-turquoise & 
+		background: $turquoise
+	.l-sea & 
+		background: $sea		 		
+	+r(w768)
+		display: block	 
+.menu
+	float: right
+	text-align: center
+	padding: 45px 0
+	ul
+		display: inline-block
+		margin-left: 146px
+		+r(w1024)
+			margin-left: 0
+		li
+			display: inline-block
+			vertical-align: middle
+			a
+				position: relative
+				display: block
+				text-transform: uppercase
+				margin: 0 13px 
+				text-decoration: none
+				color: #fff
+				&:after
+					content: ""
+					position: absolute
+					top: 100%
+					left: 0
+					width: 100%
+					background: #fff
+					opacity: 0
+					+transition(all 0.3s)
+					+transform(translateY(-8px))
+				&:hover
+					&:after
+						height: 2px
+						opacity: 1
+						+transform(translateY(3px))
+				&.is-active
+					&:after
+						height: 2px
+						opacity: 1
+						+transform(translateY(3px))		
+	+r(w768)
+		float: none
+		padding: 80px 0 45px 
+		ul
+			display: block
+			padding: 0 30px 
+			li
+				display: block
+				a
+					display: inline-block
+					height: 30px
+					line-height: 30px
+					&:hover
+						&:after
+							+transform(translateY(-4px))
+					&.is-active
+						&:after
+							+transform(translateY(-4px))
+	+r(w320)
+		ul
+			li
+				margin-bottom: 5px
+				a
+					font-size: 15px								 					 		  	 																																
+.parthners
+	text-align: center
+	opacity: 0.5
+	padding-bottom: 80px
+	&__title
+		margin-bottom: 25px
+		color: #fff
+		font-size: 16px
+	&__list
+		font-size: 0
+		padding-bottom: 20px
+		li
+			display: inline-block
+			vertical-align: middle
+			margin: 0 15px
+			a
+				display: inline-block
+				i
+					display: inline-block
+.google-logo
+	+s(google-logo)
+.abby-logo
+	+s(abby-logo)
+.vk-logo
+	+s(vk-logo)
+.heineken-logo
+	+s(heineken-logo)
+.pandadoc-logo
+	+s(pandadoc-logo)								 	
+.telegram-logo
+	+s(telegram-logo)
+.evilmartians-logo
+	+s(evilmartians-logo)									 								 	
+.willion-logo
+	+s(willion-logo)
+.quoterollers-logo
+	+s(quoterollers-logo)
+
+.m-works-wrap
+	position: relative
+	z-index: 2						
+.m-works
+	position: absolute
+	top: 0px
+	left: 0px
+	right: 0px
+	bottom: 0px
+	overflow: hidden
+	font-size: 0
+	+gpu
+	&__img
+		position: absolute
+		top: 0px
+		left: 0px
+		right: 0px
+		bottom: 0px
+		z-index: 1
+		+cover
+		+transform(scale(1))
+		+transition(all 0.3s linear)
+	&__img-blur
+		position: absolute
+		top: 0px
+		left: 0px
+		right: 0px
+		bottom: 0px
+		z-index: 2
+		+tr(all 300ms linear)
+		+gpu
+		+cover		
+	&__logo
+		position: absolute
+		top: 0px
+		left: 0px
+		right: 0px
+		bottom: 0px
+		+vertical
+		+tr(all 300ms)
+		z-index: 3
+		img
+			position: relative
+			display: inline-block
+			vertical-align: middle
+			max-width: 100%		
+	&:hover
+		.m-works__img
+			+transform(scale(1.05))
+		.m-works__logo
+			+transform(scale(0.7) translate3d(0, -60px, 0))
+			opacity: 0
+		.m-works__img-blur
+			opacity: 0
+	+r(w768)
+		&:hover
+			.m-works__img
+				+transform(scale(1))
+			.m-works__img-blur
+				opacity: 1
+			.m-works__logo
+				opacity: 1
+				+transform(scale(1) translate3d(0, 0, 0))		 					 						 
+.about
+	text-align: center
+	max-width: 812px
+	margin: 0 auto 
+	padding: 80px 20px
+	p
+		+font-light
+		font-size: 20px
+		color: #072335
+		line-height: 1.8 
+.services-wrap
+	background: #ffeb12
+	padding-top: 70px
+.services
+	max-width: 812px
+	margin: 0 auto
+	&__title
+		margin-bottom: 50px
+		text-align: center
+		+font-bold
+		font-size: 24px
+		color: #072335
+	&__list
+		font-size: 0
+		li
+			display: inline-block
+			width: 33%
+			margin-bottom: 15px
+			a
+				font-size: 16px
+				color: #072335
+				+font-light
+				text-decoration: none
+				+tr(all 200ms)
+				&:hover
+					color: #f64139
+	&__img
+		font-size: 0
+		text-align: center
+		img
+			max-width: 90%
+.testimonials
+	padding: 110px 0 80px
+	max-width: 812px
+	margin: 0 auto
+	&__inner
+		+clr
+	&__img
+		position: relative
+		float: left
+		width: 132px
+		margin-right: 50px
+		font-size: 0
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			background: url(../img/border.png) 0 0 no-repeat
+			z-index: 2
+		img
+			width: 100%
+			height: 100%
+	&__content
+		overflow: hidden
+		font-size: 16px
+		color: #656565
+		p
+			margin-bottom: 25px
+		a
+			color: #f64139
+			text-decoration: none
+.m-clients
+	position: relative
+	padding: 92px 50px
+	text-align: center
+	z-index: 1
+	&__title
+		position: relative
+		margin-bottom: 35px
+		text-align: center
+		font-size: 24px
+		color: #fff
+		+font-bold
+		z-index: 2
+	&__list
+		position: relative
+		max-width: 812px
+		margin: 0 auto 
+		font-size: 0
+		line-height: 1
+		z-index: 2
+		li
+			display: inline-block
+			vertical-align: top
+			width: 33%
+			text-align: center
+	&__img
+		display: inline-block
+		width: 190px
+		height: 190px  
+		border-radius: 50%
+		overflow: hidden
+		margin-bottom: 30px
+		background-position: 50% 50%
+		background-repeat: no-repeat
+	&__name
+		font-size: 18px
+		color: #fff
+	&__job
+		+font-light
+		color: #656565
+		font-size: 18px 		  
+	&__btn
+		position: relative
+		font-size: 0
+		margin-bottom: 110px 
+		z-index: 2
+	+r(w1024)
+		background: url(../img/clients-bg.jpg) no-repeat
+		+cover
+	+r(w900)
+		padding: 52px 20px
+	+r(w480)
+		padding: 52px 0
+		.m-clients__title
+			font-size: 18px
+			margin-bottom: 58px 
+.video-holder
+	position: fixed
+	top: 110px
+	left: 0
+	z-index: 1
+	width: 100%
+	min-width: 1440px
+	min-height: 100%
+	+r(w1024)
+		display: none							  
+
+.contacts
+	position: relative
+	padding: 100px 0 80px
+	background: #FFF  
+	z-index: 2					
+	&__inner
+		max-width: 812px
+		margin: 0 auto
+	&__topper
+		margin-bottom: 60px
+		text-align: center
+		font-size: 20px
+		color: #072335
+		line-height: 1.8
+	&__wrap
+		+clr
+	&__left
+		float: left
+		width: 50%
+	&__right
+		float: right
+		width: 50%
+		+box
+		padding-left: 60px
+	&__block
+		margin-bottom: 40px
+		font-size: 16px
+		color: #656565
+		+font-light
+		strong
+			+font
+			font-weight: normal
+			color: #072335
+		a
+			text-decoration: none
+			color: #f64139
+			+font	
+	&__title
+		font-size: 24px
+		color: #072335
+		+font-bold
+		margin-bottom: 20px
+	&__city
+		margin-bottom: 20px		
+.form
+	padding: 60px 0 0 
+	&__topper
+		text-align: center
+		font-size: 20px
+		margin-bottom: 50px
+	&__title
+		font-weight: 600
+		font-size: 24px
+		color: #072335 
+		margin-bottom: 30px
+	&__content
+		padding: 0 25px
+		+r(w568)
+			padding: 0 20px
+		+r(w480)
+			padding: 0 10px 
+	&__item
+		display: block
+		margin-bottom: 11px
+		label
+			display: none!important
+	&__name 
+		padding: 18px 0 
+		text-align: center
+		font-size: 16px
+		color: #072335
+	&__checkbox
+		+clr
+		margin-left: -1%
+		.checkbox
+			float: left		
+.input
+	display: block
+	width: 100% 
+	height: 44px
+	padding: 0 22px 
+	+box
+	border: 1px solid #eee
+	background: #eee
+	+tr(all 200ms)
+	+font
+	font-size: 16px
+	color: #072335  
+	+placeholder
+		+font-light
+		font-size: 16px
+		color: #a3a3a3  
+	&:hover 
+		border-color: #ebeaea
+		background: #fff
+	&:focus
+		border-color: #ebeaea
+		background: #fff        
+	&.is-error
+		background: #fca9a5
+		border-color: #fca9a5
+		color: #df3027
+	&.valid
+		background: #e5f7ba
+		border-color: #e5f7ba
+		color: #072335
+
+.footer
+	position: relative
+	background: #fff
+	z-index: 2
+	&__inner
+		padding: 85px 20px 90px
+		text-align: center 
+		font-size: 14px
+		color: #656565
+		+font-light
+		line-height: 1.8
+		a
+			color: #fa453c
+			text-decoration: none
+	&__mail
+		padding-top: 20px		
+
+		  					

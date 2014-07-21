@@ -1,0 +1,140 @@
+// default layout
+.box-wrap
+	+clr
+	background: #000
+	.m-services &
+		background: #FFF
+	&.box-wrap_mod
+		.box-wrap__col
+			&.second
+				left: 40%
+				+r(w1024)
+					left: 50%
+				+r(w768)
+					left: 0	
+			&.first
+				left: -20%
+				+r(w1024)
+					left: -25%
+				+r(w768)
+					left: 0	
+.box-wrap__col
+	position: relative
+	width: 20%
+	float: left
+	&.wide
+		width: 40%
+	&.first
+		left: 20%
+	&.second
+		left: -40%		
+	+r(w1024)
+		width: 25%
+		&.wide
+			width: 50%
+			&.wide_resp
+				width: 25%
+				.box_big
+					padding-bottom: 200%
+		&.first
+			left: 25%
+		&.second
+			left: -50%				
+	+r(w768)
+		width: 50%
+		&.wide
+			width: 100%
+			&.wide_resp
+				width: 50%
+				.box_big
+					padding-bottom: 100% 	
+		&.first
+			left: 0
+		&.second
+			left: 0
+	+r(w480)
+		width: 100%
+		&.wide
+			width: 100%
+			&.wide_resp
+				width: 100% 		 							 
+.box
+	position: relative
+	float: left
+	width: 100%
+	padding-bottom: 100%  
+	+box
+	&.box_small
+		width: 50%
+		padding-bottom: 50%
+		+r(w480)
+			width: 100%
+			padding-bottom: 100%   
+	&.box_high
+		padding-bottom: 200%
+		+r(w768)
+			padding-bottom: 100%
+	&.box_w
+		padding-bottom: 50%
+		+r(w480)
+			padding-bottom: 100%
+		+r(w320)
+			padding-bottom: 80% 	
+	.m-services &
+		border-bottom: 1px solid #f0f0f0
+		border-left: 1px solid #f0f0f0  	   	
+.m-service__col1
+	+r(w1180)
+		width: 50%
+		.box_high
+			padding-bottom: 100%
+	+r(w768)
+		width: 100%
+		.box_high
+			padding-bottom: 40%
+	+r(w600)
+		.box_high
+			padding-bottom: 50%
+	+r(w400)
+		.box_high
+			padding-bottom: 75% 		 		  		
+.m-service__col2
+	//margin-top: -1px
+	&.wide
+		+r(w1180)
+			width: 50%
+	+r(w768)
+		margin-top: 0
+		&.wide
+			width: 100%
+	+r(w480)
+		.box
+			&.box_small
+				padding-bottom: 50%
+	+r(w400)
+		.box
+			&.box_small
+				padding-bottom: 70%
+			&.box_w
+				padding-bottom: 70%					 		 		
+.m-service__col3
+	&.wide
+		+r(w1180)
+			width: 100%
+			.box_big
+				padding-bottom: 25%
+		+r(w768)
+			.box_big
+				padding-bottom: 50%
+		+r(w568)
+			.box_big
+				padding-bottom: 100%
+		+r(w480)
+			.box_big
+				padding-bottom: 130%
+		+r(w400)
+			.box_big
+				padding-bottom: 150%
+		+r(w360)			 					
+			.box_big
+				padding-bottom: 160%
