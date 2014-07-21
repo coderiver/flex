@@ -174,9 +174,9 @@
     &__author
         font-size: 0
         img
-            display: inline-block
+            display: inline-block!important
             vertical-align: middle
-            margin-right: 25px
+            margin: 0 25px 0 0!important
         span
             display: inline-block
             vertical-align: middle
@@ -441,7 +441,9 @@
             .l-orange &
                 border-left-color: $orange
             .l-turquoise & 
-                border-left-color: $turquoise    
+                border-left-color: $turquoise
+            .l-sea & 
+                border-left-color: $sea        
     &__block
         margin-bottom: 60px
         border-bottom: 1px solid #e1e1e1
@@ -471,11 +473,15 @@
                 .l-orange &
                     color: $orange
                 .l-turquoise & 
-                    color: $turquoise 
+                    color: $turquoise
+                .l-sea & 
+                    color: $sea     
         img
             display: block
             max-width: 100%
             margin: 60px 0
+        .quote
+            margin-bottom: 25px     
         +r(w1024)
             p
                 strong
@@ -509,6 +515,33 @@
             display: inline-block
             vertical-align: middle
             margin: 0px 0 10px
+.title-origin, .title-esthetics, .title-dedication
+    position: relative
+    padding-top: 50px
+    font-size: 20px
+    color: #253e6b
+    font-weight: 400
+.title-origin
+    &:before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        +s(origin)
+.title-esthetics
+    &:before
+        content: ""
+        position: absolute
+        top: 5px
+        left: 0
+        +s(esthetics)
+.title-dedication
+    &:before
+        content: ""
+        position: absolute
+        top: 5px
+        left: 0
+        +s(dedication)                                  
 .article-nav
     position: fixed
     right: 0
@@ -611,7 +644,9 @@
             .l-orange &
                 color: $orange
             .l-turquoise & 
-                color: $turquoise 
+                color: $turquoise
+            .l-sea & 
+                color: $sea     
         +r(w768)
             width: 45%
         +r(w480)
@@ -658,7 +693,10 @@
                     +arr(8, 12, $orange, r)
             .l-turquoise &
                 &:before
-                    +arr(8, 12, $turquoise, r)   
+                    +arr(8, 12, $turquoise, r)
+            .l-sea &
+                &:before
+                    +arr(8, 12, $sea, r)           
         +r(w480)
             li
                 width: 95%
@@ -1239,6 +1277,65 @@
         +r(w900)
             margin-bottom: 10px
             span
-                display: block            
+                display: block
+                
+//graphic-menu
+
+.graphic-menu
+    max-width: 812px
+    margin: 80px auto
+    +r(w900)
+        padding: 0 20px 
+    ul
+        font-size: 0
+        li
+            display: inline-block
+            vertical-align: top
+            width: 50%
+            font-size: 14px
+            margin-bottom: 15px
+            a
+                position: relative
+                display: inline-block
+                padding-left: 50px 
+                color: #262626
+                font-weight: 400 
+                text-decoration: none
+                span
+                    display: inline-block
+                    padding-top: 5px
+                i
+                    position: absolute
+                    top: 0
+                    left: 0
+                .design-ico
+                    +s(design-icon)
+                .promotion-ico
+                    +s(promotion-icon)
+                .mob-ico
+                    +s(mob-icon)        
+                &:hover
+                    color: #f3463d
+                    .design-ico
+                        +s(design-red)
+                    .promotion-ico
+                        +s(promotion-icon-red)
+                    .mob-ico
+                        +s(mob-icon-red)         
+                &:visited    
+                    color: #afafaf
+                    .design-ico
+                        +s(design-gray)
+                    .promotion-ico
+                        +s(promotion-icon-gray)
+                    .mob-ico
+                        +s(mob-icon-gray)
+        +r(w568)
+            width: 80% 
+            margin: 0 auto 
+            li
+                width: 100%                                
+
+
             
                  

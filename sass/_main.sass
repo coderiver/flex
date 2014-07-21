@@ -5,6 +5,10 @@
 	text-align: center
 	padding-top: 150px
 	z-index: 99
+	&__img
+		font-size: 0
+		img
+			max-width: 90%
 	+r(w768)
 		padding-top: 80px
 	.l-gray &
@@ -23,6 +27,8 @@
 		background: $orange
 	.l-turquoise & 
 		background: $turquoise
+	.l-sea & 
+		background: $sea	
 	&.topper_index
 		padding-top: 0		
 .wrapper
@@ -103,7 +109,9 @@
 		.l-orange &
 			background: $orange
 		.l-turquoise & 
-			background: $turquoise 
+			background: $turquoise
+		.l-sea & 
+			background: $sea	 
 	+r(w320)
 		width: 320px
 		+transform(translate3d(-320px, 0, 0) rotateY(90deg))
@@ -145,7 +153,9 @@
 	.l-orange &
 		background: $orange
 	.l-turquoise & 
-		background: $turquoise	 
+		background: $turquoise
+	.l-sea & 
+		background: $sea		 
 	+r(w900)
 		padding: 0 20px 	
 	+r(w768)
@@ -213,7 +223,9 @@
 	.l-orange &
 		background: $orange
 	.l-turquoise & 
-		background: $turquoise	 		
+		background: $turquoise
+	.l-sea & 
+		background: $sea		 		
 	+r(w768)
 		display: block	 
 .menu
@@ -378,7 +390,13 @@
 			+s(like-turquoise)
 			&:hover
 				&:after
-					+box-shadow(0 0px 5px 2px $turquoise)																												
+					+box-shadow(0 0px 5px 2px $turquoise)
+	.l-sea &
+		a
+			+s(like-sea)
+			&:hover
+				&:after
+					+box-shadow(0 0px 5px 2px $sea)																																	
 
 // slider
 .slider
