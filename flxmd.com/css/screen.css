@@ -193,7 +193,7 @@ body { font-family: "ProximaNovaRegular", Arial, sans-serif; font-size: 14px; li
 .menu ul { display: inline-block; margin-left: 146px; }
 @media only screen and (max-width: 1024px) { .menu ul { margin-left: 0; } }
 .menu ul li { display: inline-block; vertical-align: middle; }
-.menu ul li a { position: relative; display: block; text-transform: uppercase; margin: 0 13px; text-decoration: none; color: white; }
+.menu ul li a { position: relative; display: block; text-transform: uppercase; margin: 0 13px; text-decoration: none; color: white; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .menu ul li a:after { content: ""; position: absolute; top: 100%; left: 0; width: 100%; background: white; opacity: 0; -moz-transition: all 0.3s; -o-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s; -moz-transform: translateY(-8px); -ms-transform: translateY(-8px); -webkit-transform: translateY(-8px); transform: translateY(-8px); }
 .menu ul li a:hover:after { height: 2px; opacity: 1; -moz-transform: translateY(3px); -ms-transform: translateY(3px); -webkit-transform: translateY(3px); transform: translateY(3px); }
 .menu ul li a.is-active:after { height: 2px; opacity: 1; -moz-transform: translateY(3px); -ms-transform: translateY(3px); -webkit-transform: translateY(3px); transform: translateY(3px); }
@@ -208,8 +208,8 @@ body { font-family: "ProximaNovaRegular", Arial, sans-serif; font-size: 14px; li
 
 .parthners { text-align: center; opacity: 0.5; padding-bottom: 80px; }
 .parthners__title { margin-bottom: 25px; color: white; font-size: 16px; }
-.parthners__list { font-size: 0; padding-bottom: 20px; }
-.parthners__list li { display: inline-block; vertical-align: middle; margin: 0 15px; }
+.parthners__list { font-size: 0; }
+.parthners__list li { display: inline-block; vertical-align: middle; margin: 0 15px 20px; }
 .parthners__list li a { display: inline-block; }
 .parthners__list li a i { display: inline-block; }
 
@@ -250,6 +250,7 @@ body { font-family: "ProximaNovaRegular", Arial, sans-serif; font-size: 14px; li
 .about p { font-family: "ProximaNovaLight", Arial, sans-serif; font-size: 20px; color: #072335; line-height: 1.8; }
 
 .services-wrap { background: #ffeb12; padding-top: 70px; }
+@media only screen and (max-width: 900px) { .services-wrap { padding: 70px 20px 0; } }
 
 .services { max-width: 812px; margin: 0 auto; }
 .services__title { margin-bottom: 50px; text-align: center; font-family: "ProximaNovaBold", Arial, sans-serif; font-size: 24px; color: #072335; }
@@ -257,23 +258,31 @@ body { font-family: "ProximaNovaRegular", Arial, sans-serif; font-size: 14px; li
 .services__list li { display: inline-block; width: 33%; margin-bottom: 15px; }
 .services__list li a { font-size: 16px; color: #072335; font-family: "ProximaNovaLight", Arial, sans-serif; text-decoration: none; -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; }
 .services__list li a:hover { color: #f64139; }
+@media only screen and (max-width: 600px) { .services__list li { width: 50%; } }
+@media only screen and (max-width: 320px) { .services__list li { width: 100%; text-align: center; } }
 .services__img { font-size: 0; text-align: center; }
 .services__img img { max-width: 90%; }
 
 .testimonials { padding: 110px 0 80px; max-width: 812px; margin: 0 auto; }
+@media only screen and (max-width: 900px) { .testimonials { padding: 110px 20px 80px; } }
+@media only screen and (max-width: 480px) { .testimonials { padding: 50px 20px 50px; } }
 .testimonials__inner { *zoom: 1; }
 .testimonials__inner:after { content: " "; display: table; clear: both; }
 .testimonials__img { position: relative; float: left; width: 132px; margin-right: 50px; font-size: 0; }
 .testimonials__img:before { content: ""; position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: url(../img/border.png) 0 0 no-repeat; z-index: 2; }
 .testimonials__img img { width: 100%; height: 100%; }
+@media only screen and (max-width: 320px) { .testimonials__img { float: none; margin: 0 auto 20px; } }
 .testimonials__content { overflow: hidden; font-size: 16px; color: #656565; }
 .testimonials__content p { margin-bottom: 25px; }
 .testimonials__content a { color: #f64139; text-decoration: none; }
+@media only screen and (max-width: 320px) { .testimonials__content { text-align: center; } }
 
 .m-clients { position: relative; padding: 92px 50px; text-align: center; z-index: 1; }
 .m-clients__title { position: relative; margin-bottom: 35px; text-align: center; font-size: 24px; color: white; font-family: "ProximaNovaBold", Arial, sans-serif; z-index: 2; }
 .m-clients__list { position: relative; max-width: 812px; margin: 0 auto; font-size: 0; line-height: 1; z-index: 2; }
 .m-clients__list li { display: inline-block; vertical-align: top; width: 33%; text-align: center; }
+@media only screen and (max-width: 680px) { .m-clients__list li { width: 50%; margin-bottom: 20px; } }
+@media only screen and (max-width: 480px) { .m-clients__list li { width: 100%; } }
 .m-clients__img { display: inline-block; width: 190px; height: 190px; border-radius: 50%; overflow: hidden; margin-bottom: 30px; background-position: 50% 50%; background-repeat: no-repeat; }
 .m-clients__name { font-size: 18px; color: white; }
 .m-clients__job { font-family: "ProximaNovaLight", Arial, sans-serif; color: #656565; font-size: 18px; }
@@ -288,18 +297,20 @@ body { font-family: "ProximaNovaRegular", Arial, sans-serif; font-size: 14px; li
 
 .contacts { position: relative; padding: 100px 0 80px; background: white; z-index: 2; }
 .contacts__inner { max-width: 812px; margin: 0 auto; }
-.contacts__topper { margin-bottom: 60px; text-align: center; font-size: 20px; color: #072335; line-height: 1.8; }
+.contacts__topper { margin-bottom: 60px; text-align: center; font-size: 20px; color: #072335; line-height: 1.8; padding: 0 20px; }
 .contacts__wrap { *zoom: 1; }
 .contacts__wrap:after { content: " "; display: table; clear: both; }
 .contacts__left { float: left; width: 50%; }
+@media only screen and (max-width: 568px) { .contacts__left { width: 100%; } }
 .contacts__right { float: right; width: 50%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-left: 60px; }
+@media only screen and (max-width: 768px) { .contacts__right { padding-left: 10px; } }
+@media only screen and (max-width: 568px) { .contacts__right { width: 100%; text-align: center; padding: 0 10px; } }
 .contacts__block { margin-bottom: 40px; font-size: 16px; color: #656565; font-family: "ProximaNovaLight", Arial, sans-serif; }
 .contacts__block strong { font-family: "ProximaNovaRegular", Arial, sans-serif; font-weight: normal; color: #072335; }
 .contacts__block a { text-decoration: none; color: #f64139; font-family: "ProximaNovaRegular", Arial, sans-serif; }
 .contacts__title { font-size: 24px; color: #072335; font-family: "ProximaNovaBold", Arial, sans-serif; margin-bottom: 20px; }
 .contacts__city { margin-bottom: 20px; }
 
-.form { padding: 60px 0 0; }
 .form__topper { text-align: center; font-size: 20px; margin-bottom: 50px; }
 .form__title { font-weight: 600; font-size: 24px; color: #072335; margin-bottom: 30px; }
 .form__content { padding: 0 25px; }
@@ -312,16 +323,25 @@ body { font-family: "ProximaNovaRegular", Arial, sans-serif; font-size: 14px; li
 .form__checkbox:after { content: " "; display: table; clear: both; }
 .form__checkbox .checkbox { float: left; }
 
-.input { display: block; width: 100%; height: 44px; padding: 0 22px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #eeeeee; background: #eeeeee; -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; font-family: "ProximaNovaRegular", Arial, sans-serif; font-size: 16px; color: #072335; }
-.input:-ms-input-placeholder { font-family: "ProximaNovaLight", Arial, sans-serif; font-size: 16px; color: #a3a3a3; }
-.input:-moz-placeholder { font-family: "ProximaNovaLight", Arial, sans-serif; font-size: 16px; color: #a3a3a3; }
-.input::-moz-placeholder { font-family: "ProximaNovaLight", Arial, sans-serif; font-size: 16px; color: #a3a3a3; }
-.input::-webkit-input-placeholder { font-family: "ProximaNovaLight", Arial, sans-serif; font-size: 16px; color: #a3a3a3; }
-.input::placeholder { font-family: "ProximaNovaLight", Arial, sans-serif; font-size: 16px; color: #a3a3a3; }
-.input:hover { border-color: #ebeaea; background: white; }
-.input:focus { border-color: #ebeaea; background: white; }
-.input.is-error { background: #fca9a5; border-color: #fca9a5; color: #df3027; }
-.input.valid { background: #e5f7ba; border-color: #e5f7ba; color: #072335; }
+.input, .textarea { display: block; width: 100%; height: 44px; padding: 0 22px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #eeeeee; background: #eeeeee; -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; font-family: "ProximaNovaRegular", Arial, sans-serif; font-size: 16px; color: #072335; }
+.input:-ms-input-placeholder, .textarea:-ms-input-placeholder { font-family: "ProximaNovaLight", Arial, sans-serif; font-size: 16px; color: #a3a3a3; }
+.input:-moz-placeholder, .textarea:-moz-placeholder { font-family: "ProximaNovaLight", Arial, sans-serif; font-size: 16px; color: #a3a3a3; }
+.input::-moz-placeholder, .textarea::-moz-placeholder { font-family: "ProximaNovaLight", Arial, sans-serif; font-size: 16px; color: #a3a3a3; }
+.input::-webkit-input-placeholder, .textarea::-webkit-input-placeholder { font-family: "ProximaNovaLight", Arial, sans-serif; font-size: 16px; color: #a3a3a3; }
+.input::placeholder, .textarea::placeholder { font-family: "ProximaNovaLight", Arial, sans-serif; font-size: 16px; color: #a3a3a3; }
+.input:hover, .textarea:hover { border-color: #ebeaea; background: white; }
+.input:focus, .textarea:focus { border-color: #ebeaea; background: white; }
+.input.is-error, .textarea.is-error { background: #fca9a5; border-color: #fca9a5; color: #df3027; }
+.input.valid, .textarea.valid { background: #e5f7ba; border-color: #e5f7ba; color: #072335; }
+
+.textarea { resize: none; width: 100%; padding: 11px 22px; height: 180px; }
+
+.select { position: relative; margin-bottom: 11px; }
+.select__text { height: 44px; line-height: 44px; padding: 0 40px 0 22px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #eeeeee; background: #eeeeee; -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; font-size: 16px; color: #a3a3a3; cursor: pointer; }
+.select__text:before { content: ""; position: absolute; top: 19px; right: 20px; width: 0px; height: 0px; border-style: solid; border-width: 5px 5px 0 5px; border-color: #ababab transparent transparent transparent; }
+.select__dropdown { position: absolute; top: 43px; left: 0; right: 0; background: white; border: 1px solid #eeeeee; z-index: 99; }
+.select__dropdown li a { display: block; padding: 10px 22px; font-size: 16px; color: #a3a3a3; text-decoration: none; }
+.select__dropdown li a:hover { background: whitesmoke; }
 
 .footer { position: relative; background: white; z-index: 2; }
 .footer__inner { padding: 85px 20px 90px; text-align: center; font-size: 14px; color: #656565; font-family: "ProximaNovaLight", Arial, sans-serif; line-height: 1.8; }

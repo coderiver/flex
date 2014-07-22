@@ -58,6 +58,36 @@ $(document).ready(function() {
 		threshold: 0
 	});
 
+ // nav scroll
+
+    function scrollNav(){
+        $('.js-section').each(function(){
+            var pos = $(this).offset().top;
+            var id = $(this).attr('id');
+            if( $(window).scrollTop() >= (pos - 110)){
+                $('.menu ul li a').removeClass('is-active');
+                $('[href = #'+id+']').addClass('is-active');
+            }
+        });
+    }
+
+    $(".menu a").click(function (){
+        var page = $(this).attr("href");
+    
+        $('html, body').animate({
+            scrollTop: $(page).offset().top - 110
+        }, 500);
+        return false;
+    });
+
+    $(".works-link").click(function (){
+        var page = $(this).attr("href");
+    
+        $('html, body').animate({
+            scrollTop: $(page).offset().top - 110
+        }, 500);
+        return false;
+    });
 
 // validation
 	
@@ -96,7 +126,42 @@ $(document).ready(function() {
 		
 	validate();
 
+// select
+    function select() {
+        $(".js-select").each(function(){
+            var select_list = $(this).find(".js-select-list");
+            var text = select_list.find("li").first().text();
+            select_list.hide();
+            $(this).click(function(event){
+                if ($(this).hasClass("is-active")) {
+                    $(this).removeClass("is-active");
+                    select_list.slideUp("fast");
+                }
+                else {
+                    $(".js-select").removeClass("is-active");
+                    $(".js-select-list").hide();
+                    select_list.slideDown("fast");
+                    $(this).addClass("is-active");
+                }
+                event.stopPropagation();
+            });
+            select_list.find("li").click(function(event) {
+                var id = $(this).attr("data-id");
+                var text = $(this).text();
+                $(this).parent().parent().find(".js-select-text").text(text);
+                $(this).parent().parent().find(".js-select-input").val(id);
+                $(this).parent().hide();
+                $(this).parents(".js-select").removeClass("is-active");
+                event.stopPropagation();
+                return false;
+            });
+        });
 
+    }
+    select();
+    $('.js-select').click(function(event){
+        event.stopPropagation();
+    });
 
 //resize function
 
@@ -108,6 +173,11 @@ $(document).ready(function() {
 
 	$(window).scroll(function(){
 		header();
-	})
+		scrollNav();
+	});
+
+	$(document).click(function(e){
+		$(".js-select-list").slideUp("fast");
+	});
 	
 });

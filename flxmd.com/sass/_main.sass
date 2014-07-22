@@ -395,6 +395,7 @@ body
 				margin: 0 13px 
 				text-decoration: none
 				color: #fff
+				+gpu
 				&:after
 					content: ""
 					position: absolute
@@ -449,11 +450,10 @@ body
 		font-size: 16px
 	&__list
 		font-size: 0
-		padding-bottom: 20px
 		li
 			display: inline-block
 			vertical-align: middle
-			margin: 0 15px
+			margin: 0 15px 20px
 			a
 				display: inline-block
 				i
@@ -553,6 +553,8 @@ body
 .services-wrap
 	background: #ffeb12
 	padding-top: 70px
+	+r(w900)
+		padding: 70px 20px 0 
 .services
 	max-width: 812px
 	margin: 0 auto
@@ -576,6 +578,13 @@ body
 				+tr(all 200ms)
 				&:hover
 					color: #f64139
+		+r(w600)
+			li
+				width: 50%
+		+r(w320)
+			li
+				width: 100%
+				text-align: center 					
 	&__img
 		font-size: 0
 		text-align: center
@@ -585,6 +594,10 @@ body
 	padding: 110px 0 80px
 	max-width: 812px
 	margin: 0 auto
+	+r(w900)
+		padding: 110px 20px 80px
+	+r(w480)
+		padding: 50px 20px 50px	 
 	&__inner
 		+clr
 	&__img
@@ -605,6 +618,9 @@ body
 		img
 			width: 100%
 			height: 100%
+		+r(w320)
+			float: none
+			margin: 0 auto 20px 	
 	&__content
 		overflow: hidden
 		font-size: 16px
@@ -614,6 +630,8 @@ body
 		a
 			color: #f64139
 			text-decoration: none
+		+r(w320)
+			text-align: center	
 .m-clients
 	position: relative
 	padding: 92px 50px
@@ -639,6 +657,11 @@ body
 			vertical-align: top
 			width: 33%
 			text-align: center
+			+r(w680)
+				width: 50%
+				margin-bottom: 20px
+			+r(w480)
+				width: 100% 	
 	&__img
 		display: inline-block
 		width: 190px
@@ -695,16 +718,25 @@ body
 		font-size: 20px
 		color: #072335
 		line-height: 1.8
+		padding: 0 20px 
 	&__wrap
 		+clr
 	&__left
 		float: left
 		width: 50%
+		+r(w568)
+			width: 100% 
 	&__right
 		float: right
 		width: 50%
 		+box
 		padding-left: 60px
+		+r(w768)
+			padding-left: 10px
+		+r(w568)
+			width: 100%
+			text-align: center
+			padding: 0 10px  	
 	&__block
 		margin-bottom: 40px
 		font-size: 16px
@@ -725,8 +757,7 @@ body
 		margin-bottom: 20px
 	&__city
 		margin-bottom: 20px		
-.form
-	padding: 60px 0 0 
+.form 
 	&__topper
 		text-align: center
 		font-size: 20px
@@ -757,7 +788,7 @@ body
 		margin-left: -1%
 		.checkbox
 			float: left		
-.input
+.input, .textarea
 	display: block
 	width: 100% 
 	height: 44px
@@ -786,8 +817,49 @@ body
 	&.valid
 		background: #e5f7ba
 		border-color: #e5f7ba
-		color: #072335
-
+		color: #072335    
+.textarea
+	resize: none
+	width: 100%
+	padding: 11px 22px 
+	height: 180px
+.select
+	position: relative
+	margin-bottom: 11px
+	&__text
+		height: 44px
+		line-height: 44px
+		padding: 0 40px 0 22px 
+		+box
+		border: 1px solid #eee
+		background: #eee
+		+tr(all 200ms)
+		font-size: 16px
+		color: #a3a3a3
+		cursor: pointer
+		&:before
+			content: ""
+			position: absolute
+			top: 19px
+			right: 20px
+			+arr(10, 5, #ababab, b) 	
+	&__dropdown
+		position: absolute
+		top: 43px
+		left: 0
+		right: 0
+		background: #fff
+		border: 1px solid #eee
+		z-index: 99 
+		li
+			a
+				display: block
+				padding: 10px 22px
+				font-size: 16px
+				color: #a3a3a3
+				text-decoration: none
+				&:hover
+					background: #f5f5f5  		
 .footer
 	position: relative
 	background: #fff
