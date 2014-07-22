@@ -345,8 +345,8 @@
 .progress-button[data-style="rotate-side-down"] .progress {
 	position: absolute;
 	top: 100%;
-	left: 8px;
-	right: 8px;
+	left: 0px;
+	right: 0px;
 	height: 20px;
 	-webkit-transform: rotateX(-90deg);
 	transform: rotateX(-90deg);
