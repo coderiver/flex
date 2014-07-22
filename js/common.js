@@ -330,12 +330,22 @@ window.onpageshow = function(event) {
 		if ($('.article-nav').length) {
 
 			var nav = $('.article-nav'),
-				point = $('.footer').offset().top,
+				top = ($('.topper').outerHeight() + 166),
+				point2 = $('.footer').offset().top,
 				scroll_top = ($(window).scrollTop() + $(window).height());
-				console.log(point);
-
-				if (scroll_top >= point ) {
+				console.log(top);
+				nav.css('top', top);
+				
+				if ( (scroll_top - 250) > top ) {
+					nav.addClass('is-fixed');
+				}
+				else{
+					nav.removeClass('is-fixed');
+				}
+				
+				if (scroll_top >= point2 ) {
 					nav.addClass('no-fixed');
+					nav.removeClass('is-fixed');
 				}
 				else{
 					nav.removeClass('no-fixed');
@@ -421,7 +431,29 @@ window.onpageshow = function(event) {
 		
 	validate();
 
+// animation bg portfolio_inner
 
+	!function($){
+  	window.requestAnimationFrame = function() {
+    return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (fn) {
+        window.setTimeout(fn, 1000 / 60);
+    }
+  }();
+
+  $(function() {
+    if (el = document.getElementById('spotlight')) {      
+
+      	(function render(){
+        	var o = document.documentElement.scrollTop || document.body.scrollTop
+          	, n = Math.max(Math.min(o / 675, 1), 0);
+
+        	el.style.backgroundColor = "rgba(198, 40, 58, " + n + ")";
+
+        	requestAnimationFrame(render);
+      	}());
+    	}
+  	});
+	}(jQuery);
 
 //resize function
 

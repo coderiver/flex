@@ -287,6 +287,11 @@
             background: $turquoise
             &:hover
                 background: lighten($turquoise, 5%)
+    &.blog_vinous
+        a
+            background: $vinous
+            &:hover
+                background: lighten($vinous, 5%)            
     &__inner
         display: inline-block
         vertical-align: middle
@@ -371,7 +376,7 @@
             height: 100%
     +r(w568)
         top: 0
-        span
+        p
             display: block
             text-align: center        
             padding-bottom: 20px
@@ -414,7 +419,13 @@
             color: $orange
     .l-turquoise & 
         a
-            color: $turquoise                        
+            color: $turquoise
+    .l-sea & 
+        a
+            color: $sea        
+    .l-vinous & 
+        a
+            color: $vinous                                
     &__quote
         padding-bottom: 32px
         margin-bottom: 60px  
@@ -443,7 +454,9 @@
             .l-turquoise & 
                 border-left-color: $turquoise
             .l-sea & 
-                border-left-color: $sea        
+                border-left-color: $sea
+            .l-vinous & 
+                border-left-color: $vinous             
     &__block
         margin-bottom: 60px
         border-bottom: 1px solid #e1e1e1
@@ -475,7 +488,9 @@
                 .l-turquoise & 
                     color: $turquoise
                 .l-sea & 
-                    color: $sea     
+                    color: $sea
+                .l-vinous & 
+                    color: $vinous         
         img
             display: block
             max-width: 100%
@@ -543,12 +558,16 @@
         left: 0
         +s(dedication)                                  
 .article-nav
-    position: fixed
+    position: absolute
     right: 0
-    bottom: 100px
+    &.is-fixed
+        position: fixed
+        bottom: 100px
+        top: auto!important
     &.no-fixed
         position: absolute
         bottom: 266px
+        top: auto!important 
     +r(w1024)
         position: relative
         margin-bottom: 25px
@@ -654,7 +673,9 @@
             .l-turquoise & 
                 color: $turquoise
             .l-sea & 
-                color: $sea     
+                color: $sea
+            .l-vinous & 
+                color: $vinous         
         +r(w768)
             width: 45%
         +r(w480)
@@ -704,7 +725,10 @@
                     +arr(8, 12, $turquoise, r)
             .l-sea &
                 &:before
-                    +arr(8, 12, $sea, r)           
+                    +arr(8, 12, $sea, r)
+            .l-vinous &
+                &:before
+                    +arr(8, 12, $vinous, r)                   
         +r(w480)
             li
                 width: 95%
@@ -1290,7 +1314,7 @@
 //graphic-menu
 
 .graphic-menu
-    max-width: 812px
+    max-width: 900px
     margin: 80px auto
     +r(w900)
         padding: 0 20px 
@@ -1342,7 +1366,11 @@
             width: 80% 
             margin: 0 auto 
             li
-                width: 100%                                
+                width: 100%
+                
+// portfolio_inner
+
+                                                
 
 
             

@@ -28,9 +28,40 @@
 	.l-turquoise & 
 		background: $turquoise
 	.l-sea & 
-		background: $sea	
+		background: $sea
+	.l-vinous & 
+		background: $vinous		
 	&.topper_index
-		padding-top: 0		
+		padding-top: 0
+	&.topper_portfolio 
+		background: transparent url(../img/topper-bg1.jpg)
+		+cover
+	&__logo
+		padding: 60px 0
+		font-size: 0
+	&__link
+		padding: 70px 0 120px 	
+		a
+			display: inline-block
+			position: relative
+			padding-left: 37px
+			font-size: 24px
+			font-weight: 400
+			color: #fff  
+			&:before
+				content: ""
+				position: absolute
+				top: 9px
+				left: 0
+				+s(link)
+			&:hover
+				text-decoration: none
+	&__overlay
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%  				 			
 .wrapper
 	position: relative
 	&.has-blur
@@ -111,7 +142,9 @@
 		.l-turquoise & 
 			background: $turquoise
 		.l-sea & 
-			background: $sea	 
+			background: $sea
+		.l-vinous & 
+			background: $vinous		 
 	+r(w320)
 		width: 320px
 		+transform(translate3d(-320px, 0, 0) rotateY(90deg))
@@ -155,7 +188,32 @@
 	.l-turquoise & 
 		background: $turquoise
 	.l-sea & 
-		background: $sea		 
+		background: $sea
+	.l-vinous & 
+		background: $vinous
+	&.header_portfolio
+		background: transparent
+		&.is-fixed
+			.l-gray &
+				background: $gray
+			.l-green &
+				background: $green
+			.l-red &
+				background: $red
+			.l-blue &
+				background: $blue
+			.l-yellow &
+				background: $yellow
+			.l-violet &
+				background: $violet
+			.l-orange &
+				background: $orange
+			.l-turquoise & 
+				background: $turquoise
+			.l-sea & 
+				background: $sea
+			.l-vinous & 
+				background: $vinous
 	+r(w900)
 		padding: 0 20px 	
 	+r(w768)
@@ -225,7 +283,9 @@
 	.l-turquoise & 
 		background: $turquoise
 	.l-sea & 
-		background: $sea		 		
+		background: $sea
+	.l-vinous & 
+		background: $vinous			 		
 	+r(w768)
 		display: block	 
 .menu
@@ -397,7 +457,12 @@
 			&:hover
 				&:after
 					+box-shadow(0 0px 5px 2px $sea)																																	
-
+	.l-vinous &
+		a
+			+s(like-vinous)
+			&:hover
+				&:after
+					+box-shadow(0 0px 5px 2px $vinous)
 // slider
 .slider
 	position: relative
