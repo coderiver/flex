@@ -322,6 +322,11 @@ window.onpageshow = function(event) {
 			dots: true
 		});
 	};
+	if ($('.js-gallery2').length) {
+		$('.js-gallery2').slick({
+			dots: false
+		});
+	};
 	
 
 // article nav position
