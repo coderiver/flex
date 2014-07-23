@@ -204,10 +204,11 @@
     &.quote_mod
         padding-top: 50px
         border-top: 1px solid #e1e1e1  
-        margin-left: 45px   
+        padding-left: 65px   
         font-style: italic
         &:before
             top: 11px
+            left: 0
         .quote__author
             span
                 font-style: normal         
@@ -245,9 +246,14 @@
         margin: 0 10%
         font-size: 16px
         line-height: 1.8
+        &.quote_mod
+            margin: 0 
+            font-size: 13px
     +r(w568)
         font-size: 14px
         line-height: 1.6
+        &.quote_mod
+            font-size: 13px
     +r(w480)
         margin: 0 
         padding: 10px 0 10px 20px
@@ -560,7 +566,15 @@
             margin-left: 0
             li
                 width: 100%
-                margin-left: 0     
+                margin-left: 0
+        &.article__cols_mod
+            li
+                width: 20%
+            +r(w480)
+                margin-left: -5%
+                li
+                    width: 20%
+                    margin-left: 5%                     
     &__share
         padding: 20px 30px 10px
         margin-bottom: 60px
@@ -618,10 +632,13 @@
         top: auto!important 
     +r(w1024)
         position: relative
-        margin-bottom: 25px
+        margin: 25px 0
         &.no-fixed
             position: relative
-            bottom: auto
+            bottom: auto!important
+        &.is-fixed
+            position: relative
+            bottom: auto!important    
         ul
             text-align: center
             li
@@ -1450,6 +1467,10 @@
             margin-bottom: 20px
         span
             color: #939393
+    +r(w480)
+        .person__img
+            float: none
+            margin: 0 auto 20px         
 .hint
     font-style: italic
     line-height: 1.6
@@ -1485,5 +1506,15 @@
             +s(link-vinous)
         &:hover
             text-decoration: none
+.gallery-container
+    position: relative            
+.browser
+    position: relative
+    top: 60px
+    font-size: 0
+    img
+        margin: 0
+    +r(w480)
+        top: 30px                 
             
                  
