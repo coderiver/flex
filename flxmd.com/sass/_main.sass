@@ -173,10 +173,10 @@ body
 		color: #071427
 		font-weight: 400
 		+box-shadow(0 19px 30px -18px #ffeb12)
+		&:after
+			display: none
 		&:hover
-			background: #e3d219
-			&:after
-				+transform(translateX(252px))		 		
+			background: #e3d219 		 		
 .wrapper
 	position: relative
 	&.has-blur
@@ -522,7 +522,30 @@ body
 			position: relative
 			display: inline-block
 			vertical-align: middle
-			max-width: 100%		
+			max-width: 100%
+	&__content
+		position: absolute
+		top: 0px
+		left: 0px
+		right: 0px
+		bottom: 0px
+		+vertical
+		font-size: 0
+		background: rgba(0, 0, 0, .4)
+		+tr(opacity 300ms)
+		opacity: 0
+		z-index: 3
+	&__inner
+		display: inline-block
+		vertical-align: middle
+		color: #fff
+		padding: 45px 
+		font-size: 14px
+		text-align: left
+		& > div
+			color: #ffe216
+			font-size: 30px
+			margin-bottom: 5px		 				
 	&:hover
 		.m-works__img
 			+transform(scale(1.05))
@@ -531,14 +554,18 @@ body
 			opacity: 0
 		.m-works__img-blur
 			opacity: 0
+		.m-works__content
+			opacity: 1	
 	+r(w768)
+		.m-works__inner
+			padding: 25px 
 		&:hover
 			.m-works__img
 				+transform(scale(1))
 			.m-works__img-blur
 				opacity: 1
 			.m-works__logo
-				opacity: 1
+				opacity: 0
 				+transform(scale(1) translate3d(0, 0, 0))		 					 						 
 .about
 	text-align: center
@@ -570,14 +597,13 @@ body
 			display: inline-block
 			width: 33%
 			margin-bottom: 15px
-			a
-				font-size: 16px
-				color: #072335
-				+font-light
-				text-decoration: none
-				+tr(all 200ms)
-				&:hover
-					color: #f64139
+			font-size: 16px
+			color: #072335
+			+font-light
+			text-decoration: none
+			+tr(all 200ms)
+			span
+				color: #f64139
 		+r(w600)
 			li
 				width: 50%
