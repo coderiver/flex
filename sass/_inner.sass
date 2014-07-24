@@ -1507,8 +1507,39 @@
             +s(link-vinous)
         &:hover
             text-decoration: none
-.gallery-container
-    position: relative            
+.gallery
+    position: relative
+    &__controls
+        position: relative
+        top: 30px
+        font-size: 0
+        text-align: center
+    &__prev, &__next
+        position: relative
+        display: inline-block
+        vertical-align: middle
+        margin: 0 12px 
+        width: 17px
+        height: 17px
+        border-radius: 50%
+        background: #c21a2e
+        &:before
+            content: ""
+            position: absolute
+            top: 4px
+            left: 6px 
+            +arr(4, 8, #fff, l)
+    &__next
+        &:before
+            left: 7px
+            +arr(4, 8, #fff, r)
+    &__pager
+        display: inline-block
+        vertical-align: middle
+        font-size: 14px
+        span
+            display: inline-block
+            vertical-align: middle                              
 .browser
     position: relative
     top: 60px
