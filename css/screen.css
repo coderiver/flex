@@ -916,7 +916,7 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 .upload__add { position: absolute; top: 50%; width: 60px; height: 60px; margin-top: -30px; margin-right: 28px; border-radius: 2px; background: #217745; }
 .upload__add:before { content: ""; position: absolute; top: 50%; left: 50%; margin: -17px 0 0 -17px; background: url('../img/icons-s51bc3ebb78.png') 0 -1713px no-repeat; width: 34px; height: 34px; }
 .upload__text { padding-top: 10px; padding-left: 88px; }
-.upload__mail { text-align: center; color: #262626; }
+.upload__mail { margin-top: 20px; text-align: center; color: #262626; }
 .upload__mail a { font-size: 20px; color: #fa453c; font-weight: 400; text-decoration: none; }
 .upload__mail a span { display: inline-block; line-height: 1; border-bottom: 1px solid #fa453c; }
 
