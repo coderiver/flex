@@ -519,7 +519,7 @@ window.onpageshow = function(event) {
 
       	(function render(){
         	var o = document.documentElement.scrollTop || document.body.scrollTop
-          	, n = Math.max(Math.min(o / 575, 1), 0);
+          	, n = Math.max(Math.min(o / 375, 1), 0);
 
         	el.style.backgroundColor = "rgba(198, 40, 58, " + n + ")";
 
