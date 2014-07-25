@@ -7,6 +7,7 @@
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/component.css" >
 	<link rel="stylesheet" media="screen" href="css/slick.css" >
+	<link rel="stylesheet" media="screen" href="css/dropzone.css" >
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<script src="js/lib/jquery.js"></script>
@@ -19,6 +20,7 @@
 	<script src="js/lib/svgLoader.js"></script>
 	<script src="js/lib/progressButton.js"></script>
 	<script src="js/lib/slick.min.js"></script>
+	<script src="js/lib/dropzone.min.js"></script>
 	<script src="js/common.js"></script>
 	<!--[if IE]><script src="js/lib/html5shiv.js"></script><![endif]-->
 </head>
@@ -63,15 +65,15 @@
 			<div class="feedback">
 		  	<!-- tab list -->
 		  	<ul class="form-nav">
-		  	  <li class="form-nav__item">
-		  	    <a href="#" class="form-nav__link">Отправить заявку</a>
-		  	  </li>
-		  	  <li class="form-nav__item is-active">
-		  	    <a href="#" class="form-nav__link">Скачать бриф</a>
-		  	  </li>
-		  	  <li class="form-nav__item">
-		  	    <a href="#" class="form-nav__link">Обратный звонок</a>
-		  	  </li>
+		  		<li class="form-nav__item">
+		  		  <a href="#" class="form-nav__link">Отправить заявку</a>
+		  		</li>
+		  		<li class="form-nav__item is-active">
+		  		  <a href="#" class="form-nav__link">Скачать бриф</a>
+		  		</li>
+		  		<li class="form-nav__item">
+		  		  <a href="#" class="form-nav__link">Обратный звонок</a>
+		  		</li>
 		  	</ul>
 		  	<!-- END tab list -->
 		  	<!-- tab content -->
@@ -93,16 +95,20 @@
 		  			</ul>
 		  			<div class="upload">
 		  				<div class="upload__title">Заполните бриф и загрузите его на сайт:</div>
-		  				<div class="upload__block">
-		  					<input type="file">
-		  					<div class="upload__preview">
-		  						<div class="upload__add"></div>
-		  						<div class="upload__text">
-		  							<p>Выберите или перетащите необходимые файлы для загрузки</p>
-		  							<i>Максимальный размер файла 10 МБ</i>
+		  				<div class="upload__wrap">
+		  					<form action="#" class="dropzone">
+		  						<div class="upload__block">
+		  							<div class="upload__preview">
+		  								<div class="upload__add"></div>
+		  								<div class="upload__text">
+		  									<p>Выберите или перетащите необходимые файлы для загрузки</p>
+		  									<i>Максимальный размер файла 10 МБ</i>
+		  								</div>
+		  							</div>
 		  						</div>
-		  					</div>
+		  					</form>
 		  				</div>
+		  				
 		  				<div class="upload__mail">
 		  					или отправьте нам на почту:  <a href="mailto:info@flxmd.by"><span>info@flxmd.by</span></a> 
 		  				</div>

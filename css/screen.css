@@ -910,7 +910,7 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 @media only screen and (max-width: 480px) { .download li { margin: 0 20px; } }
 
 .upload__title { margin-bottom: 30px; text-align: center; text-transform: uppercase; font-size: 16px; color: #262626; }
-.upload__block { position: relative; min-height: 98px; padding: 18px; margin-bottom: 18px; background: #27ae60; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border: 2px dashed #1d8649; }
+.upload__block { position: relative; min-height: 98px; padding: 18px; background: #27ae60; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .upload__block input[type="file"] { position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; opacity: 0; z-index: 2; }
 .upload__preview { color: white; }
 .upload__add { position: absolute; top: 50%; width: 60px; height: 60px; margin-top: -30px; margin-right: 28px; border-radius: 2px; background: #217745; }
