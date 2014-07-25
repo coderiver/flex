@@ -52,7 +52,7 @@
   height: 120px;
   position: relative;
   padding: 5px 5px 60px;
-  background: url(../img/file-small.png) 50% 0 no-repeat;
+  background: url(../img/file-small.png) 50% 10px no-repeat;
 }
 .dropzone .dz-preview .dz-details .dz-filename,
 .dropzone-previews .dz-preview .dz-details .dz-filename {
