@@ -22,6 +22,8 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 body { font-family: "Open Sans", sans-serif; font-weight: 300; font-size: 14px; line-height: 1.4; background: #444444; }
 
+.no-loader svg { display: none !important; }
+
 .out { background: white; }
 @media only screen and (max-width: 1024px) { .out { cursor: default; } }
 
