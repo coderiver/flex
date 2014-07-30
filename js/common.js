@@ -499,11 +499,14 @@ $('.js-submitatt').on("click", function (e) {
       step: 1000,
       slide: function( event, ui ) {
         $( "#amount" ).val( "От $" + ui.values[ 0 ] + " до $" + ui.values[ 1 ]);
+        var maximum = 30000;
+        if (maximum == ui.values[ 1 ]) {
+        	$( "#amount" ).val( "От $" + ui.values[ 0 ] + " до $" + ui.values[ 1 ] + "+");
+        };
       }
     });
     $( "#amount" ).val( "От $" + $( "#slider-range" ).slider( "values", 0 ) +
       " до $" + $( "#slider-range" ).slider( "values", 1 ) + " +" ); 	
-
     $( "#slider-range" ).find('.ui-slider-handle:last-child').addClass('is-last');
 
 
