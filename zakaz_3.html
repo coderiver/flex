@@ -21,7 +21,7 @@
 	<script src="js/lib/progressButton.js"></script>
 	<script src="js/lib/slick.min.js"></script>
 	<script src="js/lib/dropzone.min.js"></script>
-	<script src="js/lib/jquery.validate.js"></script>
+	<script src="js/lib/jquery.form-validator.js"></script>
 	<script src="js/common.js"></script>
 	<!--[if IE]><script src="js/lib/html5shiv.js"></script><![endif]-->
 </head>
@@ -88,13 +88,13 @@
 		  	  <div class="form__content">
 		  	  	<form class="js-validate">
 		  	  		<label class="form__item">
-		  	  			<input type="text" class="input" placeholder="Имя" required name="name">
+		  	  			<input type="text" class="input" placeholder="Имя" name="name" data-validation="required">
 		  	  		</label>
 		  	  		<label class="form__item">
-		  	  			<input type="text" class="input" placeholder="Контактный телефон" required name="tel">
+		  	  			<input type="text" class="input" placeholder="Контактный телефон" name="tel" data-validation="number" data-validation-allowing="positive">
 		  	  		</label>
 							<label class="form__item">
-								<textarea class="textarea" placeholder="Комментарий" required name="comment"></textarea>
+								<textarea class="textarea" placeholder="Комментарий" name="comment" data-validation="required"></textarea>
 							</label>
 							<div class="form__btn">
 								<button class="progress-button-imitation">Отправить</button>

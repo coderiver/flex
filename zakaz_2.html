@@ -21,7 +21,7 @@
 	<script src="js/lib/progressButton.js"></script>
 	<script src="js/lib/slick.min.js"></script>
 	<script src="js/lib/dropzone.min.js"></script>
-	<script src="js/lib/jquery.validate.js"></script>
+	<script src="js/lib/jquery.form-validator.js"></script>
 	<script src="js/common.js"></script>
 	<!--[if IE]><script src="js/lib/html5shiv.js"></script><![endif]-->
 </head>
@@ -99,7 +99,7 @@
 		  			<div class="upload">
 		  				<div class="upload__title">Заполните бриф и загрузите его на сайт:</div>
 		  				<div class="upload__wrap">
-		  					<form action="/fileupload" class="dropzone" id="dropzone1" >
+		  					<form id="mydropzone" class="dropzone" action="/fileupload">
 		  						<div class="upload__block">
 		  							<div class="upload__preview">
 		  								<div class="upload__add"></div>
@@ -111,8 +111,9 @@
 		  						</div>
 		  					</form>
 		  				</div>
-			  			<div class="form__btn js-submitall">
-								<button class="progress-button" data-style="rotate-side-down" data-perspective data-horizontal>Отправить</button>
+			  			<div class="form__btn">
+			  				<button class="progress-button-imitation js-submitall">Отправить</button>
+								<button class="progress-button" data-style="rotate-side-down" data-perspective data-horizontal style="display: none;">Отправить</button>
 							</div>
 		  				<div class="upload__mail">или отправьте нам на почту:  <a href="mailto:info@flxmd.by"><span>info@flxmd.by</span></a>
 		  				</div>

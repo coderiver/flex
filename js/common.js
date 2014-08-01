@@ -40,40 +40,17 @@ window.onpageshow = function(event) {
 
 
 // dropzone submit
-
-Dropzone.options.myDropzone = {
-
-  // Prevents Dropzone from uploading dropped files immediately
-  autoProcessQueue: false,
-
-  init: function() {
-    var submitButton = document.querySelector(".js-submitall")
-        myDropzone = this; // closure
-
-    submitButton.addEventListener("click", function() {
-      myDropzone.processQueue(); // Tell Dropzone to process all queued files.
-    });
-
-    // You might want to show the submit button only when 
-    // files are dropped here:
-    this.on("addedfile", function() {
-      // Show submit button here and/or inform user to click it.
-    });
-
-  }
-};
-
-
-	
-$('.js-submitatt').on("click", function (e) {
-	alert('a');
-        e.preventDefault();
-        e.stopPropagation();
-
-        var form = $('.dropzone');          
-    });
-
-
+$('#mydropzone').dropzone({ 
+	//url: '/file/post'
+	paramName: "file", // The name that will be used to transfer the file
+	maxFilesize: 2, // MB
+	accept: function(file, done) {
+	  if (file.name == "justinbieber.jpg") {
+	    done("Naha, you don't.");
+	  }
+	  else { done(); }
+	}
+});
 
 
 // slider
@@ -495,53 +472,23 @@ $('.js-submitatt').on("click", function (e) {
 
 
 // validation
-	
-	function validate() {
-		$('.js-validate').each(function(){
-			if ($(this).length > 0) {
-				$.validator.setDefaults({
-				  debug: true,
-				  success: "valid"
-				});
-				$.validator.addMethod(
-				  "regex",
-				  function(value, element, regexp) {
-				      var check = false;
-				      return this.optional(element) || regexp.test(value);
-				  },
-				  "Please check your input."
-				);
-				$(this).validate({
-					errorClass: 'is-error',
-					rules: {
-						name: {
-							minlength: 3
-						},
-						company: {
-							minlength: 3
-						},
-						comment: {
-							minlength: 3
-						},
-						email: {
-							minlength: 3,
-						  email: true
-						},
-						tel: {
-							minlength: 3,
-							digits: true
-						}
-					},
-					submitHandler: function () {
-						$('.progress-button-imitation').hide();
-						$('.progress-button').show().trigger('click');
-					}
-				});
-			}
+	var form_validate = $('.js-validate');
+	if (form_validate.length) {
+		form_validate.each(function () {
+			var form_this = $(this);
+			$.validate({
+				form : form_this,
+				borderColorOnError : 'transparent',
+				onSuccess : function() {
+				  $('.progress-button-imitation').hide();
+				  $('.progress-button').show().trigger('click');
+				  return false;
+				}
+			});
 		});
-	}
-		
-	validate();
+	};
+	
+	
 
 // animation bg portfolio_inner
 
