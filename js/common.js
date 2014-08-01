@@ -11,19 +11,25 @@ window.onpageshow = function(event) {
 			var loader = new SVGLoader( document.getElementById( 'loader' ), { speedIn : 100 } );
 
 			$('a').click(function(ev) {
-				ev.preventDefault();
-				var inner_link = $(this).attr('rel');
-				if (inner_link == 'internal') {
+				if($(this).attr('target')=='_blank'){
+
 				}
 				else{
-					loader.show();
-	
-					var route = $(this).attr('href');
-					
-					setTimeout( function() {
+					ev.preventDefault();
+					var inner_link = $(this).attr('rel');
+					if (inner_link == 'internal') {
+					}
+					else{
+
+						loader.show();
+		
+						var route = $(this).attr('href');
 						
-						window.location.href = route;
-					}, 1000 );
+						setTimeout( function() {
+							
+							window.location.href = route;
+						}, 1000 );
+					}
 				}
 				
 			});
