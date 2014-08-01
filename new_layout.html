@@ -21,7 +21,6 @@
 	<script src="js/lib/progressButton.js"></script>
 	<script src="js/lib/slick.min.js"></script>
 	<script src="js/lib/dropzone.min.js"></script>
-	<script src="js/lib/jquery.validate.js"></script>
 	<script src="js/common.js"></script>
 	<!--[if IE]><script src="js/lib/html5shiv.js"></script><![endif]-->
 </head>
@@ -59,67 +58,7 @@
 	<!-- BEGIN wrap in -->
 	<div class="wrap-in">
 		<div class="wrap-in__container">
-			<!-- BEGIN topper -->
-			<section class="topper">
-				<a href="#" class="logo-big">flex media</a>
-				<h2 class="h2">Начните с нами работать прямо <span>сейчас</span></h2>
-			</section>
-			<!-- BEGIN form -->
-			<div class="feedback">
-		  	<!-- tab list -->
-		  	<ul class="form-nav">
-		  	  <li class="form-nav__item">
-		  	    <a href="#" class="form-nav__link">Отправить заявку</a>
-		  	  </li>
-		  	  <li class="form-nav__item">
-		  	    <a href="#" class="form-nav__link">Скачать бриф</a>
-		  	  </li>
-		  	  <li class="form-nav__item is-active">
-		  	    <a href="#" class="form-nav__link">Обратный звонок</a>
-		  	  </li>
-		  	</ul>
-		  	<!-- END tab list -->
-		  	<!-- tab content -->
-		  	<div class="form">
-					<div class="form__topper">
-						<div class="form__title">Заполните форму и мы вам перезвоним</div>
-						<p>Мы свяжемся с вами в любое удобное для вас время</p>
-					</div>
-		  	  <div class="form__content">
-		  	  	<form class="js-validate">
-		  	  		<label class="form__item">
-		  	  			<input type="text" class="input" placeholder="Имя" required name="name">
-		  	  		</label>
-		  	  		<label class="form__item">
-		  	  			<input type="text" class="input" placeholder="Контактный телефон" required name="tel">
-		  	  		</label>
-							<label class="form__item">
-								<textarea class="textarea" placeholder="Комментарий" required name="comment"></textarea>
-							</label>
-							<div class="form__btn">
-								<button class="progress-button-imitation">Отправить</button>
-								<button class="progress-button-reset" type="reset"></button>
-								<button class="progress-button" data-style="rotate-side-down" data-perspective="" data-horizontal="" style="display: none;">Отправить</button>
-							</div>
-		  	  	</form>
-		  		</div>
-		  	</div>
-		  </div> 
-			<!-- END form -->
-			</div>
-			<!-- BEGIN footer -->
-			<footer class="footer footer_inner">
-				<div class="footer__copyrights">© 2009—2014 Flexmedia</div>
-				<ul class="footer__socials">
-				<li><a href="#" class="vk"><i></i></a></li>
-				<li><a href="#" class="fb"><i></i></a></li>
-				<li><a href="#" class="tw"><i></i></a></li>
-				<li><a href="#" class="dribble"><i></i></a></li>
-				<li><a href="#" class="instagram"><i></i></a></li>
-				</ul>
-				<a href="#" class="btn btn_up js-scroll-up" rel="internal">наверх</a>
-			</footer>
-			<!-- END footer -->
+			
 		</div>
 	</div>
 	<!-- END wrap in -->
@@ -144,22 +83,6 @@
 </div>
 
 <script>
-	[].slice.call( document.querySelectorAll('button.progress-button')).forEach( function( bttn ) {
-		new ProgressButton( bttn, {
-			callback : function( instance ) {
-				var progress = 0,
-				interval = setInterval( function() {
-					progress = Math.min( progress + Math.random() * 0.1, 1 );
-					instance._setProgress( progress );
-					if( progress === 1 ) {
-						instance._stop(1);
-						clearInterval( interval );
-					}
-				}, 200 );
-			}
-		});
-	});
-	// 
 	(function() {
 		var loader = new SVGLoader( document.getElementById( 'loader' ), { speedIn : 10, speedOut: 100 } );
 		loader.show();

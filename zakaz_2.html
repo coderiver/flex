@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>zakaz 2</title>
+	<title>blog inner</title>
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/component.css" >
@@ -29,11 +29,10 @@
 <div class="pagewrap" id="pagewrap">
 <a href="#" class="menu-btn" rel="internal"></a>
 <div class="wrapper">
-<!-- BEGIN  out-->
-<div class="out out_mobile">
-	
-	<!-- BEGIN header -->
-		<header class="header-wrap">
+	<!-- BEGIN wrap header -->
+	<div class="wrap-header">
+		<div class="wrap-header__in">
+			<!-- header -->
 			<div class="header">
 				<span class="header__close js-close-sidebar"></span>
 				<h1 class="logo"><a href="index.html"></a></h1>
@@ -45,7 +44,7 @@
 				</div>
 				<nav class="menu">
 					<ul>
-						<li><a href="portfolio.html" class="is-active">портфолио</a></li>
+						<li><a href="portfolio.html">портфолио</a></li>
 						<li><a href="services.html">Услуги</a></li>
 						<li><a href="#">компания</a></li>
 						<li><a href="#">блог</a></li>
@@ -54,15 +53,18 @@
 					</ul>
 				</nav>
 			</div>
-		</header>
-		<!-- END header -->
-	<div class="out__inner">
-		<!-- BEGIN topper -->
-		<section class="topper">
+		</div>
+	</div>
+	<!-- END wrap header -->
+	<!-- BEGIN wrap in -->
+	<div class="wrap-in">
+		<div class="wrap-in__container">
+			<!-- BEGIN topper -->
+			<section class="topper">
 				<a href="#" class="logo-big">flex media</a>
 				<h2 class="h2">Начните с нами работать прямо <span>сейчас</span></h2>
-		</section>
-		<!-- BEGIN form -->
+			</section>
+			<!-- BEGIN form -->
 			<div class="feedback">
 		  	<!-- tab list -->
 		  	<ul class="form-nav">
@@ -98,7 +100,6 @@
 		  				<div class="upload__title">Заполните бриф и загрузите его на сайт:</div>
 		  				<div class="upload__wrap">
 		  					<form action="/fileupload" class="dropzone" id="dropzone1" >
-
 		  						<div class="upload__block">
 		  							<div class="upload__preview">
 		  								<div class="upload__add"></div>
@@ -110,36 +111,19 @@
 		  						</div>
 		  					</form>
 		  				</div>
-
-			  				<div class="form__btn js-submitall">
+			  			<div class="form__btn js-submitall">
 								<button class="progress-button" data-style="rotate-side-down" data-perspective data-horizontal>Отправить</button>
 							</div>
-			  				<div class="upload__mail">
-			  					или отправьте нам на почту:  <a href="mailto:info@flxmd.by"><span>info@flxmd.by</span></a> 
-			  				</div>
-
+		  				<div class="upload__mail">или отправьте нам на почту:  <a href="mailto:info@flxmd.by"><span>info@flxmd.by</span></a>
+		  				</div>
 		  			</div>
-		  			
 		  		</div>
 		  	</div>
-		<!-- END form -->
+		  </div>
+			<!-- END form -->
 		</div>
-		<!-- BEGIN footer -->
-		<footer class="footer footer_inner">
-			<div class="footer__copyrights">© 2009—2014 Flexmedia</div>
-			<ul class="footer__socials">
-			<li><a href="#" class="vk"><i></i></a></li>
-			<li><a href="#" class="fb"><i></i></a></li>
-			<li><a href="#" class="tw"><i></i></a></li>
-			<li><a href="#" class="dribble"><i></i></a></li>
-			<li><a href="#" class="instagram"><i></i></a></li>
-			</ul>
-			<a href="#" class="btn btn_up js-scroll-up" rel="internal">наверх</a>
-		</footer>
-		<!-- END footer -->
 	</div>
-</div>
-<!-- END out-->
+	<!-- END wrap in -->
 </div>
 <!-- BEGIN popup -->
 <div class="popup-wrap js-popup">
@@ -161,22 +145,22 @@
 </div>
 
 <script>
-			[].slice.call( document.querySelectorAll( 'button.progress-button' ) ).forEach( function( bttn ) {
-				new ProgressButton( bttn, {
-					callback : function( instance ) {
-						var progress = 0,
-							interval = setInterval( function() {
-								progress = Math.min( progress + Math.random() * 0.1, 1 );
-								instance._setProgress( progress );
-
-								if( progress === 1 ) {
-									instance._stop(1);
-									clearInterval( interval );
-								}
-							}, 200 );
+	[].slice.call( document.querySelectorAll('button.progress-button')).forEach( function( bttn ) {
+		new ProgressButton( bttn, {
+			callback : function( instance ) {
+				var progress = 0,
+				interval = setInterval( function() {
+					progress = Math.min( progress + Math.random() * 0.1, 1 );
+					instance._setProgress( progress );
+					if( progress === 1 ) {
+						instance._stop(1);
+						clearInterval( interval );
 					}
-				} );
-			} );
+				}, 200 );
+			}
+		});
+	});
+	// 
 	(function() {
 		var loader = new SVGLoader( document.getElementById( 'loader' ), { speedIn : 10, speedOut: 100 } );
 		loader.show();

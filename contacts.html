@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>contacts</title>
+	<title>blog inner</title>
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/component.css" >
@@ -28,11 +28,10 @@
 <div class="pagewrap" id="pagewrap">
 <a href="#" class="menu-btn" rel="internal"></a>
 <div class="wrapper">
-<!-- BEGIN  out-->
-<div class="out out_mobile">
-	
-	<!-- BEGIN header -->
-		<header class="header-wrap">
+	<!-- BEGIN wrap header -->
+	<div class="wrap-header">
+		<div class="wrap-header__in">
+			<!-- header -->
 			<div class="header">
 				<span class="header__close js-close-sidebar"></span>
 				<h1 class="logo"><a href="index.html"></a></h1>
@@ -48,133 +47,136 @@
 						<li><a href="services.html">Услуги</a></li>
 						<li><a href="#">компания</a></li>
 						<li><a href="#">блог</a></li>
-						<li><a href="#" class="is-active">Контакты</a></li>
+						<li><a href="#">Контакты</a></li>
 						<li><a href="#"><strong>Заказать</strong></a></li>
 					</ul>
 				</nav>
 			</div>
-		</header>
-		<!-- END header -->
-	<div class="out__inner">
-		<!-- BEGIN topper -->
-		<section class="topper">
+		</div>
+	</div>
+	<!-- END wrap header -->
+	<!-- BEGIN wrap in -->
+	<div class="wrap-in">
+		<div class="wrap-in__container">
+			<!-- BEGIN topper -->
+			<section class="topper">
 				<a href="#" class="logo-big">flex media</a>
 				<h2 class="h2">Контактная информация</h2>
-		</section>
-		<ul class="form-nav">
-		  	<li class="form-nav__item is-active">
-		  	  <a href="#" class="form-nav__link">Минск</a>
-		  	</li>
-		  	<li class="form-nav__item">
-		  	  <a href="#" class="form-nav__link">Москва</a>
-		  	</li>
-		  	<li class="form-nav__item">
-		  	  <a href="#" class="form-nav__link">Сан-Франциско</a>
-		  	</li>
-		</ul>
-		<!-- BEGIN contacts -->
-		<div class="contacts">
-			<div class="adress">
-				<div class="adress__inner">
-					<div class="adress__item">
-						<p>ООО «Флекс Медиа»</p>
-						<p>ул. Мележа 1, офис 1501</p>
-						<p>г. Минск, Республика Беларусь, 220001</p>
-					</div>
-					<div class="adress__item">
-						<div class="adress__phone"><span>+375 17 306-52-42,</span> <span>+375 29 306-52-42</span></div>
-						<p><a href="#">info@flxmd.by</a> <a href="#" class="skype">skype: flex.by</a></p>
-					</div>
-				</div>
-			</div>
-			<div class="contacts__map" id="map-canvas"></div>
-			<script>
-			  	function initialize() {
-			  		var stylez = [
-					    {
-					      featureType: "all",
-					      elementType: "all",
-					      stylers: [
-					        { saturation: -100 } // <-- THIS
-					      ]
-					    }
-					];
-				    var mapOptions = {
-				      	zoom: 15,
-				      	center: new google.maps.LatLng(53.940047, 27.573587),
-				      	disableDefaultUI: true,
-				      	scrollwheel: false,
-				     	zoomControl: true,
-				     	zoomControlOptions: {
-           				  style: google.maps.ZoomControlStyle.SMALL,
-           				  position: google.maps.ControlPosition.RIGHT_CENTER
-           				},
-						mapTypeControlOptions: {
-    					    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'tehgrayz']
-    					}
-				    }
-				    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-				    var mapType = new google.maps.StyledMapType(stylez, { name:"Grayscale" });    
-					map.mapTypes.set('tehgrayz', mapType);
-					map.setMapTypeId('tehgrayz');
-				    var image = 'img/marker.png';
-				    var myLatLng1 = new google.maps.LatLng(53.940098, 27.602298);
-				    var marker1 = new google.maps.Marker({
-					      position: myLatLng1,
-					      map: map,
-					      title: 'Uluru (Ayers Rock)', 
-					      icon: image
-					});
-
-				}
-			  	// Asynchronous Loading
-				function loadScript() {
-				  var script = document.createElement('script');
-				  script.type = 'text/javascript';
-				  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
-				      'callback=initialize';
-				  document.body.appendChild(script);
-				}
-				window.onload = loadScript;
-			</script>
-			<div class="contacts__inner">
-				<div class="contacts__block">
-					<div class="contacts__content">
-						<div class="link">заказать проект</div>
-						<div class="contacts__text">
-							Мы знаем как сделать для вас качественный, продуманный и стильный проект.
-						</div>
-						<a href="#" class="btn">заказать</a>
-					</div>
-				</div>
-				<div class="contacts__block">
-					<div class="contacts__content">
-						<div class="link">Хотите работать у нас?</div>
-						<div class="contacts__text">
-							Пишите нам и присылайте своё портфолио, мы всегда рады новым знакомствам:
-						</div>
-						<a href="mailto:superhero@flex.by" class="contacts__email">superhero@flex.by</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- END contacts -->
-		<!-- BEGIN footer -->
-		<footer class="footer footer_inner">
-			<div class="footer__copyrights">© 2009—2014 Flexmedia</div>
-			<ul class="footer__socials">
-			<li><a href="#" class="vk"><i></i></a></li>
-			<li><a href="#" class="fb"><i></i></a></li>
-			<li><a href="#" class="tw"><i></i></a></li>
-			<li><a href="#" class="dribble"><i></i></a></li>
-			<li><a href="#" class="instagram"><i></i></a></li>
+			</section>
+			<ul class="form-nav">
+			  <li class="form-nav__item is-active">
+			    <a href="#" class="form-nav__link">Минск</a>
+			  </li>
+			  <li class="form-nav__item">
+			    <a href="#" class="form-nav__link">Москва</a>
+			  </li>
+			  <li class="form-nav__item">
+			    <a href="#" class="form-nav__link">Сан-Франциско</a>
+			  </li>
 			</ul>
-			<a href="#" class="btn btn_up js-scroll-up" rel="internal">наверх</a>
-		</footer>
-		<!-- END footer -->
+			<!-- BEGIN contacts -->
+			<div class="contacts">
+				<div class="adress">
+					<div class="adress__inner">
+						<div class="adress__item">
+							<p>ООО «Флекс Медиа»</p>
+							<p>ул. Мележа 1, офис 1501</p>
+							<p>г. Минск, Республика Беларусь, 220001</p>
+						</div>
+						<div class="adress__item">
+							<div class="adress__phone"><span>+375 17 306-52-42,</span> <span>+375 29 306-52-42</span></div>
+							<p><a href="#">info@flxmd.by</a> <a href="#" class="skype">skype: flex.by</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="contacts__map" id="map-canvas"></div>
+				<script>
+				  	function initialize() {
+				  		var stylez = [
+						    {
+						      featureType: "all",
+						      elementType: "all",
+						      stylers: [
+						        { saturation: -100 } // <-- THIS
+						      ]
+						    }
+						];
+					    var mapOptions = {
+					      	zoom: 15,
+					      	center: new google.maps.LatLng(53.940047, 27.573587),
+					      	disableDefaultUI: true,
+					      	scrollwheel: false,
+					     	zoomControl: true,
+					     	zoomControlOptions: {
+	           				  style: google.maps.ZoomControlStyle.SMALL,
+	           				  position: google.maps.ControlPosition.RIGHT_CENTER
+	           				},
+							mapTypeControlOptions: {
+	    					    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'tehgrayz']
+	    					}
+					    }
+					    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+					    var mapType = new google.maps.StyledMapType(stylez, { name:"Grayscale" });    
+						map.mapTypes.set('tehgrayz', mapType);
+						map.setMapTypeId('tehgrayz');
+					    var image = 'img/marker.png';
+					    var myLatLng1 = new google.maps.LatLng(53.940098, 27.602298);
+					    var marker1 = new google.maps.Marker({
+						      position: myLatLng1,
+						      map: map,
+						      title: 'Uluru (Ayers Rock)', 
+						      icon: image
+						});
+
+					}
+				  	// Asynchronous Loading
+					function loadScript() {
+					  var script = document.createElement('script');
+					  script.type = 'text/javascript';
+					  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
+					      'callback=initialize';
+					  document.body.appendChild(script);
+					}
+					window.onload = loadScript;
+				</script>
+				<div class="contacts__inner">
+					<div class="contacts__block">
+						<div class="contacts__content">
+							<div class="link">заказать проект</div>
+							<div class="contacts__text">
+								Мы знаем как сделать для вас качественный, продуманный и стильный проект.
+							</div>
+							<a href="#" class="btn">заказать</a>
+						</div>
+					</div>
+					<div class="contacts__block">
+						<div class="contacts__content">
+							<div class="link">Хотите работать у нас?</div>
+							<div class="contacts__text">
+								Пишите нам и присылайте своё портфолио, мы всегда рады новым знакомствам:
+							</div>
+							<a href="mailto:superhero@flex.by" class="contacts__email">superhero@flex.by</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END contacts -->
+			<!-- BEGIN footer -->
+			<footer class="footer footer_inner">
+				<div class="footer__copyrights">© 2009—2014 Flexmedia</div>
+				<ul class="footer__socials">
+				<li><a href="#" class="vk"><i></i></a></li>
+				<li><a href="#" class="fb"><i></i></a></li>
+				<li><a href="#" class="tw"><i></i></a></li>
+				<li><a href="#" class="dribble"><i></i></a></li>
+				<li><a href="#" class="instagram"><i></i></a></li>
+				</ul>
+				<a href="#" class="btn btn_up js-scroll-up" rel="internal">наверх</a>
+			</footer>
+			<!-- END footer -->
+		</div>
 	</div>
-</div>
-<!-- END out-->
+	<!-- END wrap in -->
 </div>
 <!-- BEGIN popup -->
 <div class="popup-wrap js-popup">
@@ -196,22 +198,6 @@
 </div>
 
 <script>
-			[].slice.call( document.querySelectorAll( 'button.progress-button' ) ).forEach( function( bttn ) {
-				new ProgressButton( bttn, {
-					callback : function( instance ) {
-						var progress = 0,
-							interval = setInterval( function() {
-								progress = Math.min( progress + Math.random() * 0.1, 1 );
-								instance._setProgress( progress );
-
-								if( progress === 1 ) {
-									instance._stop(1);
-									clearInterval( interval );
-								}
-							}, 200 );
-					}
-				} );
-			} );
 	(function() {
 		var loader = new SVGLoader( document.getElementById( 'loader' ), { speedIn : 10, speedOut: 100 } );
 		loader.show();

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>zakaz 1</title>
+	<title>blog inner</title>
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/component.css" >
@@ -29,11 +29,10 @@
 <div class="pagewrap" id="pagewrap">
 <a href="#" class="menu-btn" rel="internal"></a>
 <div class="wrapper">
-<!-- BEGIN  out-->
-<div class="out out_mobile">
-	
-	<!-- BEGIN header -->
-		<header class="header-wrap">
+	<!-- BEGIN wrap header -->
+	<div class="wrap-header">
+		<div class="wrap-header__in">
+			<!-- header -->
 			<div class="header">
 				<span class="header__close js-close-sidebar"></span>
 				<h1 class="logo"><a href="index.html"></a></h1>
@@ -45,7 +44,7 @@
 				</div>
 				<nav class="menu">
 					<ul>
-						<li><a href="portfolio.html" class="is-active">портфолио</a></li>
+						<li><a href="portfolio.html">портфолио</a></li>
 						<li><a href="services.html">Услуги</a></li>
 						<li><a href="#">компания</a></li>
 						<li><a href="#">блог</a></li>
@@ -54,15 +53,18 @@
 					</ul>
 				</nav>
 			</div>
-		</header>
-		<!-- END header -->
-	<div class="out__inner">
-		<!-- BEGIN topper -->
-		<section class="topper">
-				<a href="#" class="logo-big">flex media</a>
-				<h2 class="h2">Начните с нами работать прямо <span>сейчас</span></h2>
-		</section>
-		<!-- BEGIN form -->
+		</div>
+	</div>
+	<!-- END wrap header -->
+	<!-- BEGIN wrap in -->
+	<div class="wrap-in">
+		<div class="wrap-in__container">
+			<!-- BEGIN topper -->
+			<section class="topper">
+					<a href="#" class="logo-big">flex media</a>
+					<h2 class="h2">Начните с нами работать прямо <span>сейчас</span></h2>
+			</section>
+			<!-- BEGIN form -->
 			<div class="feedback">
 		  	<!-- tab list -->
 		  	<ul class="form-nav">
@@ -83,44 +85,44 @@
 					<div class="form__title">Заполните форму заявки</div>
 					<p>Чем быстрее вы заполните заявку, тем быстрее мы сделаем для вас клёвый проект</p>
 				</div>
-		  	  	<div class="form__content">
-		  	  		<form class="js-validate">
-		  	  			<label class="form__item">
-		  	  				<input type="text" class="input" placeholder="Имя" required name="name">
-		  	  			</label>
-		  	  			<label class="form__item">
-		  	  				<input type="text" class="input" placeholder="Компания" required name="company">
-		  	  			</label>
-		  	  			<label class="form__item">
-		  	  				<input type="text" class="input" placeholder="E-mail" required name="email">
-		  	  			</label>
-		  	  			<label class="form__item">
-		  	  				<input type="text" class="input" placeholder="Телефон" required name="tel">
-		  	  			</label>
-		  	  			<div class="form__name">Тип проекта</div>
-		  	  			<div class="form__checkbox">
+  	  	<div class="form__content">
+  	  		<form class="js-validate">
+  	  			<label class="form__item">
+  	  				<input type="text" class="input" placeholder="Имя" required name="name">
+  	  			</label>
+  	  			<label class="form__item">
+  	  				<input type="text" class="input" placeholder="Компания" required name="company">
+  	  			</label>
+  	  			<label class="form__item">
+  	  				<input type="text" class="input" placeholder="E-mail" required name="email">
+  	  			</label>
+  	  			<label class="form__item">
+  	  				<input type="text" class="input" placeholder="Телефон" required name="tel">
+  	  			</label>
+  	  			<div class="form__name">Тип проекта</div>
+  	  			<div class="form__checkbox">
 							<label class="checkbox checkbox_w25">
-								<input type="checkbox">
+								<input type="checkbox" name="type1">
 								<span>Стартап</span>
 							</label>
 							<label class="checkbox checkbox_w49">
-								<input type="checkbox">
+								<input type="checkbox" name="type2">
 								<span>Корпоративный сайт</span>
 							</label>
 							<label class="checkbox checkbox_w23">
-								<input type="checkbox">
+								<input type="checkbox" name="type3">
 								<span>Промо</span>
 							</label>
 							<label class="checkbox checkbox_w43">
-								<input type="checkbox">
+								<input type="checkbox" name="type4">
 								<span>Интернет-магазин</span>
 							</label>
 							<label class="checkbox checkbox_w55">
-								<input type="checkbox">
+								<input type="checkbox" name="type5">
 								<span>Мобильное приложение</span>
 							</label>
 							<label class="checkbox checkbox_w23">
-								<input type="checkbox">
+								<input type="checkbox" name="type6">
 								<span>Другое</span>
 							</label>
 						</div>
@@ -134,35 +136,37 @@
 									<div id="slider-range"></div>
 								</div>
 							</div>
-  							<input type="text" class="range__value" id="amount" readonly>
+							<input type="text" class="range__value" name="money" id="amount" readonly>
 						</div>
 						<label class="form__item">
-							<textarea class="textarea" placeholder="Описание проекта"></textarea>
+							<textarea class="textarea" placeholder="Описание проекта" name="comment"></textarea>
 						</label>
 						<div class="form__btn">
-							<button class="progress-button" data-style="rotate-side-down" data-perspective data-horizontal>Отправить</button>
+							<button class="progress-button-imitation">Отправить</button>
+							<button class="progress-button-reset" type="reset"></button>
+							<button class="progress-button" data-style="rotate-side-down" data-perspective="" data-horizontal="" style="display: none;">Отправить</button>
 						</div>
-		  	  		</form>
-		  	  	</div>
-		  	</div> 
-		<!-- END form -->
+  	  		</form>
+	  	  </div>
+		  </div> 
+			<!-- END form -->
+			</div>
+			<!-- BEGIN footer -->
+			<footer class="footer footer_inner">
+				<div class="footer__copyrights">© 2009—2014 Flexmedia</div>
+				<ul class="footer__socials">
+				<li><a href="#" class="vk"><i></i></a></li>
+				<li><a href="#" class="fb"><i></i></a></li>
+				<li><a href="#" class="tw"><i></i></a></li>
+				<li><a href="#" class="dribble"><i></i></a></li>
+				<li><a href="#" class="instagram"><i></i></a></li>
+				</ul>
+				<a href="#" class="btn btn_up js-scroll-up" rel="internal">наверх</a>
+			</footer>
+			<!-- END footer -->
 		</div>
-		<!-- BEGIN footer -->
-		<footer class="footer footer_inner">
-			<div class="footer__copyrights">© 2009—2014 Flexmedia</div>
-			<ul class="footer__socials">
-			<li><a href="#" class="vk"><i></i></a></li>
-			<li><a href="#" class="fb"><i></i></a></li>
-			<li><a href="#" class="tw"><i></i></a></li>
-			<li><a href="#" class="dribble"><i></i></a></li>
-			<li><a href="#" class="instagram"><i></i></a></li>
-			</ul>
-			<a href="#" class="btn btn_up js-scroll-up" rel="internal">наверх</a>
-		</footer>
-		<!-- END footer -->
 	</div>
-</div>
-<!-- END out-->
+	<!-- END wrap in -->
 </div>
 <!-- BEGIN popup -->
 <div class="popup-wrap js-popup">
@@ -184,22 +188,22 @@
 </div>
 
 <script>
-			[].slice.call( document.querySelectorAll( 'button.progress-button' ) ).forEach( function( bttn ) {
-				new ProgressButton( bttn, {
-					callback : function( instance ) {
-						var progress = 0,
-							interval = setInterval( function() {
-								progress = Math.min( progress + Math.random() * 0.1, 1 );
-								instance._setProgress( progress );
-
-								if( progress === 1 ) {
-									instance._stop(1);
-									clearInterval( interval );
-								}
-							}, 200 );
+	[].slice.call( document.querySelectorAll('button.progress-button')).forEach( function( bttn ) {
+		new ProgressButton( bttn, {
+			callback : function( instance ) {
+				var progress = 0,
+				interval = setInterval( function() {
+					progress = Math.min( progress + Math.random() * 0.1, 1 );
+					instance._setProgress( progress );
+					if( progress === 1 ) {
+						instance._stop(1);
+						clearInterval( interval );
 					}
-				} );
-			} );
+				}, 200 );
+			}
+		});
+	});
+	// 
 	(function() {
 		var loader = new SVGLoader( document.getElementById( 'loader' ), { speedIn : 10, speedOut: 100 } );
 		loader.show();

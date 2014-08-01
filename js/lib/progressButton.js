@@ -202,6 +202,10 @@
 
 			// remove class state-loading from the button
 			classie.remove( self.button, 'state-loading' );
+			classie.add( self.button, 'is-success' );
+			$('.progress-button-reset').trigger('click');
+			$('.js-validate').find('input[type="text"], textarea').removeClass('valid');
+			$('.content').text('успешно отправлено');
 		}, 100 );
 	};
 
