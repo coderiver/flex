@@ -206,7 +206,7 @@ $('.js-submitatt').on("click", function (e) {
 
 	$('.js-scroll-up').on('click', function(){
 		$('html, body').animate({
-    	  scrollTop: $('.out').offset().top
+    	  scrollTop: $('body').offset().top
     	}, 500);
     	return false;
 	});
