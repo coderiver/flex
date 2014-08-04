@@ -1592,7 +1592,6 @@
     left: 0
     right: 0
     height: 110px
-    overflow: hidden
     z-index: 4
     .header_portfolio
         background: transparent 
@@ -1643,10 +1642,11 @@
         +r(w768)
             box-shadow: none
     +r(w768)
+        position: absolute
         right: auto
         left: 0
         bottom: 0
-        width: 200px
+        width: 0
         height: auto
         -webkit-perspective: 1500px
         perspective: 1500px
@@ -1654,20 +1654,24 @@
         perspective-origin: 0% 0%
         -webkit-transform-style: preserve-3d
         transform-style: preserve-3d
+    &.is-open
+        .wrap-header__in
+            +r(w768)
+                +transform(translate3d(0, 0, 0) rotateY(0))
     .wrap-header__in
         position: absolute
         top: 0
         left: 0
-        right: 0
         bottom: 0
+        right: 0
         +r(w768)
-            //background: #fa453c
+            right: auto
+            width: 200px
             +transition(all 0.5s)
             +transform(translate3d(-200px, 0, 0) rotateY(90deg))
             -webkit-transform-origin: 100% 50%
             transform-origin: 100% 50%
-            &.is-open
-                +transform(translate3d(0, 0, 0) rotateY(0))
+
 .wrap-in
     position: relative
     background: #FFF 
@@ -1696,7 +1700,6 @@
             +transform(translate3d(320px, 0, 0)) 
     .wrap-in__container
         position: relative
-        overflow: hidden
         z-index: 2 
        
 

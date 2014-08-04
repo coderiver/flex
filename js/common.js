@@ -206,31 +206,43 @@ Dropzone.options.myDropzone = {
 	});
 
 // sidebar
+	var wrap_header = $('.wrap-header'),
+			wrap_header_in = wrap_header.find('.wrap-header__in'),
+			wrap_in = $('.wrap-in'),
+			menu_btn = $('.menu-btn');
 	
-	$('.menu-btn').on('click', function(){
+	menu_btn.on('click', function(){
+		var scroll_top = $(document).scrollTop();
 		$(this).addClass('is-active');
-		$('.wrap-header__in').addClass('is-open');
-		$('.wrap-in').addClass('is-open');
+		wrap_header.addClass('is-open').css('top', scroll_top);
+		wrap_in.addClass('is-open');
 		return false;
 	});
-	$('.wrap-in').on('touchstart click', function(){
-		$('.menu-btn').removeClass('is-active');
-		$('.wrap-header__in').removeClass('is-open');
-		$('.wrap-in').removeClass('is-open');
+
+	$('body').on('scroll touchmove mousewheel', function(e){
+	  if ($('.wrap-header').hasClass('is-open')) {
+	  	e.preventDefault();
+	  	e.stopPropagation();
+	  	return false;
+	  };
+	})
+	wrap_in.on('touchstart click', function(){
+		menu_btn.removeClass('is-active');
+		wrap_header.removeClass('is-open');
+		wrap_in.removeClass('is-open');
 	});
 
 	$('.js-close-sidebar').on('click', function(){
-		$('.menu-btn').removeClass('is-active');
-		$('.wrap-header__in').removeClass('is-open');
-		$('.wrap-in').removeClass('is-open');
+		menu_btn.removeClass('is-active');
+		wrap_header.removeClass('is-open');
+		wrap_in.removeClass('is-open');
 	});
 
 	$('.wrap-in').swipe({
 		swipeLeft: function(event, direction, distance, duration, fingerCount) {
-		  $('.menu-btn').removeClass('is-active');
-			$('.wrap-header__in').removeClass('is-open');
-			$('.wrap-in').removeClass('is-open');
-			$(this).removeClass('is-open').parent('.out').removeClass('is-open');
+		  menu_btn.removeClass('is-active');
+		  wrap_header.removeClass('is-open');
+		  wrap_in.removeClass('is-open');
 		},
 		swipeRight: function(event, direction, distance, duration, fingerCount) {
 		    

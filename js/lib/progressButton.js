@@ -211,7 +211,7 @@
 
 	// enable button
 	ProgressButton.prototype._enable = function() {
-		this.button.removeAttribute( 'disabled' );
+		// this.button.removeAttribute( 'disabled' );
 	}
 
 	// add to global namespace
