@@ -657,6 +657,7 @@
         position: fixed
         bottom: 100px
         top: auto!important
+        z-index: 10 
     &.no-fixed
         position: absolute
         bottom: 266px
@@ -1593,6 +1594,29 @@
     height: 110px
     overflow: hidden
     z-index: 4
+    .header_portfolio
+        background: transparent 
+        +r(w768)
+            .l-gray &
+                background: $gray
+            .l-green &
+                background: $green
+            .l-red &
+                background: $red
+            .l-blue &
+                background: $blue
+            .l-yellow &
+                background: $yellow
+            .l-violet &
+                background: $violet
+            .l-orange &
+                background: $orange
+            .l-turquoise & 
+                background: $turquoise
+            .l-sea & 
+                background: $sea
+            .l-vinous & 
+                background: $vinous
     &.is-shadow
         box-shadow: 0 2px 10px rgba(112, 25, 21, 0.1)
         .header_portfolio
@@ -1636,8 +1660,8 @@
         left: 0
         right: 0
         bottom: 0
-        background: #fa453c
         +r(w768)
+            //background: #fa453c
             +transition(all 0.5s)
             +transform(translate3d(-200px, 0, 0) rotateY(90deg))
             -webkit-transform-origin: 100% 50%
