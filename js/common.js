@@ -40,17 +40,28 @@ window.onpageshow = function(event) {
 
 
 // dropzone submit
-$('#mydropzone').dropzone({ 
-	//url: '/file/post'
-	paramName: "file", // The name that will be used to transfer the file
-	maxFilesize: 2, // MB
-	accept: function(file, done) {
-	  if (file.name == "justinbieber.jpg") {
-	    done("Naha, you don't.");
-	  }
-	  else { done(); }
-	}
-});
+
+Dropzone.options.myDropzone = {
+
+  // Prevents Dropzone from uploading dropped files immediately
+  autoProcessQueue: false,
+
+  init: function() {
+    var submitButton = document.querySelector(".js-submitall")
+        myDropzone = this; // closure
+
+    submitButton.addEventListener("click", function() {
+      myDropzone.processQueue(); // Tell Dropzone to process all queued files.
+    });
+
+    // You might want to show the submit button only when 
+    // files are dropped here:
+    this.on("addedfile", function() {
+      // Show submit button here and/or inform user to click it.
+    });
+
+  }
+};
 
 
 // slider
