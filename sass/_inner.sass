@@ -1679,6 +1679,9 @@
             +transform(translate3d(-200px, 0, 0) rotateY(90deg))
             -webkit-transform-origin: 100% 50%
             transform-origin: 100% 50%
+        +r(w320)
+            width: 320px
+            +transform(translate3d(-320px, 0, 0) rotateY(90deg))
 
 .wrap-in
     position: relative
@@ -1691,7 +1694,7 @@
         right: 0
         width: 100%
         height: 100%
-        background: rgba(0,0,0,0.2)
+        background: #000
         opacity: 0
         visibility: hidden
         +transition(opacity 0.5s linear)
@@ -1701,7 +1704,7 @@
             +transform(translate3d(200px, 0, 0))
             &:after
                 visibility: visible
-                opacity: 1
+                opacity: .2
                 z-index: 999 
     +r(w320)
         &.is-open

@@ -449,7 +449,7 @@
 		left: 0
 		right: 0
 		text-align: center
-		z-index: 999
+		z-index: 2
 		+r(w768)
 			top: 125px
 		+r(w480)
@@ -482,7 +482,7 @@
 		top: 50%
 		right: 48px
 		+s(slider-next)
-		z-index: 2
+		z-index: 4
 		&.is-hidden
 			display: none
 		+r(w768) 
@@ -494,7 +494,7 @@
 		top: 50%
 		left: 48px
 		+s(slider-prev)
-		z-index: 2
+		z-index: 4
 		&.is-hidden
 			display: none
 		+r(w768) 
@@ -838,7 +838,11 @@
 				vertical-align: middle
 				margin-bottom: 0	
 			&:hover
-				background: #ffeb12	
+				background: #ffeb12
+				.link
+					color: #F3463D
+					span
+						+s(arr-right-red)
 		&:hover
 			background: #27ae60
 			.m-events__date
