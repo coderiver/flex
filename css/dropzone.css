@@ -50,7 +50,7 @@
   display: inline-block;
   margin: 17px;
   vertical-align: top;
-  border: 1px solid #acacac;
+  /*border: 1px solid #acacac;*/
   padding: 6px 6px 6px 6px;
 }
 .dropzone .dz-preview.dz-file-preview [data-dz-thumbnail],
@@ -63,6 +63,7 @@
   height: 100px;
   position: relative;
   background: #ebebeb;
+  /*background: #ebebeb url(../img/file.png) no-repeat 0 100%;*/
   padding: 5px;
   margin-bottom: 22px;
 }
@@ -209,8 +210,8 @@
 }
 .dropzone .dz-preview,
 .dropzone-previews .dz-preview {
-  -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.16);
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.16);
+  /*-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.16);
+  box-shadow: 1px 1px*/ 4px rgba(0,0,0,0.16);
   font-size: 14px;
 }
 .dropzone .dz-preview.dz-image-preview:hover .dz-details img,
