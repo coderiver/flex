@@ -11,6 +11,16 @@
   position: relative;
   margin-bottom: 20px;
 }
+.dropzone .upload__block {
+  border: 2px dashed #0d8844;
+}
+.dropzone.dz-started .upload__block {
+  margin: -2px -2px 0;
+  border-width: 2px 2px 0;
+}
+.dropzone.dz-started {
+  border: 2px dashed #0d8844;
+}
 .dropzone.dz-clickable {
   cursor: pointer;
 }
