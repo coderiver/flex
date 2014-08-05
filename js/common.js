@@ -41,25 +41,32 @@ window.onpageshow = function(event) {
 
 // dropzone submit
 
-Dropzone.options.myDropzone = {
+var files_loaded = $('.js-files-loaded');
+files_loaded.on('click', function () {
+	if (!$(this).hasClass('is-disabled')) {
+		$(this).hide();
+		$(this).next().show().trigger('click');
+	};
+});
 
+Dropzone.options.myDropzone = {
   // Prevents Dropzone from uploading dropped files immediately
   autoProcessQueue: false,
-
   init: function() {
     var submitButton = document.querySelector(".js-submitall")
         myDropzone = this; // closure
-
     submitButton.addEventListener("click", function() {
       myDropzone.processQueue(); // Tell Dropzone to process all queued files.
     });
-
     // You might want to show the submit button only when 
     // files are dropped here:
     this.on("addedfile", function() {
       // Show submit button here and/or inform user to click it.
     });
-
+  },
+  success: function () {
+  	files_loaded.removeClass('is-disabled');
+  	files_loaded.removeAttr('disabled');
   }
 };
 

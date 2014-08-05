@@ -871,12 +871,22 @@
     top: 50%
     margin-top: -10px
     font-size: 0  
+.slick-prev,
+.slick-next
+    +r(w480)
+        top: auto
+        bottom: 40px
+        margin: 0
 .slick-prev
     left: 5%
     +s(gallery-prev)
+    +r(w480)
+        left: 3px
 .slick-next
     right: 5%
     +s(gallery-next)
+    +r(w480)
+        right: 3px
 .slick-track
     +r(w480)
         margin: 30px 0           
