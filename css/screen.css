@@ -208,19 +208,6 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 .topper__link a:hover { text-decoration: none; }
 .topper__overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-.wrapper { position: relative; }
-.wrapper.has-blur { -webkit-filter: blur(3px); filter: blur(3px); filter: progid:DXImageTransform.Microsoft.Blur(pixelRadius=$var); }
-@media only screen and (max-width: 768px) { .wrapper { -webkit-perspective: 1500px; perspective: 1500px; -webkit-perspective-origin: 0% 50%; perspective-origin: 0% 0%; } }
-
-.out_mobile { position: relative; }
-@media only screen and (max-width: 768px) { .out_mobile { -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -moz-transition: -moz-transform 0.5s; -o-transition: -o-transform 0.5s; -webkit-transition: -webkit-transform 0.5s; transition: transform 0.5s; }
-  .out_mobile.is-open { -moz-transform: translate3d(200px, 0, 0); -ms-transform: translate3d(200px, 0, 0); -webkit-transform: translate3d(200px, 0, 0); transform: translate3d(200px, 0, 0); } }
-@media only screen and (max-width: 320px) { .out_mobile.is-open { -moz-transform: translate3d(320px, 0, 0); -ms-transform: translate3d(320px, 0, 0); -webkit-transform: translate3d(320px, 0, 0); transform: translate3d(320px, 0, 0); } }
-
-.out__inner { position: relative; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-.out__inner:after { position: absolute; content: ""; top: 0; right: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.2); opacity: 0; -moz-transition: opacity 0.5s linear; -o-transition: opacity 0.5s linear; -webkit-transition: opacity 0.5s linear; transition: opacity 0.5s linear; z-index: -1; }
-.out__inner.is-open:after { opacity: 1; z-index: 999; }
-
 .header { position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding: 0 45px; background: #fa453c; }
 .header__close { visibility: hidden; position: absolute; top: 24px; right: 20px; background: url('../img/icons-s51bc3ebb78.png') 0 -137px no-repeat; width: 22px; height: 20px; cursor: pointer; z-index: 2; }
 .l-gray .header { background: #2c3e50; }
