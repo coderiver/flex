@@ -59,6 +59,7 @@ if ($("#mydropzone").length) {
 	  },
 	  uploadMultiple: false,
 	  maxFiles: 1,
+	  maxFilesize: 15,
 	  accept: function(file, done) {
         var re = /(?:\.([^.]+))?$/;
         var ext = re.exec(file.name)[1];
