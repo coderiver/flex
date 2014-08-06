@@ -400,6 +400,10 @@
 		right: 48px
 		+s(slider-next)
 		z-index: 4
+		+hdpi
+			+sinline(rright)
+			+background-size(18px,32px)
+			background-position: 0 0 
 		&.is-hidden
 			display: none
 		+r(w768) 
@@ -412,6 +416,10 @@
 		left: 48px
 		+s(slider-prev)
 		z-index: 4
+		+hdpi
+			+sinline(rleft)
+			+background-size(18px,32px)
+			background-position: 0 0 
 		&.is-hidden
 			display: none
 		+r(w768) 
@@ -862,6 +870,7 @@
 			width: 20%
 			margin-bottom: 35px
 			text-align: center
+			img
 		+r(w768)
 			li
 				width: 25%
