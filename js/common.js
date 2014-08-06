@@ -40,25 +40,24 @@ window.onpageshow = function(event) {
 
 
 // dropzone submit
-
-var files_loaded = $('.js-files-loaded');
-files_loaded.on('click', function () {
-	if (!$(this).hasClass('is-disabled')) {
-		$(this).hide();
-		$(this).next().show().trigger('click');
+if ($("#mydropzone").length) {
+	var files_loaded = $('.js-files-loaded');
+	files_loaded.on('click', function () {
+		if (!$(this).hasClass('is-disabled')) {
+			$(this).hide();
+			$(this).next().show().trigger('click');
+		};
+	});
+	Dropzone.options.myDropzone = {
+	  autoProcessQueue: true
 	};
-});
-
-Dropzone.options.myDropzone = {
-  autoProcessQueue: true
+	var myDropzone = new Dropzone("#mydropzone");
+	myDropzone.on("success", function(file) {
+	  files_loaded.removeClass('is-disabled');
+		files_loaded.removeAttr('disabled');
+	});
 };
 
-
-var myDropzone = new Dropzone("#mydropzone");
-  myDropzone.on("success", function(file) {
-    files_loaded.removeClass('is-disabled');
-  	files_loaded.removeAttr('disabled');
-  });
 
 // slider
 
@@ -175,15 +174,12 @@ var myDropzone = new Dropzone("#mydropzone");
 
 	function scrollUp() {
 		var btn = $('.js-scroll-up');
-
 		if($(window).scrollTop() + $(window).height() >= ($(document).height() - 50)) {
-   			btn.addClass('is-animated');
-   		}
-   		else{
-   			btn.removeClass('is-animated');
-   		}
-
-				 
+   		btn.addClass('is-animated');
+   	}
+   	else{
+   		btn.removeClass('is-animated');
+   	}
 	} 
 	scrollUp();	
 

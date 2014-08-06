@@ -80,7 +80,7 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 @media only screen and (max-width: 768px) { .btn { -moz-transform: none; -ms-transform: none; -webkit-transform: none; transform: none; } }
 .btn:after { content: ""; position: absolute; top: -30px; left: -73px; background: url('../img/icons-s51bc3ebb78.png') 0 -2162px no-repeat; width: 91px; height: 132px; -moz-transition: none; -o-transition: none; -webkit-transition: none; transition: none; }
 .btn:hover { background: #e82f25; -moz-transition: none; -o-transition: none; -webkit-transition: none; transition: none; }
-.btn:hover:after { -moz-transition: -moz-transform 250ms; -o-transition: -o-transform 250ms; -webkit-transition: -webkit-transform 250ms; transition: transform 250ms; -moz-transform: translateX(180px); -ms-transform: translateX(180px); -webkit-transform: translateX(180px); transform: translateX(180px); }
+.btn:hover:after { -moz-transition: left 250ms; -o-transition: left 250ms; -webkit-transition: left 250ms; transition: left 250ms; left: 100%; }
 .btn.btn_yellow { padding: 0 40px; background: #ffeb12; color: #071427; font-weight: 400; -moz-box-shadow: 0 19px 30px -18px #ffeb12; -webkit-box-shadow: 0 19px 30px -18px #ffeb12; box-shadow: 0 19px 30px -18px #ffeb12; }
 .btn.btn_yellow:after { display: none; }
 .btn.btn_yellow:hover { background: #e3d219; }
@@ -363,15 +363,14 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 
 .m-portfolio { position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; font-size: 0; padding: 0 15%; font-size: 0; background: white; text-align: left; }
 .m-portfolio:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.m-portfolio__img { height: 259px; overflow: hidden; margin-bottom: 30px; text-align: center; }
+.m-portfolio__img { height: 259px; overflow: hidden; margin-bottom: 30px; text-align: center; font-size: 0; }
 .m-portfolio__img img { display: inline-block; max-width: 100%; }
 @media only screen and (max-width: 1280px) { .m-portfolio { padding: 10px 30px; }
   .m-portfolio .m-portfolio__img { height: 200px; } }
-@media only screen and (max-width: 1180px) { .m-portfolio .m-portfolio__img { height: 259px; } }
-@media only screen and (max-width: 900px) { .m-portfolio .m-portfolio__img { height: 200px; } }
+@media only screen and (max-width: 1360px) { .m-portfolio .m-portfolio__img { height: 200px; } }
 @media only screen and (max-width: 768px) { .m-portfolio { text-align: center; }
   .m-portfolio .m-portfolio__img { display: none; } }
-.m-portfolio__inner { *zoom: 1; display: inline-block; vertical-align: middle; font-size: 14px; color: #6f6f6f; }
+.m-portfolio__inner { *zoom: 1; display: inline-block; width: 100%; vertical-align: middle; font-size: 14px; color: #6f6f6f; }
 .m-portfolio__inner:after { content: " "; display: table; clear: both; }
 .m-portfolio__inner p { margin-bottom: 25px; line-height: 1.6; }
 .m-portfolio__inner ul { *zoom: 1; }
@@ -384,6 +383,7 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 @media only screen and (max-width: 900px) { .m-portfolio__inner .link { margin-bottom: 5px; }
   .m-portfolio__inner p { margin-bottom: 15px; } }
 @media only screen and (max-width: 768px) { .m-portfolio__inner .link { margin-bottom: 35px; } }
+@media only screen and (max-width: 480px) { .m-portfolio__inner .link { margin-bottom: 5px; } }
 .m-portfolio__left { margin-bottom: 40px; }
 @media only screen and (max-width: 1180px) { .m-portfolio__left { float: left; width: 50%; } }
 @media only screen and (max-width: 568px) { .m-portfolio__left { width: 100%; } }
@@ -406,6 +406,8 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 .m-portfolio:hover .link span { background: url('../img/icons-s51bc3ebb78.png') 0 -18px no-repeat; width: 7px; height: 13px; }
 @media only screen and (max-width: 900px) { .m-portfolio.m-portfolio_mod { padding: 5px 20px; } }
 .m-portfolio.m-portfolio_mod .link { padding-top: 35px; font-weight: 400; font-size: 16px; text-transform: uppercase; }
+@media only screen and (max-width: 1360px) { .m-portfolio.m-portfolio_mod .link { font-size: 14px; } }
+@media only screen and (max-width: 1180px) { .m-portfolio.m-portfolio_mod .link { font-size: 16px; } }
 .m-portfolio.m-portfolio_mod .link i { position: absolute; top: 0; left: 0; }
 @media only screen and (max-width: 768px) { .m-portfolio.m-portfolio_mod .link i { left: 50%; margin-left: -15px; } }
 
