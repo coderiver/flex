@@ -376,10 +376,21 @@
         color: #fff
         margin-bottom: 45px
         span
-            +s(arr-right-white)
+            // +s(arr-right-white)
+            width: 1px
+            position: relative 
+            margin-left: -1px
+            background: none 
+            &:before
+                position: absolute
+                left: 10px 
+                top: 0 
+                +s(arr-right-white)
+                content: ' '
         &:hover
             span
-                +s(arr-right-white)
+                // +s(arr-right-white)
+                background: none 
         +r(w1180)
             margin-bottom: 25px
             font-size: 20px
