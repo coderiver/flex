@@ -41,6 +41,7 @@ window.onpageshow = function(event) {
 
 // dropzone submit
 if ($("#mydropzone").length) {
+	// Dropzone.autoDiscover = false;
 	var files_loaded = $('.js-files-loaded');
 	files_loaded.on('click', function () {
 		if (!$(this).hasClass('is-disabled')) {
@@ -48,14 +49,27 @@ if ($("#mydropzone").length) {
 			$(this).next().show().trigger('click');
 		};
 	});
-	Dropzone.options.myDropzone = {
-	  autoProcessQueue: true
+	Dropzone.options.mydropzone = {
+	  init: function() {
+	    this.on("addedfile", function(file) {  });
+	    this.on("success", function(file) { 
+	    	  files_loaded.removeClass('is-disabled');
+	    	  files_loaded.removeAttr('disabled');
+	     });
+	  },
+	  uploadMultiple: false,
+	  maxFiles: 1,
+	  accept: function(file, done) {
+        var re = /(?:\.([^.]+))?$/;
+        var ext = re.exec(file.name)[1];
+        ext = ext.toUpperCase();
+        if ( ext == "DOC" || ext == "DOCX" || ext == "PDF") {
+			done();
+        }
+        else { done("Используйте пожалуйста .doc, docx или .pdf."); }
+       }
 	};
-	var myDropzone = new Dropzone("#mydropzone");
-	myDropzone.on("success", function(file) {
-	  files_loaded.removeClass('is-disabled');
-		files_loaded.removeAttr('disabled');
-	});
+
 };
 
 

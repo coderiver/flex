@@ -69,9 +69,12 @@
 	right: 0 
 	bottom: 0
 	height: 100%
-	min-height: 1280px
+	
 	padding: 0 45px
 	background: #fa453c 
+	//min-height: 1280px
+	+r(w768)
+		min-height: 1280px 
 	&__close
 		visibility: hidden
 		position: absolute
