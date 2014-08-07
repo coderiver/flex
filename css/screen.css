@@ -451,6 +451,8 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 .m-events__date { margin-bottom: 20px; font-size: 12px; font-weight: 300; color: rgba(22, 22, 22, 0.8); -moz-transition: color 300ms; -o-transition: color 300ms; -webkit-transition: color 300ms; transition: color 300ms; }
 .m-events__text { line-height: 1.6; font-weight: 400; color: #414141; -moz-transition: color 300ms; -o-transition: color 300ms; -webkit-transition: color 300ms; transition: color 300ms; }
 
+@media only screen and (max-width: 1024px) { .is-hidden1024 { display: none !important; } }
+
 .m-services { position: relative; background: #ebf0f1; z-index: 2; }
 .m-services__alert { position: relative; top: -2px; text-align: center; padding: 75px 50px; color: #161616; font-weight: 300; font-size: 36px; background: #ebf0f1; z-index: 2; }
 @media only screen and (max-width: 900px) { .m-services__alert { font-size: 30px; } }
