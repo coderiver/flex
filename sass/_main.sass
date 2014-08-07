@@ -737,17 +737,15 @@
 	.link
 		span
 			&:before
+				+s(arr-right)
 				+hdpi
-					width: 7px 		 				 						 					  
-					height: 13px 
 					+sinline(arr-rightr)
 					+background-size(7px, 13px)
+					background-position: 0 0 
 					position: absolute
 					content: ' '
 					left: 11px 
 					top: 0 
-
-
 	&:hover
 		.link
 			color: #f3463d
@@ -814,12 +812,27 @@
 			.link
 				vertical-align: middle
 				margin-bottom: 0	
+				span
+					&:before
+						+s(arr-right)
+						+hdpi
+							+sinline(arr-rightr)
+							background-position: 0 0
+							+background-size(7px,13px) 
+
 			&:hover
 				background: #ffeb12
 				.link
 					color: #F3463D
 					span
-						+s(arr-right-red)
+						&:before
+							+s(arr-right-red)
+							+hdpi
+								+sinline(arr-right-redr)
+								background-position: 0 0
+								+background-size(7px,13px) 
+
+						
 		&:hover
 			background: #27ae60
 			.m-events__date
