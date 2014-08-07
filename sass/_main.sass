@@ -884,14 +884,27 @@
 	z-index: 2
 	&__alert
 		position: relative
-		top: -2px
+		margin-top: -2px
+		// margin-bottom: -2px 
 		text-align: center
 		padding: 75px 50px 
 		color: #161616
+		color: #fff 
 		font-weight: 300
 		font-size: 36px
 		background: #ebf0f1
+		background: #9ADCF2 
+		display: block
 		z-index: 2
+		text-decoration: none
+		background: #9ADCF2 url(../img/banner/flex-min-banner-640.png) no-repeat 50% 50% 
+		background-size: cover
+		+rrm(1024)
+			background: #9ADCF2 url(../img/banner/flex-min-banner-1024.png) no-repeat 50% 50% 
+		+rrm(1280)
+			background: #9ADCF2 url(../img/banner/flex-min-banner-1280.png) no-repeat 50% 50% 
+		+rrm(1600)
+			background: #9ADCF2 url(../img/banner/flex-min-banner-1600.png) no-repeat 50% 50% 
 		+r(w900)
 			font-size: 30px
 		+r(w768)
