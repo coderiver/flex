@@ -621,14 +621,19 @@
 		width: 100%
 		vertical-align: middle
 		vertical-align: top
-		padding-top: 25px
-		padding-top: 3.5vw 
+		padding-top: 20px
+		padding-top: 1.8vw 
 		font-size: 14px
 		color: #6f6f6f
+		+rr(1280)
+			display: none
+		&_special
+			padding-top: 0
+			vertical-align: middle 
 		p
 			margin-bottom: 25px
 			line-height: 1.6
-			margin-right: 40px 
+			margin-right: 10px 
 			+r(w768)
 				margin-left: 20px 
 				margin-right: 20px 
@@ -716,12 +721,6 @@
 				margin: 5px auto 20px
 	.link
 		span
-			+hdpi
-				margin-left: -1px
-				width: 1px   
-				background: none
-				height: 13px
-				position: relative
 			&:before
 				+hdpi
 					width: 7px 		 				 						 					  
@@ -738,14 +737,12 @@
 		.link
 			color: #f3463d
 			span
-				+s(arr-right-red)
-				+hdpi
-					background: none
-					width: 1px
-					height: 13px 
 				&:before
+					+s(arr-right-red)
 					+hdpi
+						background: none 
 						+sinline(arr-right-redr)
+						+background-size(7px, 13px)
 	&.m-portfolio_mod
 		+r(w900)
 			padding: 5px 20px 

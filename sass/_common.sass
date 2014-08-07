@@ -249,8 +249,20 @@ h3
 	color: #161616
 	span
 		display: inline-block
-		margin-left: 10px 
-		+s(arr-right)
+		width: 1px
+		height: 13px 
+		margin-left: -1px 
+		position: relative
+		&:before
+			position: absolute
+			left: 10px 
+			content: ' '
+			+s(arr-right-white)
+			top: 0 
+			+hdpi
+				background: none
+				+sinline(arr-whiter) 
+				+background-size(7px,13px)
 
 // popup
 .popup-wrap
