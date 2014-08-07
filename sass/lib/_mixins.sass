@@ -35,6 +35,9 @@ $w320: 320px
 =rr($media)
 	@media only screen and (max-width: $media+"px")
 		@content
+=rrm($media)
+	@media only screen and (min-width: $media+"px")
+		@content
 =r($media)
 	@if $media == w1360
 		@media only screen and (max-width: $w1360)

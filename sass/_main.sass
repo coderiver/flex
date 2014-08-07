@@ -626,17 +626,31 @@
 		font-size: 14px
 		color: #6f6f6f
 		+rr(1280)
-			display: none
+			//display: none
+			//padding-top: 3vw 
+		+rrm(1600)
+			padding-top: 4vw 
 		&_special
 			padding-top: 0
+			vertical-align: middle 
+		img+img
+			margin-right: 0
 			vertical-align: middle 
 		p
 			margin-bottom: 25px
 			line-height: 1.6
-			margin-right: 10px 
+			margin-right: 18px 
+			font-size: 13px 
 			+r(w768)
 				margin-left: 20px 
 				margin-right: 20px 
+			+rr(1280)
+				font-size: 12px 
+			+rr(846)
+				font-size: 11px 
+			+rr(747)
+				font-size: 14px 
+			
 		ul
 			+clr
 			li
@@ -687,6 +701,7 @@
 			margin-bottom: 30px
 		img
 			margin-right: 40px
+			vertical-align: middle
 			+r(w900)
 				margin-right: 20px
 		+r(w1180)
