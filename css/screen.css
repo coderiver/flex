@@ -187,6 +187,8 @@ h3 { margin-bottom: 25px; font-size: 24px; font-family: "Open Sans", sans-serif;
 @media only screen and (max-width: 400px) { .m-service__col3.wide .box_big { padding-bottom: 150%; } }
 @media only screen and (max-width: 360px) { .m-service__col3.wide .box_big { padding-bottom: 160%; } }
 
+.wrapper.has-blur { -webkit-filter: blur(3px); filter: blur(3px); filter: progid:DXImageTransform.Microsoft.Blur(pixelRadius=$var); }
+
 .topper { position: relative; background: #fa453c; text-align: center; padding-top: 150px; z-index: 99; }
 .topper__img { font-size: 0; }
 .topper__img img { max-width: 90%; }
