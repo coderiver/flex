@@ -259,9 +259,9 @@ body { font-family: "ProximaNovaRegular", Arial, sans-serif; font-size: 14px; li
 @media only screen and (max-width: 900px) { .services-wrap { padding: 70px 20px 0; } }
 
 .services { max-width: 812px; margin: 0 auto; }
-.services__title { margin-bottom: 50px; text-align: center; font-family: "ProximaNovaBold", Arial, sans-serif; font-size: 24px; color: #072335; }
+.services__title { margin-bottom: 50px; text-align: center; font-family: "Open Sans", sans-serif; font-weight: bold; font-size: 24px; color: #072335; }
 .services__list { font-size: 0; }
-.services__list li { display: inline-block; width: 33%; margin-bottom: 15px; font-size: 16px; color: #072335; font-family: "ProximaNovaLight", Arial, sans-serif; text-decoration: none; -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; }
+.services__list li { display: inline-block; width: 33%; margin-bottom: 15px; font-size: 16px; color: #072335; font-family: "Open Sans", sans-serif; text-decoration: none; -moz-transition: all 200ms; -o-transition: all 200ms; -webkit-transition: all 200ms; transition: all 200ms; }
 .services__list li span { color: #f64139; }
 @media only screen and (max-width: 600px) { .services__list li { width: 50%; } }
 @media only screen and (max-width: 320px) { .services__list li { width: 100%; text-align: center; } }
