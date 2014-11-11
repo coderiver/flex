@@ -665,6 +665,15 @@ body
 	+box
 	text-align: center
 	z-index: 1
+	+r(w900)
+		height: 600px
+		padding: 210px 20px 0
+	+r(w480)
+		height: 400px
+		padding: 130px 0 0
+		.m-clients__title
+			font-size: 18px
+			margin-bottom: 58px
 	&__title
 		position: relative
 		margin-bottom: 35px
@@ -696,14 +705,7 @@ body
 		z-index: 2
 	+r(w1024)
 		background: url(../img/clients-bg.jpg) no-repeat
-		+cover
-	+r(w900)
-		padding: 52px 20px
-	+r(w480)
-		padding: 52px 0
-		.m-clients__title
-			font-size: 18px
-			margin-bottom: 58px 
+		+cover 
 .video-holder
 	position: fixed
 	top: 110px
