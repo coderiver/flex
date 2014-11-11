@@ -90,41 +90,55 @@ $(document).ready(function() {
     });
 
 // validation
-	
-	function validate() {
-		$('.js-validate').each(function(){
-			if ($(this).length > 0) {
-				jQuery.validator.setDefaults({
-				  debug: true,
-				  success: "valid"
-				});
+  var form_validate = $('.js-validate');
+  if (form_validate.length) {
+    form_validate.each(function () {
+      var form_this = $(this);
+      $.validate({
+        form : form_this,
+        borderColorOnError : 'transparent',
+        onSuccess : function() {
+          $('.progress-button-imitation').hide();
+          $('.progress-button').show().trigger('click');
+          return false;
+        }
+      });
+    });
+  };
+	// function validate() {
+	// 	$('.js-validate').each(function(){
+	// 		if ($(this).length > 0) {
+	// 			jQuery.validator.setDefaults({
+	// 			  debug: true,
+	// 			  success: "valid"
+	// 			});
 
-				$(this).validate({
-					errorClass: 'is-error',
-					rules: {
-						name: {
-							minlength: 2
-						},
-						company: {
-							minlength: 2
-						},
-						comment: {
-							minlength: 2
-						},
-						email: {
-							email: true
-						},
-						tel: {
-							minlength: 2,
-							number: true
-						}
-					}
-				});
-			}
-		});
-	}
+	// 			$(this).validate({
+	// 				errorClass: 'is-error',
+	// 				rules: {
+	// 					name: {
+	// 						minlength: 2
+	// 					},
+	// 					company: {
+	// 						minlength: 2
+	// 					},
+	// 					comment: {
+	// 						minlength: 2
+	// 					},
+	// 					email: {
+	// 						email: true
+	// 					},
+	// 					tel: {
+	// 						minlength: 2,
+	// 						number: true
+	// 					}
+	// 				}
+	// 			});
+	// 		}
+	// 	});
+	// }
 		
-	validate();
+	// validate();
 
 // select
     function select() {
@@ -162,6 +176,26 @@ $(document).ready(function() {
     $('.js-select').click(function(event){
         event.stopPropagation();
     });
+
+ // range slider
+ 
+ 	$( "#slider-range" ).slider({
+      range: true,
+      min: 5000,
+      max: 30000,
+      values: [ 5000, 30000 ],
+      step: 1000,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "От $" + ui.values[ 0 ] + " до $" + ui.values[ 1 ]);
+        var maximum = 30000;
+        if (maximum == ui.values[ 1 ]) {
+        	$( "#amount" ).val( "От $" + ui.values[ 0 ] + " до $" + ui.values[ 1 ] + "+");
+        };
+      }
+    });
+    $( "#amount" ).val( "От $" + $( "#slider-range" ).slider( "values", 0 ) +
+      " до $" + $( "#slider-range" ).slider( "values", 1 ) + " +" ); 	
+    $( "#slider-range" ).find('.ui-slider-handle:last-child').addClass('is-last');
 
 //resize function
 
