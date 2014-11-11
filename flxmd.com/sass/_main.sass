@@ -620,13 +620,13 @@ body
 		img
 			max-width: 90%
 .testimonials
-	padding: 110px 0 80px
+	padding: 110px 0 40px
 	max-width: 812px
 	margin: 0 auto
 	+r(w900)
-		padding: 110px 20px 80px
+		padding: 110px 20px 40px
 	+r(w480)
-		padding: 50px 20px 50px	 
+		padding: 50px 20px 20px	 
 	&__inner
 		+clr
 	&__img
@@ -668,6 +668,9 @@ body
 	+box
 	text-align: center
 	z-index: 1
+	+r(w1024)
+		background: url(../img/zaglushka.jpg) no-repeat
+		+cover 
 	+r(w900)
 		height: 500px
 		padding: 160px 20px 0
@@ -706,9 +709,6 @@ body
 		font-size: 0
 		margin-bottom: 110px 
 		z-index: 2
-	+r(w1024)
-		background: url(../img/clients-bg.jpg) no-repeat
-		+cover 
 .video-holder
 	position: fixed
 	top: 110px
@@ -722,7 +722,7 @@ body
 
 .contacts
 	position: relative
-	padding: 100px 0 80px
+	padding: 60px 0 80px
 	background: #FFF  
 	z-index: 2					
 	&__inner

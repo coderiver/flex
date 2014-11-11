@@ -268,9 +268,9 @@ body { font-family: "Open Sans", sans-serif; font-size: 14px; line-height: 1.4; 
 .services__img { font-size: 0; text-align: center; }
 .services__img img { max-width: 90%; }
 
-.testimonials { padding: 110px 0 80px; max-width: 812px; margin: 0 auto; }
-@media only screen and (max-width: 900px) { .testimonials { padding: 110px 20px 80px; } }
-@media only screen and (max-width: 480px) { .testimonials { padding: 50px 20px 50px; } }
+.testimonials { padding: 110px 0 40px; max-width: 812px; margin: 0 auto; }
+@media only screen and (max-width: 900px) { .testimonials { padding: 110px 20px 40px; } }
+@media only screen and (max-width: 480px) { .testimonials { padding: 50px 20px 20px; } }
 .testimonials__inner { *zoom: 1; }
 .testimonials__inner:after { content: " "; display: table; clear: both; }
 .testimonials__img { position: relative; float: left; width: 132px; margin-right: 50px; font-size: 0; }
@@ -283,6 +283,7 @@ body { font-family: "Open Sans", sans-serif; font-size: 14px; line-height: 1.4; 
 @media only screen and (max-width: 320px) { .testimonials__content { text-align: center; } }
 
 .m-clients { position: relative; padding: 228px 50px 0; height: 598px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; z-index: 1; }
+@media only screen and (max-width: 1024px) { .m-clients { background: url(../img/zaglushka.jpg) no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } }
 @media only screen and (max-width: 900px) { .m-clients { height: 500px; padding: 160px 20px 0; } }
 @media only screen and (max-width: 480px) { .m-clients { height: 400px; padding: 130px 0 0; }
   .m-clients .m-clients__title { font-size: 18px; margin-bottom: 58px; } }
@@ -291,12 +292,11 @@ body { font-family: "Open Sans", sans-serif; font-size: 14px; line-height: 1.4; 
 .m-clients__name { font-size: 18px; color: white; }
 .m-clients__job { font-family: "Open Sans", sans-serif; color: #656565; font-size: 18px; }
 .m-clients__btn { position: relative; font-size: 0; margin-bottom: 110px; z-index: 2; }
-@media only screen and (max-width: 1024px) { .m-clients { background: url(../img/clients-bg.jpg) no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } }
 
 .video-holder { position: fixed; top: 110px; left: 0; z-index: 1; width: 100%; min-width: 1440px; min-height: 100%; }
 @media only screen and (max-width: 1024px) { .video-holder { display: none; } }
 
-.contacts { position: relative; padding: 100px 0 80px; background: white; z-index: 2; }
+.contacts { position: relative; padding: 60px 0 80px; background: white; z-index: 2; }
 .contacts__inner { max-width: 812px; margin: 0 auto; padding: 0 10px; }
 .contacts__topper { margin-bottom: 60px; text-align: center; font-size: 20px; color: #072335; line-height: 1.8; padding: 0 20px; }
 .contacts__wrap { *zoom: 1; }
