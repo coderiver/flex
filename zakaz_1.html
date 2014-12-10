@@ -21,6 +21,7 @@
 	<script src="js/lib/progressButton.js"></script>
 	<script src="js/lib/slick.min.js"></script>
 	<script src="js/lib/dropzone.min.js"></script>
+	<script src="js/lib/jquery.mask.min.js"></script>
 	<script src="js/lib/jquery.form-validator.js"></script>
 	<script src="js/common.js"></script>
 	<!--[if IE]><script src="js/lib/html5shiv.js"></script><![endif]-->
@@ -97,7 +98,7 @@
   	  				<input type="text" class="input" placeholder="E-mail" name="email" data-validation="email">
   	  			</label>
   	  			<label class="form__item">
-  	  				<input type="text" class="input" placeholder="Телефон" name="tel" data-validation="number" data-validation-allowing="positive">
+  	  				<input type="text" class="input input_tel" placeholder="Телефон" name="tel" data-validation="length" data-validation-length="min18">
   	  			</label>
   	  			<div class="form__name">Тип проекта</div>
   	  			<div class="form__checkbox">

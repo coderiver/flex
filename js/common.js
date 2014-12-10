@@ -552,6 +552,10 @@ if ($("#mydropzone").length) {
 	}
 	header();
 
+// phone validation
+
+	$('.input_tel').mask('+000 (00) 000-00-00');
+
 //resize function
 
 	$(window).resize(function(){
