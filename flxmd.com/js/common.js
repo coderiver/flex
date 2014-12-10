@@ -197,10 +197,6 @@ $(document).ready(function() {
       " до $" + $( "#slider-range" ).slider( "values", 1 ) + " +" ); 	
     $( "#slider-range" ).find('.ui-slider-handle:last-child').addClass('is-last');
 
-// phone validation
-
-  $('.input_tel').mask('+000 (00) 000-00-00');
-
 //resize function
 
 	$(window).resize(function(){

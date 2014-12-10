@@ -92,7 +92,7 @@
 		  	  			<input type="text" class="input" placeholder="Имя" name="name" data-validation="required">
 		  	  		</label>
 		  	  		<label class="form__item">
-		  	  			<input type="text" class="input input_tel" placeholder="Телефон" name="tel" data-validation="length" data-validation-length="min18">
+		  	  			<input type="text" class="input input_tel" placeholder="Телефон" name="tel" data-validation="custom" data-validation-regexp="^[-0-9()+ ]+$">
 		  	  		</label>
 							<label class="form__item">
 								<textarea class="textarea" placeholder="Комментарий" name="comment" data-validation="required"></textarea>
