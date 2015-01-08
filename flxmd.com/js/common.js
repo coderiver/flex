@@ -64,7 +64,7 @@ $(document).ready(function() {
         $('.js-section').each(function(){
             var pos = $(this).offset().top;
             var id = $(this).attr('id');
-            if( $(window).scrollTop() >= (pos - 111)){
+            if( $(window).scrollTop() >= (pos - 112)){
                 $('.menu ul li a').removeClass('is-active');
                 $('[href = #'+id+']').addClass('is-active');
             }
